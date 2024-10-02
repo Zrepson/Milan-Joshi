@@ -3,6 +3,7 @@
 \*-----------------------------------*/
 
 
+
 /**
  * copyright 2022 @codewithsadee
  */
@@ -14,6 +15,8 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
+
+
 
 :root {
 
@@ -112,17 +115,7 @@
 }
 
 
-/* Modal styles */
-/* body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-} */
+
 
 .popup {
   display: none;
@@ -170,7 +163,6 @@
 .close-btn:hover {
   color: var(--orange-yellow-crayola);
 }
-
 
 
 
@@ -367,8 +359,21 @@ main {
 }
 
 
+body{
+  position: relative;
+}
 
 
+.slide{
+  color: var(--orange-yellow-crayola);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  background: var(--smoky-black);
+  
+  
+  
+}
 
 /*-----------------------------------*\
   #SIDEBAR
