@@ -116,9 +116,9 @@
 .popup {
   display: none;
   position: fixed;
-  bottom: 50%;
+  bottom: -5%;
   left: 50%;
-  transform: translate(50%, 50%);
+  transform: translate(-50%, -50%);
   background: var(--bg-gradient-jet);
   padding: 30px;
   border-radius: 20px;
