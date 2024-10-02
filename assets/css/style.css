@@ -4,6 +4,12 @@
 
 
 
+/**
+ * copyright 2022 @codewithsadee
+ */
+
+
+
 
 
 /*-----------------------------------*\
@@ -108,10 +114,13 @@
 
 }
 
+
+
+
 .popup {
   display: none;
   position: fixed;
-  bottom: -5%;
+  bottom:  -5%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--bg-gradient-jet);
@@ -154,6 +163,10 @@
 .close-btn:hover {
   color: var(--orange-yellow-crayola);
 }
+
+
+
+
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
