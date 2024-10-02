@@ -157,6 +157,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
 window.onload = function() {
   setTimeout(()=>{
     document.getElementById('welcomePopup').style.display = 'block';
