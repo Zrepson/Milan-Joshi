@@ -115,53 +115,49 @@
 }
 
 
-
-
+/* General styles for the modal popup */
 .popup {
-  display: none;
-  position: fixed;
-  bottom:  -5%z;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  background: var(--bg-gradient-jet);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: var(--shadow-1);
-  z-index: 1000;
-  max-width: 600px;
-  width: 90%;
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 10px;
+    width: 80%; /* Default width for smaller devices */
+    max-width: 600px; /* Limit width for larger screens */
 }
 
-.popup h2 {
-  margin-top: 0;
-  font-size: var(--fs-4);
-  font-weight: var(--fw-600);
-  background: var(--text-gradient-yellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.popup-content {
-  margin-bottom: 20px;
-  color: var(--light-gray);
-  font-size: var(--fs-5);
-  line-height: 1.6;
-}
-
+/* Close button style */
 .close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: var(--fs-1);
-  cursor: pointer;
-  color: var(--vegas-gold);
-  transition: var(--transition-1);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.close-btn:hover {
-  color: var(--orange-yellow-crayola);
+/* Popup content styling */
+.popup-content {
+    padding: 10px 0;
+}
+
+/* Styles for larger screens (tablets and PCs) */
+@media screen and (min-width: 768px) {
+    .popup {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .popup {
+        width: 30%;
+    }
 }
 
 /* Fullscreen for mobile devices */
@@ -170,6 +166,13 @@
         width: 90%;
         padding: 10px;
     }
+    .popup-content {
+        font-size: 14px;
+    }
+}
+
+
+
 
 
 /*-----------------------------------*\
