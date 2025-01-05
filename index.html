@@ -267,7 +267,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
         </section>
 
-        <img src="assets/images/462583321_596288246279556_2024208079415434540_n.png" alt="Description of image" class="responsive-image">
+     <img id="flexibleImage" src="assets/images/462583321_596288246279556_2024208079415434540_n.png" alt="Description of image" style="max-width: 100%; height: auto;">
+
+<label for="imageSize">Select Size:</label>
+<select id="imageSize">
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+</select>
+
+<script>
+    document.getElementById('imageSize').addEventListener('change', function () {
+        const img = document.getElementById('flexibleImage');
+        switch (this.value) {
+            case 'small':
+                img.style.width = '300px';
+                break;
+            case 'medium':
+                img.style.width = '600px';
+                break;
+            case 'large':
+                img.style.width = '100%';
+                break;
+            default:
+                img.style.width = 'auto';
+        }
+    });
+</script>
+
 
         
 
