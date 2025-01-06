@@ -3,7 +3,6 @@
 \*-----------------------------------*/
 
 
-
 /**
  * copyright 2022 @codewithsadee
  */
@@ -15,8 +14,6 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
-
-
 
 :root {
 
@@ -114,55 +111,6 @@
 
 }
 
-
-
-
-.popup {
-  display: none;
-  position: fixed;
-  bottom:  -5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--bg-gradient-jet);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: var(--shadow-1);
-  z-index: 1000;
-  max-width: 600px;
-  width: 90%;
-}
-
-.popup h2 {
-  margin-top: 0;
-  font-size: var(--fs-4);
-  font-weight: var(--fw-600);
-  background: var(--text-gradient-yellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.popup-content {
-  margin-bottom: 20px;
-  color: var(--light-gray);
-  font-size: var(--fs-5);
-  line-height: 1.6;
-}
-
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: var(--fs-1);
-  cursor: pointer;
-  color: var(--vegas-gold);
-  transition: var(--transition-1);
-}
-
-.close-btn:hover {
-  color: var(--orange-yellow-crayola);
-}
 
 
 
@@ -359,21 +307,8 @@ main {
 }
 
 
-body{
-  position: relative;
-}
 
 
-.slide{
-  color: var(--orange-yellow-crayola);
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  background: var(--smoky-black);
-  
-  
-  
-}
 
 /*-----------------------------------*\
   #SIDEBAR
