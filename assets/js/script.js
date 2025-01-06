@@ -157,14 +157,3 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
-
-
-window.onload = function() {
-  setTimeout(()=>{
-    document.getElementById('welcomePopup').style.display = 'block';
-  },3000)
-}
-
-function closePopup() {
-  document.getElementById('welcomePopup').style.display = 'none';
-}
