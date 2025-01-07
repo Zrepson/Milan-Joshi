@@ -3,6 +3,7 @@
 \*-----------------------------------*/
 
 
+
 /**
  * copyright 2022 @codewithsadee
  */
@@ -14,6 +15,8 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
+
+
 
 :root {
 
@@ -112,6 +115,8 @@
 }
 
 
+
+
 .popup {
   display: none;
   position: fixed;
@@ -158,7 +163,6 @@
 .close-btn:hover {
   color: var(--orange-yellow-crayola);
 }
-
 
 
 
@@ -355,8 +359,21 @@ main {
 }
 
 
+body{
+  position: relative;
+}
 
 
+.slide{
+  color: var(--orange-yellow-crayola);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  background: var(--smoky-black);
+  
+  
+  
+}
 
 /*-----------------------------------*\
   #SIDEBAR
