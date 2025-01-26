@@ -19,11 +19,6 @@
 
 
 :root {
-
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-	
 	
 
   /**
@@ -31,11 +26,6 @@
    */
 
   /* gradient */
-
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
--moz-background-clip: text;
--moz-text-fill-color: transparent;
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
@@ -195,8 +185,6 @@ li { list-style: none; }
 img, ion-icon, a, button, time, span { display: block; }
 
 button {
-outline: 2px solid var(--orange-yellow-crayola);
-  outline-offset: 2px;
 	
   font: inherit;
   background: none;
