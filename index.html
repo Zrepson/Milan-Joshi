@@ -329,6 +329,31 @@ height="0" width="0" style="display:none;visibility:hidden">
           </div>
           <br>
 
+           <div id="aqi-container">
+    <h3>Air Quality Index</h3>
+    <p id="aqi-data">Loading...</p>
+</div>
+
+<script>
+    async function fetchAQI() {
+        const apiKey = "9c4327efee16bc4841aa9a59286b80ca7a576f61";  // Replace with your API key
+        const city = "Bhaktapur, Nepal ";  // Replace with your city
+        const url = `https://api.openweathermap.org/data/2.5/air_pollution?lat=27.7172&lon=85.3240&appid=${apiKey}`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            const aqi = data.list[0].main.aqi; // AQI value
+            document.getElementById("aqi-data").textContent = `AQI Level: ${aqi}`;
+        } catch (error) {
+            document.getElementById("aqi-data").textContent = "Error fetching AQI";
+        }
+    }
+
+    fetchAQI();
+</script>
+
+
           
         <!--
           - service
