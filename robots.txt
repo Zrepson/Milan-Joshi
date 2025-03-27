@@ -1,4 +1,2 @@
-User-agent: *
-Allow: /
 Sitemap: https://milanjoshi.com.np/sitemap.xml
 
