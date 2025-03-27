@@ -1,3 +1,4 @@
+user-agent: Googlebot
 Allow: 
 Sitemap: https://milanjoshi.com.np/sitemap.xml
 
