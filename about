@@ -1,0 +1,461 @@
+ <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About MJ</h2>
+        </header>
+
+        <section class="about-text">
+              
+           <img src="./assets/images/WhatsApp_Image_2025-03-28_at_2.53.46_PM-removebg-preview.png" alt="Milan Joshi" style="max-width: 20%; height: auto; "> 
+            <br>
+            <p style="font-size: 20px;"> 
+               Milan Joshi ( मिलन जोशी )
+            </p>
+            
+           <p>
+           is a <b>Life Insurance Advisor</b> and <b>Project Coordinator</b> from Kathmandu, Nepal working in program management and BEMS Development Project.
+            He enjoy demonstrating success in strategic planning, project management and organisational development across diverse industries.
+          </p>
+
+          <p>
+            Expertise in project management and also a life Insurance consultant, administrator and CSR. Results-driven management professional with over 5 years of experience in building teams, optimising operations and driving business growth. Demonstrated success in strategic planning, project management and organisational development across diverse industries.
+          </p>
+         
+            
+            <p style="text-orange-yellow-crayola bg-transparent" ><b>Personal</b> : Beyond academics and work, I truly enjoy discussing, acting and implementing the <b>Sustainable Development (SDGs) </b>🌈 , a set of 17 interconnected global goals established by the United Nations (UN) in 2015 that aimed to address some of the world's most pressing challenges and promote sustainable development across economic, social, and environmental dimensions.  Having visited over 10 cities, lived in 3 different cities in Nepal, and traveled to 2 cities in India, I’ve come to value the goals for Sustainable Cities and Communities , Health and Well being that will imapact on our daily lives. The design, sustainability, and cultural richness play such an essential role in shaping lifestyles.</p>
+                <div> <br><img src="./assets/images/ec6307ba-f576-466c-824d-ed8c966dbcf0.webp" alt="Causes" style="max-width: 100%; height: auto; border: 5px solid #FFFFFF; border-radius: 10px;"></br></div>
+           <p>
+            In my free time, I love immersing myself in activities like web designing, learning coding and web developing, blogging, exploring technology and gadgets, volunteering, reading, and traveling. Each of these interests fuels my curiosity and broadens my understanding of the world around me. And I belive in Time Management, Active Learning, Compassion, Honesty, Coordination, and Teamwork as a part of soft skills that reflect a strong foundation for personal and professional success.
+          </p>
+
+           <p style="text-align: center;">
+            <b> Albert Einstein :</b> 
+            <mark class="text-orange-yellow-crayola bg-transparent"><br></br>
+            <b><i> • Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.</i></b>
+          <br>
+            </mark></p>
+          
+          <div> <p style="text-align: center;">
+    <iframe src="https://free.timeanddate.com/clock/i9ppte6p/n117/fcfff/tct/pct/pd3/tt0/tw1/tm1/th2/ta1/tb2" frameborder="0" width="270" height="19" allowtransparency="true"></iframe>
+          </div>
+          <br>
+
+         
+
+
+
+
+          
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Project Management</h4>
+
+                <p class="service-item-text">
+                As a former project coordinator, I excel in managing teams, fostering collaboration, and ensuring the successful delivery of projects.
+
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+             
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Life Insurance Solutions</h4>
+
+                <p class="service-item-text">
+                  With extensive experience in the insurance industry, I guide individuals and businesses in finding tailored insurance solutions that offer financial security and peace of mind.
+
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+             
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Digital Strategist & Tech Enthusiast</h4>
+
+                <p class="service-item-text">
+                  
+Passionate about technology and digital innovation, I learn, design and implement features that enhance user experiences, such as portfolio showcases, networking tools, and customizable themes for websites.
+                </p>
+              </div>
+
+            </li>
+
+         
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="">
+
+          <h3 class="h3 testimonials-title">References</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Shambhu Sharma Silwal</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Branch Manager
+                    <br>
+                    Life Insurance Corporation (Nepal) Ltd. 
+                    <br>
+                    Kalanki-13, Kathmandu, Nepal
+                    <br>
+                    shambhu.silwal@licnepal.com.np
+                    <br>
+                    +977-9851365539, 01-5224009
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+                      <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Eak Dev Khanal" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Eak Dev Khanal </h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Underscreatery 
+                    <br>
+                    Government of Nepal
+                     <br>
+                    Ministry of Health and Population (MoHP)
+                     <br>
+                    Ramshah Path, Kathmandu, Nepal,
+                     <br>
+                    4-262987, 
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Purnima Bajracharya</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  
+                  <p>
+                  Head of Exploration,
+                    <br>
+                    United Nation Development Programme, UN House
+                     <br>
+                    Pulchok GPO Box 107, kathmandu, Nepal
+                     <br>
+                    purnima.bajracharya@undp.org
+                     <br>
+                    977-9805541006, 977- 9851036457
+                  </p>
+                  
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" >
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+             
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+<br></br>
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Professional Affiliations</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="https://www.licnepal.com.np"target="_blank">
+                <img src="./assets/images/cc.jpg" alt="client logo">
+              </a>
+            </li>
+
+               <li class="clients-item">
+              <a href="http://nia.gov.np/"target="_blank">
+                <img src="./assets/images/uiuikj.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://mohp.gov.np/np"target="_blank">
+                <img src="./assets/images/vva.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://nhrc.gov.np"target="_blank">
+                <img src="./assets/images/zz.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://asiafoundation.org/where-we-work/nepal/"target="_blank">
+                <img src="./assets/images/bbd.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://missionoxygenteam.org"target="_blank">
+                <img src="./assets/images/guu.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.ran.org.np"target="_blank">
+                <img src="./assets/images/bb.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://bsn.org.np"target="_blank">
+                <img src="./assets/images/daa.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.d4dnepal.org"target="_blank">
+                <img src="./assets/images/ca.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.undp.org/nepal"target="_blank">
+                <img src="./assets/images/vava.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.daraz.com.np"target="_blank">
+                <img src="./assets/images/qq.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="http://www.aecpl.com.np"target="_blank">
+                <img src="./assets/images/tt.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.jyotigroup.org.np/industry/himal-iron-steel/"target="_blank">
+                <img src="./assets/images/we.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://grandehospital.com"target="_blank">
+                <img src="./assets/images/maia.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.nibl.com.np"target="_blank">
+                <img src="./assets/images/bbds.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.himalayanbank.com/en/"target="_blank">
+                <img src="./assets/images/cdsc.jpg" alt="client logo">
+              </a>
+            </li>
+            
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/hh.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.inf.org" target="_blank">
+                <img src="./assets/images/gh.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://smf.org.np" target="_blank">
+                <img src="./assets/images/dasf.jpg" alt="client logo">
+              </a>
+            </li>
+             <li class="clients-item">
+              <a href="https://nepalcyclesociety.org.np/"target="_blank">
+                <img src="./assets/images/mama.jpg" alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="https://nepalscouts.org"target="_blank">
+                <img src="./assets/images/llll.jpg" alt="client logo">
+              </a>
+            </li>
+          
+        </section>
+
+        <br></br>
+        
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Namita Regmi</h4>
+              
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I never thought much about life insurance until I had my first child. Milan Joshi was incredibly patient and walked me through the entire process. Now, I have peace of mind knowing my family will be taken care of no matter what happens. Highly recommend!
+                  <br></br>
+                    <p> <i>— Namita Regmi, Under Secretary, CIAA</i></p>
+
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+           
+
+          </ul>
+
+        </section>
+
+        
+<section class="clients">
+
+          <h3 class="h3 clients-title">Conference Participation
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="https://knowledge.nrna.org" target="_blank">
+                <img src="./assets/images/hhhh.jpg" alt="client logo">
+              </a>
+            </li>
+            
+             <li class="clients-item">
+              <a href="https://www.linkedin.com/in/international-ai-and-robotics-conference-810b39321/" target="_blank">
+                <img src="./assets/images/mana.jpg" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.undp.org/asia-pacific/kanni-wignaraja" target="_blank">
+                <img src="./assets/images/money.jpg" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+          
+            
+          </section>
+
+         <div section class="Causes">
+            <h3 class="h3 causue-title">Causes</h3>
+            <br>
+            <img src="./assets/images/002fca80-971e-4fb6-afa8-b39ff30600a6.webp" alt="Causes" style="max-width: 100%; height: auto; border: 5px solid #FFFFFF; border-radius: 10px;">
+          </div>
+         
+             </article>
+       
+       
+      
+       
