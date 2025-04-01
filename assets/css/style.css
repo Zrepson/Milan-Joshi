@@ -574,6 +574,8 @@ body{
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+list-style-type: disc;
+margin-left: 20px;
 }
 
 .about-text p { margin-bottom: 15px; }
