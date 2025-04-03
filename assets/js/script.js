@@ -1,3 +1,13 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Milan Joshi",
+  "url": "https://milanjoshi.com.np",
+  "jobTitle": "Life Insurance Advisor and Project Coordinator based in Kathmandu, Nepal.",
+  "sameAs": [ "https://www.linkedin.com/milanjoshi18", ]
+}
+</script>
 'use strict';
 
 
