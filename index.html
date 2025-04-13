@@ -345,6 +345,19 @@ height="0" width="0" style="display:none;visibility:hidden">
               min-width: 300px; /* Minimum width for paragraph */
                 
             }
+               
+                    /* Mobile-specific adjustments */
+  @media (max-width: 768px) { /* Adjust for screens 768px or smaller */
+    .side-by-side {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center; /* Center text and image */
+    }
+    .side-by-side img {
+      margin: 0 auto 20px; /* Center image and add space below */
+    }
+    .side-by-side p {
+      min-width: unset; /* Remove minimum width for better fit */
+    }
           </style>
                       <div class="side-by-side">
                 <p>
@@ -352,10 +365,11 @@ height="0" width="0" style="display:none;visibility:hidden">
          </p>
             
 
-              <img src="./assets/images//1727772988090.jpeg" alt="milan joshi"  width="250" height="250" style="border-radius: 8px;"">     
+              <img src="./assets/images//1727772988090.jpeg" alt="milan joshi"  width="200" height="200" ">     
            
            
           </div>
+            <br><br>
          
               <style>
         
