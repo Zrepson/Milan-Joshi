@@ -407,6 +407,19 @@ height="0" width="0" style="display:none;visibility:hidden">
               flex: 1;
               min-width: 300px; /* Minimum width for paragraph */
             }
+                   
+                    /* Mobile-specific adjustments */
+  @media (max-width: 768px) { /* Adjust for screens 768px or smaller */
+    .side-by-side {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center; /* Center text and image */
+    }
+    .side-by-side img {
+      margin: 0 auto 20px; /* Center image and add space below */
+    }
+    .side-by-side p {
+      min-width: unset; /* Remove minimum width for better fit */
+    }
           </style>
           <div class="side-by-side">
            <img src="./assets/images/WhatsApp_Image_2025-04-09_at_15.14.33_9133e6f5-removebg-preview.png" alt="milan joshi"  width="150" height="150" ">     
