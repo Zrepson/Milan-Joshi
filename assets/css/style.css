@@ -231,36 +231,27 @@ body { background: var(--smoky-black); }
 .side-by-side {
   display: flex;
   align-items: center; /* Center vertically */
+justify-content: start; /* Align items horizontally, with the image on the left and text on the right */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+
 }
 
 .side-by-side img {
   margin-right: 20px; /* Add some space between the image and paragraph */
+max-width: 100%; /* Ensure the image is responsive */
+  height: auto;
+  border: 5px solid #121212; /* Border styling */
+  border-radius: 10px;
 }
 
-/* Media query for screens smaller than 768px */
-@media (max-width: 768px) {
-  .side-by-side {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-  }
-
-  .side-by-side img {
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 20px; /* Add bottom margin to separate image and paragraph */
-  }
+.side-by-side p {
+  flex: 1; /* Allow the paragraph to take up remaining space */
+  min-width: 300px; /* Minimum width for the paragraph */
 }
 
-align-items: <value>;
-align-items: stretch;     /* 🔧 Default: items stretch to fill container */
-align-items: flex-start;  /* 🔝 Top aligned */
-align-items: flex-end;    /* 🔚 Bottom aligned */
-align-items: center;      /* 🎯 Vertically centered */
-align-items: baseline;    /* 📏 Align items by text baseline */
 
-.container {
-  display: flex;
-  align-items: center;
-}
+
+
 
 
 
