@@ -251,6 +251,12 @@ body { background: var(--smoky-black); }
 }
 
 align-items: <value>;
+align-items: stretch;     /* 🔧 Default: items stretch to fill container */
+align-items: flex-start;  /* 🔝 Top aligned */
+align-items: flex-end;    /* 🔚 Bottom aligned */
+align-items: center;      /* 🎯 Vertically centered */
+align-items: baseline;    /* 📏 Align items by text baseline */
+
 
 .sidebar,
 article {
