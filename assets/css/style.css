@@ -257,6 +257,12 @@ align-items: flex-end;    /* 🔚 Bottom aligned */
 align-items: center;      /* 🎯 Vertically centered */
 align-items: baseline;    /* 📏 Align items by text baseline */
 
+.container {
+  display: flex;
+  align-items: center;
+}
+
+
 
 .sidebar,
 article {
