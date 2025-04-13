@@ -228,6 +228,30 @@ body { background: var(--smoky-black); }
   #REUSED STYLE
 \*-----------------------------------*/
 
+.side-by-side {
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.side-by-side img {
+  margin-right: 20px; /* Add some space between the image and paragraph */
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .side-by-side {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .side-by-side img {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add bottom margin to separate image and paragraph */
+  }
+}
+
+align-items: <value>;
+
 .sidebar,
 article {
   background: var(--eerie-black-2);
