@@ -361,17 +361,48 @@ height="0" width="0" style="display:none;visibility:hidden">
           </div>
           <br>
       
-     <p style="display: flex; flex-direction: column;text-align: justify; align-items: center; gap: 20px;">
-  <img src="./assets/images/moq.png" alt="Milan Joshi" style="width: 200px; height: auto; border-radius: 10px;">
-  
-    In his free time, he loves immersing himself in activities like web designing, learning coding and web development, 
-              blogging, exploring technology and gadgets, volunteering, reading, and traveling. Each of these interests
-              fuels his curiosity and broadens his understanding of the world around him.
+    <style>
+  .image-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+  }
 
-            He strongly believes in Time Management, Active Learning, Compassion, Honesty, Coordination,
-              and Teamwork as essential soft skills that serve as a foundation for both personal and professional success.
-             
+  .image-text-container img {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .image-text-container p {
+    max-width: 700px;
+    text-align: justify;
+  }
+
+  @media (min-width: 768px) {
+    .image-text-container {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<div class="image-text-container">
+  <img src="./assets/images/moq.png" alt="Milan Joshi">
+  <p>
+    In his free time, he loves immersing himself in activities like web designing, learning coding and web development,
+    blogging, exploring technology and gadgets, volunteering, reading, and traveling. Each of these interests
+    fuels his curiosity and broadens his understanding of the world around him.
+
+    <br><br>
+
+    He strongly believes in Time Management, Active Learning, Compassion, Honesty, Coordination,
+    and Teamwork as essential soft skills that serve as a foundation for both personal and professional success.
   </p>
+</div>
 
 
       
