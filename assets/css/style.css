@@ -228,25 +228,6 @@ body { background: var(--smoky-black); }
   #REUSED STYLE
 \*-----------------------------------*/
 
-.image-text-block {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.image-text-block img {
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
-}
-.image-text-block p {
-  max-width: 600px;
-}
-
-
-
-
-
-
 
 .sidebar,
 article {
