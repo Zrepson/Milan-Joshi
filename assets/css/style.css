@@ -228,25 +228,18 @@ body { background: var(--smoky-black); }
   #REUSED STYLE
 \*-----------------------------------*/
 
-.side-by-side {
+.image-text-block {
   display: flex;
-  align-items: center; /* Center vertically */
-justify-content: start; /* Align items horizontally, with the image on the left and text on the right */
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-
+  align-items: center;
+  gap: 20px;
 }
-
-.side-by-side img {
-  margin-right: 20px; /* Add some space between the image and paragraph */
-max-width: 100%; /* Ensure the image is responsive */
+.image-text-block img {
+  width: 200px;
   height: auto;
-  border: 5px solid #121212; /* Border styling */
   border-radius: 10px;
 }
-
-.side-by-side p {
-  flex: 1; /* Allow the paragraph to take up remaining space */
-  min-width: 300px; /* Minimum width for the paragraph */
+.image-text-block p {
+  max-width: 600px;
 }
 
 
