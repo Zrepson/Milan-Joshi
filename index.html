@@ -847,6 +847,80 @@ Passionate about technology and digital innovation, I learn, design and implemen
             
             
           </div>
+
+      
+      <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .service-box {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    .service-box h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .service-box input {
+      padding: 0.5rem;
+      width: 100%;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .service-box button {
+      padding: 0.6rem 1.2rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .service-box button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+      
+</head>
+<body>
+
+  <div class="service-box">
+    <h2>Enter Passcode</h2>
+    <input type="password" id="passcode" placeholder="Enter code" />
+    <button onclick="checkPass()">Submit</button>
+  </div>
+
+  <script>
+    function checkPass() {
+      const input = document.getElementById("passcode").value;
+      const correctPass = "milan2025"; // You can change this
+
+      if (input === correctPass) {
+        window.location.href = "https://your-link-here.com"; // Change to your data link
+      } else {
+        alert("Wrong passcode! Try again.");
+      }
+    }
+  </script>
              </article>
        
        
