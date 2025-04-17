@@ -3,7 +3,7 @@
   
   <!-- About -->
   <url>
-    <loc>https://milanjoshi.com.np/#about</loc>
+<loc>https://milanjoshi.com.np/about</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -11,7 +11,7 @@
 
   <!-- Professional Experience -->
   <url>
-    <loc>https://milanjoshi.com.np/#resume</loc>
+    <loc>https://milanjoshi.com.np/resume</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19,27 +19,30 @@
 
   <!-- Portfolio/Projects -->
   <url>
-    <loc>https://milanjoshi.com.np/#portfolio</loc>
+    <loc>https://milanjoshi.com.np/portfolio</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  
+
+
   <!-- Blog/Articles -->
   <url>
-    <loc>https://milanjoshi.com.np/#blog</loc>
+    <loc>https://milanjoshi.com.np/blog</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <!-- Contact -->
   <url>
-    <loc>https://milanjoshi.com.np/#contact</loc>
+    <loc>https://milanjoshi.com.np/contact</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
+
 </urlset>
+
+
