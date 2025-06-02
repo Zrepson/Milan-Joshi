@@ -1850,8 +1850,31 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
   
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ae3e61bcd6064b6288cbb7bb5bb51d1b"}'></script><!-- End Cloudflare Web Analytics -->
 
+      <div id="chat">
+  <textarea id="userInput"></textarea>
+  <button onclick="sendMessage()">Send</button>
+  <div id="responseBox"></div>
+</div>
+
+<script>
+async function sendMessage() {
+  const userMessage = document.getElementById('userInput').value;
+
+  const res = await fetch('https://yourdomain.com/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: userMessage })
+  });
+
+  const data = await res.json();
+  document.getElementById('responseBox').innerText = data.reply;
+}
+</script>
+
+
+
     
 </body>
 
 </html>
-
+      
