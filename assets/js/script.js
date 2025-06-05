@@ -461,4 +461,13 @@ function animate(timestamp) {
 
   lastTimestamp = timestamp;
 }
+self.addEventListener("install", event => {
+  console.log("Service Worker: Installed");
+});
+
+self.addEventListener("fetch", event => {
+  // Offline caching logic goes here (optional)
+});
+
+
 
