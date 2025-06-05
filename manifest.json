@@ -3,6 +3,7 @@
   "short_name": "Milan",
   "start_url": "https://milanjoshi.com.np/",
   "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#0f0f0f",
   "theme_color": "#ffd700",
   "description": "Milan Joshi — Life Insurance Advisor, Project Coordinator",
