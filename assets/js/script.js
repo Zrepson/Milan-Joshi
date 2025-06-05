@@ -469,5 +469,13 @@ self.addEventListener("fetch", event => {
   // Offline caching logic goes here (optional)
 });
 
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault(); // Prevent the default mini-infobar
+  deferredPrompt = e; // Save it for later
+  showCustomInstallUI(); // Show your modal or CTA button
+});
+
 
 
