@@ -477,5 +477,30 @@ window.addEventListener('beforeinstallprompt', (e) => {
   showCustomInstallUI(); // Show your modal or CTA button
 });
 
+function showCustomInstallUI() {
+  const installBtn = document.getElementById('installBtn');
+  installBtn.style.display = 'block';
+
+  installBtn.addEventListener('click', async () => {
+    installBtn.style.display = 'none';
+    if (deferredPrompt) {
+      deferredPrompt.prompt(); // Show browser install dialog
+
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log(`User response: ${outcome}`);
+
+      deferredPrompt = null; // Clear it
+    }
+  });
+}
+deferredPrompt.userChoice.then((choiceResult) => {
+  if (choiceResult.outcome === 'accepted') {
+    console.log('User accepted the install prompt');
+  } else {
+    console.log('User dismissed the install prompt');
+  }
+});
+
+
 
 
