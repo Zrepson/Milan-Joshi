@@ -373,12 +373,299 @@ height="0" width="0" style="display:none;visibility:hidden">
 </p>
 
       <br>
+
+  <style>
+  .flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: 280px;
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #000;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 10px;
+  height: 260px;
+  width: 260px;
+}
+
+a {
+color: #fff;
+}
+    
+  </style>
       
-      <figure>
-          <p>
-          <img src="./assets/images/Untitled design (1).png" alt="Sustainable Development Goals"  style="max-width: 100%; height: auto; border-radius: 10px;">
-         </p>
-      </figure>
+<div class="flip-card-container">
+
+    
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-01.jpg" alt="UN SDG Goal 1" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 1</h1> 
+      <p>End poverty in all its forms everywhere.</p>
+      <p><a href="https://sdgs.un.org/goals/goal1" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 2-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-02.jpg" alt="UN SDG Goal 2" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 2</h1> 
+      <p>End hunger, achieve food security and improved nutrition and promote sustainable agriculture.</p>
+      <p><a href="https://sdgs.un.org/goals/goal2" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 3-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-03.jpg" alt="UN SDG Goal 3" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 3</h1> 
+      <p>Ensure healthy lives and promote well-being for all at all ages.</p>
+      <p><a href="https://sdgs.un.org/goals/goal3" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 4-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-04.jpg" alt="UN SDG Goal 4" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 4</h1> 
+      <p>Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.</p>
+      <p><a href="https://sdgs.un.org/goals/goal4" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 5-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-05.jpg" alt="UN SDG Goal 5" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 5</h1> 
+      <p>Achieve gender equality and empower all women and girls.</p>
+      <p><a href="https://sdgs.un.org/goals/goal5" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 6-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-06.jpg" alt="UN SDG Goal 6" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 6</h1> 
+      <p>Ensure availability and sustainable management of water and sanitation for all.</p>
+      <p><a href="https://sdgs.un.org/goals/goal6" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 7-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-07.jpg" alt="UN SDG Goal 7" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 7</h1> 
+      <p>Ensure access to affordable, reliable, sustainable and modern energy for all.</p>
+      <p><a href="https://sdgs.un.org/goals/goal7" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 8-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-08.jpg" alt="UN SDG Goal 8" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 8</h1> 
+      <p>Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all.</p>
+      <p><a href="https://sdgs.un.org/goals/goal8" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 9-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-09.jpg" alt="UN SDG Goal 9" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 9</h1> 
+      <p>Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation.</p>
+      <p><a href="https://sdgs.un.org/goals/goal9" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 10-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-10.jpg" alt="UN SDG Goal 10" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 10</h1> 
+      <p>Reduce inequality within and among countries.</p>
+      <p><a href="https://sdgs.un.org/goals/goal10" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 11-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-11.jpg" alt="UN SDG Goal 11" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 11</h1> 
+      <p>Make cities and human settlements inclusive, safe, resilient and sustainable.</p>
+      <p><a href="https://sdgs.un.org/goals/goal11" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 12-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-12.jpg" alt="UN SDG Goal 12" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 12</h1> 
+      <p>Ensure sustainable consumption and production patterns.</p>
+      <p><a href="https://sdgs.un.org/goals/goal12" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 13-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-13.jpg" alt="UN SDG Goal 13" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 13</h1> 
+      <p>Take urgent action to combat climate change and its impacts*.</p>
+      <p><a href="https://sdgs.un.org/goals/goal13" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 14-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-14.jpg" alt="UN SDG Goal 14" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 14</h1> 
+      <p>Conserve and sustainably use the oceans, seas and marine resources for sustainable development.</p>
+      <p><a href="https://sdgs.un.org/goals/goal14" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 15-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-15.jpg" alt="UN SDG Goal 15" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 15</h1> 
+      <p>Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss.</p>
+      <p><a href="https://sdgs.un.org/goals/goal15" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 16-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-16.jpg" alt="UN SDG Goal 16" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 16</h1> 
+      <p>Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels.</p>
+      <p><a href="https://sdgs.un.org/goals/goal16" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+
+<!--GOAL 17-->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-17.jpg" alt="UN SDG Goal 17" style="width:280px;height:280px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Goal 17</h1> 
+      <p>Strengthen the means of implementation and revitalize the global partnership for sustainable development.</p>
+      <p><a href="https://sdgs.un.org/goals/goal17" target="_blank">More info</a></p>
+    </div>
+  </div>
+</div>
+</div>
+      
       </br>
               
               <p style="text-align: center;">
