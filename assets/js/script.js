@@ -5,6 +5,10 @@
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
+window.addEventListener('DOMContentLoaded', () => {
+  const audio = new Audio('your-audio-file.mp3');
+  audio.play();
+});
 
 
 // sidebar variables
