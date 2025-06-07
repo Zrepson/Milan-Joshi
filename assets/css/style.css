@@ -29,12 +29,13 @@
     url('assets/images/2.png'),
     url('assets/images/3.png'),
     url('assets/images/4.png');
- background-size: cover ;
+	
+ 	background-size: cover ;
 	background-position: center-center; 
-	background-repeat: no-repeat;" 
-	background-attachment: local 
-		scroll-behavior: smooth;"
-Add comment
+	background-repeat: no-repeat; 
+	background-attachment: local;
+		scroll-behavior: smooth;
+
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(
