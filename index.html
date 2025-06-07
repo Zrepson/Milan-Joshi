@@ -2025,6 +2025,62 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
 
 
 
+<!-- 📆 Nepali BS DateTime Widget -->
+<div id="nepali-datetime-widget">
+  <p id="nepali-datetime">लोड हुँदैछ...</p>
+</div>
+
+<style>
+  #nepali-datetime-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(17, 17, 17, 0.5); 
+    color: #F0C413;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-family: 'Ananda Akchyar ', 'Inter', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    user-select: none;
+  }
+</style>
+
+<script>
+// Very simple AD to BS converter approximation
+function getBSDate(adDate) {
+  const bsOffset = 56; // Years offset, roughly
+  const bsYear = adDate.getFullYear() + bsOffset;
+  const bsMonth = adDate.getMonth() + 1;
+  const bsDay = adDate.getDate();
+
+  const nepaliMonths = [
+    "बैशाख", "जेठ", "असार", "श्रावण", "भदौ", "आश्विन",
+    "कार्तिक", "मंसिर", "पुष", "माघ", "फाल्गुण", "चैत्र"
+  ];
+
+  const nepaliDays = ["आइतबार", "सोमबार", "मंगलबार", "बुधबार", "बिहीबार", "शुक्रबार", "शनिबार"];
+
+  const weekday = nepaliDays[adDate.getDay()];
+  const hour = adDate.getHours().toString().padStart(2, '0');
+  const minute = adDate.getMinutes().toString().padStart(2, '0');
+  const second = adDate.getSeconds().toString().padStart(2, '0');
+
+  const session = adDate.getHours() < 12 ? "बिहान" : "बेलुका";
+
+  return `${weekday}, ${bsDay} ${nepaliMonths[(bsMonth - 1) % 12]} ${bsYear}, ${session} ${hour}:${minute}:${second}`;
+}
+
+function updateNepaliDateTime() {
+  const now = new Date();
+  const bsDateTime = getBSDate(now);
+  document.getElementById("nepali-datetime").textContent = bsDateTime;
+}
+
+updateNepaliDateTime();
+setInterval(updateNepaliDateTime, 1000);
+</script>
 
     
 </body>
