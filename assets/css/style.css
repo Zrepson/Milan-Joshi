@@ -24,7 +24,17 @@
   /**
    * colors
    */
-
+.multi-bg (background-image: 
+    url('assets/images/1.png'),
+    url('assets/images/2.png'),
+    url('assets/images/3.png'),
+    url('assets/images/4.png');
+ background-size: cover ;
+	background-position: center-center; 
+	background-repeat: no-repeat;" 
+	background-attachment: local 
+		scroll-behavior: smooth;"
+Add comment
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(
@@ -73,7 +83,7 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
-  /**
+  /*X
    * typography
    */
 
