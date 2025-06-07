@@ -181,7 +181,13 @@
 }
 
 
-
+body {
+  background-image: url('assets/images/ChatGPT Image Jun 7, 2025, 07_57_58 AM'); /* Replace with your actual path */
+  background-size: cover;                 /* Makes it stretch full screen */
+  background-position: center;            /* Keeps the image centered */
+  background-repeat: no-repeat;           /* Prevents tiling */
+  background-attachment: fixed;           /* Optional: creates parallax feel */
+}
 
 /*-----------------------------------*\
   #RESET
