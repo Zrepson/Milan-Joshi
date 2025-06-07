@@ -183,8 +183,8 @@
 
 body {
   background-image: url('assets/images/Made with ❤️ in Nepal.png'); /* Replace with your actual path */
-  background-size: cover;                 /* Makes it stretch full screen */
-  background-position: auto;            /* Keeps the image centered */
+  background-size: auto;                 /* Makes it stretch full screen */
+  background-position: center top;            /* Keeps the image centered */
   background-repeat: no-repeat;           /* Prevents tiling */
   background-attachment: fixed;           /* Optional: creates parallax feel */
 }
