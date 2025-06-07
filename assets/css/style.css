@@ -24,17 +24,18 @@
   /**
    * colors
    */
-.multi-bg (background-image: 
+.body 
+{	background-image: 
     url('assets/images/1.png'),
     url('assets/images/2.png'),
     url('assets/images/3.png'),
-    url('assets/images/4.png');
+    url('assets/images/4.png'); 
 	
  	background-size: cover ;
 	background-position: center-center; 
 	background-repeat: no-repeat; 
 	background-attachment: local;
-		scroll-behavior: smooth;
+		scroll-behavior: smooth; }
 
   /* gradient */
 
