@@ -2065,23 +2065,7 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
 
 
 
-      <blockquote id="quote"></blockquote>
-<script>
-  const quotes  = [
-  "जीवन एउटा संग्राम हो, लड्न सिक।",
-  "आजको मेहनत, भोलिको सफलता।",
-  "केही कुरा असम्भव छैन।",
-];
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const quoteEl = document.getElementById("quote");
-    if (quoteEl) {
-      quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
-    },5000); // every 5 sec
-  });
-</script>
-
-
+     
 <!-- 📆 Nepali BS DateTime Widget -->
 <div id="nepali-datetime-widget">
   <p id="nepali-datetime">लोड हुँदैछ..</p>
@@ -2144,6 +2128,48 @@ function updateNepaliDateTime() {
 updateNepaliDateTime();
 setInterval(updateNepaliDateTime, 1000);
 </script>
+
+
+            
+            
+            
+            <style>
+ #quote {
+    position: absolute
+    bottom: 20px;
+    left: 20px;
+    background: rgba(17, 17, 17, 0.5); 
+    color: #F0C413;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-family: 'Ananda Akchyar ', 'Inter', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    user-select: none;
+  }
+
+</style>
+            <script>
+  const quotes = [ "जीवन एउटा संग्राम हो, लड्न सिक।",
+      "आजको मेहनत, भोलिको सफलता।",
+      "केही कुरा असम्भव छैन।",
+  ];
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const quoteEl = document.getElementById("quote");
+    const updateQuote = () => {
+      quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+    };
+
+    if (quoteEl) {
+      updateQuote(); // show one immediately
+      setInterval(updateQuote, 5000); // update every 5 seconds
+    }
+  });
+</script>
+
+            
 
 
     
