@@ -2065,21 +2065,32 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
 
 <style>
   #quote {
-    position: fixed;
-    bottom: 50px;
-    center: 50%;
-    background: rgba(17, 17, 17, 0.5); 
-    color: #F0C413;
-    padding: 12px 20px;
-    border-radius: 12px;
-    font-family: 'Ananda Akchyar ', 'Inter', sans-serif;
-    font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    z-index: 9999;
-    user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: #fff;
+    text-align: center;
+    max-width: 80%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6); /* optional background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
-  
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to right, #222, #444); /* optional background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
+
 
       <blockquote id="quote"></blockquote>
 <script>
