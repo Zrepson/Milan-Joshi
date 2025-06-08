@@ -2135,7 +2135,7 @@ setInterval(updateNepaliDateTime, 1000);
             
             <style>
  #quote {
-    position: absolute
+    position: fixed;
     bottom: 20px;
     left: 20px;
     background: rgba(17, 17, 17, 0.5); 
@@ -2151,6 +2151,11 @@ setInterval(updateNepaliDateTime, 1000);
   text-align: left  
   }
 
+ @media only screen and (max-width: 768px) {
+    #nepali-datetime-widget {
+      display: none;
+}
+  }
 </style>
             <blockquote id="quote"></blockquote>
 
