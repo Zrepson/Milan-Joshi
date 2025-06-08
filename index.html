@@ -2043,10 +2043,10 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ae3e61bcd6064b6288cbb7bb5bb51d1b"}'></script><!-- End Cloudflare Web Analytics -->
 
     
-``````<button onclick="goFullscreen()"><strong>Fullscreen</strong></button>
+<button onclick="goFullscreen()"><strong>Fullscreen</strong></button>
 
 
-            -------------------------
+  
 <script>
   window.addEventListener('load', function () {
        if (!localStorage.getItem('vcfDownloaded')) {
@@ -2061,18 +2061,50 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
   });
 </script>
 
-        <blockquote id="quote"></blockquote>
+      <blockquote id="quote"></blockquote>
+<style>
+  Random-Quote-Generator {
+    position: fixed;
+    bottom: 50px;
+    center: 50%;
+    background: rgba(17, 17, 17, 0.5); 
+    color: #F0C413;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-family: 'Ananda Akchyar ', 'Inter', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    user-select: none;
+  }
+    /* Hide widget on mobile screens */
+  @media only screen and (max-width: 768px) {
+    #nepali-datetime-widget {
+      display: none;
+    }
+  }
+</style>
 
 <script>
-  const quotes = ["Stay sharp.", "Keep building.", "You got this."];
-  document.getElementById("quote").textContent =
-    quotes[Math.floor(Math.random() * quotes.length)];
+  const quotes = ["const quotes = [
+  "जीवन एउटा संग्राम हो, लड्न सिक।",
+  "आजको मेहनत, भोलिको सफलता।",
+  "केही कुरा असम्भव छैन।",
+];
+"];
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const quoteEl = document.getElementById("quote");
+    if (quoteEl) {
+      quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+    },5000); // every 5 sec
+  });
 </script>
-    
+
 
 <!-- 📆 Nepali BS DateTime Widget -->
 <div id="nepali-datetime-widget">
-  <p id="nepali-datetime">लोड हुँदैछ...</p>
+  <p id="nepali-datetime">लोड हुँदैछ..</p>
 </div>
 
 <style>
