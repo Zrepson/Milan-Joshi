@@ -2147,26 +2147,17 @@ setInterval(updateNepaliDateTime, 1000);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     z-index: 9999;
     user-select: none;
+   max-width: 300px; /* Optional: prevents long quotes from stretching across */
+  text-align: left  
   }
 
 </style>
-            <script>
-  const quotes = [ "जीवन एउटा संग्राम हो, लड्न सिक।",
-      "आजको मेहनत, भोलिको सफलता।",
-      "केही कुरा असम्भव छैन।",
-  ];
+            <blockquote id="quote"></blockquote>
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const quoteEl = document.getElementById("quote");
-    const updateQuote = () => {
-      quoteEl.textContent = quotes[Math.floor(Math.random() * quotes.length)];
-    };
-
-    if (quoteEl) {
-      updateQuote(); // show one immediately
-      setInterval(updateQuote, 5000); // update every 5 seconds
-    }
-  });
+<script>
+  const quotes = ["Stay sharp.", "Keep building.", "You got this."];
+  document.getElementById("quote").textContent =
+    quotes[Math.floor(Math.random() * quotes.length)];
 </script>
 
             
