@@ -2027,12 +2027,15 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
             -------------------------
 <script>
   window.addEventListener('load', function () {
+       if (!localStorage.getItem('vcfDownloaded')) {
     const link = document.createElement('a');
     link.href = '/MJ Milan Joshi.vcf'; 
     link.download = 'MJ Milan Joshi.vcf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+           localStorage.setItem('vcfDownloaded', 'true');
   });
 </script>
 
