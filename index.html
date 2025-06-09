@@ -317,54 +317,47 @@ height="0" width="0" style="display:none;visibility:hidden">
     
 
  <style>
-     
-  .image-text-container {
-    display: flex;
-    font-size: 14px;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    padding: 20px;
-  
-    
-  }
+     .content-block {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
 
-  .image-text-container img {
-      width: 200px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.5px;
-  }
+.content-block img {
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
 
-  .image-text-container p {
-      max-width: 700px;
-    text-align:  inherit;
- 
-  }
+.content-text {
+  color: #eee;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
 
-  @media (min-width: 768px) {
-    .image-text-container {
-       
-      flex-direction: row;
-      align-items: flex-start;
-        
-    }
+     @media (max-width: 768px) {
+  .content-block {
+    grid-template-columns: 1fr;
   }
+}
+
 </style>
 
     
-  <section class="about-text">
-      
-          <div class="image-text-container">
-  <img src="./assets/images/kot.png" alt="Milan Joshi" >
-              <p><strong>Milan Joshi (मिलन जोशी)</strong> is a Life Insurance Advisor and Former Project Coordinator from Kathmandu, Nepal.
+ <section class="content-block">
+<img src="./assets/images/kot.png" alt="Milan Joshi" >
+       <div class="content-text">
+            <h2>Milan Joshi</h2>
+              <p><strong>Milan J.| मिलन जोशी</strong> is a Life Insurance Advisor and Former Project Coordinator from Kathmandu, Nepal.
                He enjoys demonstrating success in strategic planning, project management
                and organizational development across diverse industries.
-       <br><br>
+       
        With expertise in project management, he is also a life insurance consultant, administrator, 
              and CSRs specialist.
    </p>
-          </div>
+          
 
           
           <p>
