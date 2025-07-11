@@ -91,11 +91,40 @@ height="0" width="0" style="display:none;visibility:hidden">
 </iframe>
 </noscript> 
 <!-- End Google Tag Manager (noscript) -->
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0f0f0f; /* Match your site's theme */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+</style>
 
 
 
     <body style="background-image: url('assets/images/Untitled design (4).png'); background-size: cover; background-position: center center; background-repeat: no-repeat;" background-attachment: fixed  scroll-behavior: smooth;>
+<!-- Lottie Script -->
+<script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
 
+<!-- Loading Screen with Lottie -->
+<div id="loading-screen">
+  <dotlottie-wc 
+    src="https://lottie.host/f10e2aa3-c8c4-4442-a0cc-91fddfcc85c6/e9HLSWdQN2.lottie" 
+    autoplay 
+    loop 
+    style="width: 120px; height: 120px;">
+  </dotlottie-wc>
+</div>
+
+        <style>
+
+        
          <!--
             - #MAIN
             -->
@@ -2226,6 +2255,16 @@ setInterval(updateNepaliDateTime, 1000);
 }
   }
 </style>
+
+        <script>
+  window.addEventListener('load', function () {
+    const loader = document.getElementById('loading-screen');
+    loader.style.opacity = '0';
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 500);
+  });
+</script>
 
 
     
