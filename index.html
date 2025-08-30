@@ -149,17 +149,21 @@ height="0" width="0" style="display:none;visibility:hidden">
 </style>
 
         <script>
-  const video = document.getElementById('widget-video');
-  const widget = document.getElementById('video-widget');
+  const video = document.getElementById("widget-video");
+  const widget = document.getElementById("video-widget");
 
+  // When video finishes
+  video.addEventListener("ended", () => {
+    // Fade out smoothly
+    widget.style.transition = "opacity 0.6s ease";
+    widget.style.opacity = 0;
 
-  video.addEventListener('ended', () => {
-       widget.style.transition = 'opacity 0.5s';
-  widget.style.opacity = 0;
-      setTimeout(()=> widget.style.display = 'none'; 500);
+    // After fade, remove completely
+    setTimeout(() => {
+      widget.style.display = "none";
+    }, 600);
   });
 </script>
-        
 
   <main>
                  
