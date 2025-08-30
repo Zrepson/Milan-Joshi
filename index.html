@@ -2274,8 +2274,12 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
 
 <!-- 🔥 Video Widget -->
 <div id="video-widget">
-  <video id="widget-video" width="300" height="170">
-    <source src="./assets/Sign Language.mp4 (1).mp4" type="video/mp4">
+  <video id="widget-video" width=" 150" height="150">
+    <source src="./assets/Sign Language.mp4 (1).mp4" type="video/mp4"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+        >
   </video>
 
 </div>
@@ -2283,13 +2287,10 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
         <style>
 #video-widget {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 300px;
-  height: 170px;
+ border-radius: 20px;
+
   background-color: #000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  border-radius: 8px;
   overflow: hidden;
   z-index: 9999;
   display: flex;
