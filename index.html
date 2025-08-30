@@ -2471,7 +2471,36 @@ setInterval(updateNepaliDateTime, 1000);
 </script>
 
             
-<a href="mailto:mail@milanjoshi.com.np" class="floating-feedback">Feedback</a>
+<!-- ✅ Feedback Icon -->
+<a href="mailto:mail@milanjoshi.com.np" class="floating-feedback" title="Send Feedback">
+  <i class="fas fa-comment-dots"></i>
+</a>
+
+<!-- ✅ Font Awesome (icon library) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  .floating-feedback {
+    position: fixed;
+    top: 20px;   /* distance from top */
+    left: 20px;  /* distance from left */
+    background: #ffb703; /* button color */
+    color: white;
+    font-size: 22px;  /* icon size */
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+  }
+
+  .floating-feedback:hover {
+    background: #fb8500;
+    transform: scale(1.1);
+  }
+</style>
+
 
 <style>
 
