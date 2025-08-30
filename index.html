@@ -119,56 +119,7 @@ height="0" width="0" style="display:none;visibility:hidden">
   </marquee>
   </div>
 
-         <!-- 🔥 Video Widget -->
-<div id="video-widget">
-  <video id="widget-video" controls autoplay muted playsinline >
-    <source src="./assets/Language.mp4" type="video/mp4">
-  </video>
-</div>
-        
-<style>
-#video-widget {
-  max-width: 200px;   /* Adjust widget size */
-  position: fixed;
- buttom: 170px;
-  right: 20px;
-  border-radius: 20px;
-  background-color: #000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  overflow: hidden;
-  z-index: 9999;
-}
-
-#widget-video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 20px;
-}
-</style>
-
-        <script>
-  const video = document.getElementById("widget-video");
-  const widget = document.getElementById("video-widget");
-
-            // Ensure autoplay works
-  video.muted = true;
-  video.play().catch(err => {
-    console.log("Autoplay blocked:", err);
-  });
-
-  // When video finishes
-  video.addEventListener("ended", () => {
-    // Fade out smoothly
-    widget.style.transition = "opacity 0.6s ease";
-    widget.style.opacity = 0;
-
-    // After fade, remove completely
-    setTimeout(() => {
-      widget.style.display = "none";
-    }, 600);
-  });
-</script>
+         
 
   <main>
                  
@@ -2458,6 +2409,57 @@ setInterval(updateNepaliDateTime, 1000);
 "जीवन एउटा संग्राम हो, लड्न सिक।","सत्य गाह्रो हुन्छ, तर मनको बोझ कम गर्छ।","अनुशासनको बीउ आज रोप, भविष्य सुनौलो हुनेछ।","पढेर मात्र पुग्दैन, सोच्न सिक।","जसले सिक्न छोड्छ, उसले अगाडि बढ्न पनि छोड्छ।","रुक्ने हरायो, हिँड्ने पुग्छ।","झूट चिच्याउँछ, सत्य चुप लाग्छ—तर अन्तिम जित सत्यकै हुन्छ।","अनुशासन विहीन स्वतन्त्रता, आगोमा तेल जस्तै हो।","असफलता भन्नु गल्ती होइन, त्यो पाठशाला हो।","सिकाइको अन्त्य तब हुन्छ, जब घमण्ड सुरु हुन्छ।","आजको सीप भोलीको अवसर हो।","शब्द याद गर्दा परीक्षा पास हुन्छ, अर्थ बुझ्दा जीवन पास हुन्छ।","विकास भित्रबाट सुरु हुन्छ, बहिर देखिन सक्छ।","सिकाइको मूल्य डिग्रीले होइन, व्यवहारले तौलिन्छ।","अनुशासन विहीन स्वतन्त्रता, आगोमा तेल जस्तै हो।","पढ्नु भनेको अंक ल्याउनु होइन, बुझेर बाँच्न जान्नु हो।","न्याय ढिलो हुन सक्छ, तर अँध्यारोमा हराउँदैन।" ,"हरेक चोटले सिकाउँछ, यदि ध्यान दिएर सुनेको खण्डमा।","बाटो मोडिए पनि, लक्ष्य छोडिदिनु हुँदैन।","सच्चा विद्यार्थी कहिल्यै ‘म जान्दछु’ भन्दैन।","ज्ञान किताबमा मात्र होइन, व्यवहारमा देखिनुपर्छ।"];
   document.getElementById("quote").textContent =
     quotes[Math.floor(Math.random() * quotes.length)];
+</script>
+
+<!-- 🔥 Video Widget -->
+<div id="video-widget">
+  <video id="widget-video" controls autoplay muted playsinline >
+    <source src="./assets/Language.mp4" type="video/mp4">
+  </video>
+</div>
+        
+<style>
+#video-widget {
+  max-width: 200px;   /* Adjust widget size */
+  position: fixed;
+ bottom: 170px;
+  right: 20px;
+  border-radius: 20px;
+  background-color: #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  overflow: hidden;
+  z-index: 10000;
+}
+
+#widget-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+</style>
+
+        <script>
+  const video = document.getElementById("widget-video");
+  const widget = document.getElementById("video-widget");
+
+            // Ensure autoplay works
+  video.muted = true;
+  video.play().catch(err => {
+    console.log("Autoplay blocked:", err);
+  });
+
+  // When video finishes
+  video.addEventListener("ended", () => {
+    // Fade out smoothly
+    widget.style.transition = "opacity 0.6s ease";
+    widget.style.opacity = 0;
+
+    // After fade, remove completely
+    setTimeout(() => {
+      widget.style.display = "none";
+    }, 600);
+  });
 </script>
 
             
