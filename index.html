@@ -2291,8 +2291,37 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ae3e61bcd6064b6288cbb7bb5bb51d1b"}'></script><!-- End Cloudflare Web Analytics -->
 
     
-<button onclick="goFullscreen()"><strong>Fullscreen</strong></button>
+<!-- Fullscreen Button -->
+<button class="fullscreen-btn" onclick="goFullscreen()" title="Enter Fullscreen">
+  <i class="fas fa-expand"></i>
+</button>
 
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <style>
+  .fullscreen-btn {
+position: fixed;
+    top: 20px;     
+    right: 20px; 
+       font-size: 22px;  
+    padding: 12px;
+    border-radius: 50%;
+    z-index: 1000;
+  }
+</style>
+
+        <script>
+function goFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+</script>
 
   
 <script>
