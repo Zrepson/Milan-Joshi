@@ -2307,6 +2307,134 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
 </script>
             
 
+<!-- 🔥 Quiz Widget -->
+<div id="quiz-widget">
+  <h3>Quick Quiz: Test Your Knowledge</h3>
+  <div id="quiz-question"></div>
+  <div id="quiz-options"></div>
+  <button id="next-btn" disabled>Next ➡</button>
+  <p id="quiz-result"></p>
+</div>
+
+<style>
+  #quiz-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 16px;
+    border-radius: 12px;
+    background: rgba(17, 17, 17, 0.8); /* onyx vibe */
+    color: #F0C413; /* yellow from your palette */
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  #quiz-widget h3 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .quiz-option {
+    display: block;
+    padding: 8px 12px;
+    margin: 6px 0;
+    background: #111;
+    color: #fff;
+    border: 1px solid #F0C413;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .quiz-option:hover { background: #222; }
+  .quiz-option.selected { background: #F0C413; color: #111; }
+  #next-btn {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #F0C413;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #next-btn:disabled {
+    background: #666;
+    cursor: not-allowed;
+  }
+  #quiz-result {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  const quizData = [
+    {
+      question: "Which year did Nepal adopt the federal democratic constitution?",
+      options: ["2006", "2015", "1990", "2020"],
+      answer: "2015"
+    },
+    {
+      question: "What does SDG stand for?",
+      options: ["Smart Development Goals", "Sustainable Development Goals", "Socio Democratic Growth", "Systematic Data Governance"],
+      answer: "Sustainable Development Goals"
+    },
+    {
+      question: "Capital city of Province No. 3 (Bagmati)?",
+      options: ["Hetauda", "Pokhara", "Lalitpur", "Kathmandu"],
+      answer: "Hetauda"
+    }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  const questionEl = document.getElementById("quiz-question");
+  const optionsEl = document.getElementById("quiz-options");
+  const nextBtn = document.getElementById("next-btn");
+  const resultEl = document.getElementById("quiz-result");
+
+  function loadQuestion() {
+    let q = quizData[currentQuestion];
+    questionEl.textContent = q.question;
+    optionsEl.innerHTML = "";
+    q.options.forEach(opt => {
+      const btn = document.createElement("div");
+      btn.classList.add("quiz-option");
+      btn.textContent = opt;
+      btn.onclick = () => selectOption(btn, opt);
+      optionsEl.appendChild(btn);
+    });
+    nextBtn.disabled = true;
+  }
+
+  function selectOption(element, opt) {
+    document.querySelectorAll(".quiz-option").forEach(o => o.classList.remove("selected"));
+    element.classList.add("selected");
+    element.dataset.selected = opt;
+    nextBtn.disabled = false;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    let selected = document.querySelector(".quiz-option.selected");
+    if (!selected) return;
+    if (selected.textContent === quizData[currentQuestion].answer) score++;
+    currentQuestion++;
+    if (currentQuestion < quizData.length) {
+      loadQuestion();
+    } else {
+      questionEl.textContent = "Quiz Completed 🎉";
+      optionsEl.innerHTML = "";
+      nextBtn.style.display = "none";
+      resultEl.textContent = `Your Score: ${score} / ${quizData.length}`;
+    }
+  });
+
+  // Load first question
+  loadQuestion();
+</script>
 
 
      
