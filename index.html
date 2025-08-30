@@ -121,7 +121,7 @@ height="0" width="0" style="display:none;visibility:hidden">
 
          <!-- 🔥 Video Widget -->
 <div id="video-widget">
-  <video id="widget-video" controls autoplay loop muted>
+  <video id="widget-video" controls autoplay >
     <source src="./assets/Language.mp4" type="video/mp4">
   </video>
 </div>
@@ -147,6 +147,19 @@ height="0" width="0" style="display:none;visibility:hidden">
   border-radius: 20px;
 }
 </style>
+
+        <script>
+  const video = document.getElementById('widget-video');
+  const widget = document.getElementById('video-widget');
+
+
+  video.addEventListener('ended', () => {
+       widget.style.transition = 'opacity 0.5s';
+  widget.style.opacity = 0;
+      setTimeout(()=> widget.style.display = 'none'; 500);
+  });
+</script>
+        
 
   <main>
                  
