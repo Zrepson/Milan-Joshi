@@ -2369,40 +2369,69 @@ position: fixed;
 </style>
 
 <script>
-// Very simple AD to BS converter approximation
-function getBSDate(adDate) {
-  const bsOffset = 56; // Years offset, roughly
-  const bsYear = adDate.getFullYear() + bsOffset;
-  const bsMonth = adDate.getMonth() + 1;
-  const bsDay = adDate.getDate();
+// Nepali months and days
+const nepaliMonths = [
+  "बैशाख", "जेठ", "असार", "श्रावण", "भदौ", "आश्विन",
+  "कार्तिक", "मंसिर", "पुष", "माघ", "फाल्गुण", "चैत्र"
+];
+const nepaliDays = ["आइतबार", "सोमबार", "मंगलबार", "बुधबार", "बिहीबार", "शुक्रबार", "शनिबार"];
 
-  const nepaliMonths = [
-    "बैशाख", "जेठ", "असार", "श्रावण", "भदौ", "आश्विन",
-    "कार्तिक", "मंसिर", "पुष", "माघ", "फाल्गुण", "चैत्र"
-  ];
+// BS month lengths table (simplified for 2000-2089 BS)
+const bsMonthData = {
+  2079: [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 30],
+  2080: [31, 31, 32, 31, 32, 30, 30, 29, 30, 29, 30, 30],
+  // Add more years as needed
+};
 
-  const nepaliDays = ["आइतबार", "सोमबार", "मंगलबार", "बुधबार", "बिहीबार", "शुक्रबार", "शनिबार"];
+// Base reference: BS 2079-01-01 = AD 2022-04-14
+const bsBase = { bsYear: 2079, bsMonth: 1, bsDay: 1, adDate: new Date(2022, 3, 14) };
 
-  const weekday = nepaliDays[adDate.getDay()];
-  const hour = adDate.getHours().toString().padStart(2, '0');
-  const minute = adDate.getMinutes().toString().padStart(2, '0');
-  const second = adDate.getSeconds().toString().padStart(2, '0');
+function adToBs(adDate) {
+  let totalDays = Math.floor((adDate - bsBase.adDate) / (24*60*60*1000));
+  let bsYear = bsBase.bsYear;
+  let bsMonth = bsBase.bsMonth;
+  let bsDay = bsBase.bsDay;
 
-  const session = adDate.getHours() < 12 ? "बिहान" : "बेलुका";
+  while (totalDays > 0) {
+    const monthDays = bsMonthData[bsYear][bsMonth - 1];
+    if (totalDays + bsDay <= monthDays) {
+      bsDay += totalDays;
+      totalDays = 0;
+    } else {
+      totalDays -= (monthDays - bsDay + 1);
+      bsDay = 1;
+      bsMonth++;
+      if (bsMonth > 12) {
+        bsMonth = 1;
+        bsYear++;
+      }
+    }
+  }
 
-  return `${weekday}, ${bsDay} ${nepaliMonths[(bsMonth - 1) % 12]} ${bsYear}, ${session} ${hour}:${minute}:${second}`;
+  return { bsYear, bsMonth, bsDay };
+}
+
+function getNepaliDateTime() {
+  const now = new Date();
+  const bs = adToBs(now);
+
+  const weekday = nepaliDays[now.getDay()];
+  const hour = now.getHours().toString().padStart(2, '0');
+  const minute = now.getMinutes().toString().padStart(2, '0');
+  const second = now.getSeconds().toString().padStart(2, '0');
+  const session = now.getHours() < 12 ? "बिहान" : "बेलुका";
+
+  return `${weekday}, ${bs.bsDay} ${nepaliMonths[bs.bsMonth - 1]} ${bs.bsYear}, ${session} ${hour}:${minute}:${second}`;
 }
 
 function updateNepaliDateTime() {
-  const now = new Date();
-  const bsDateTime = getBSDate(now);
-  document.getElementById("nepali-datetime").textContent = bsDateTime;
+  document.getElementById("nepali-datetime").textContent = getNepaliDateTime();
 }
 
 updateNepaliDateTime();
 setInterval(updateNepaliDateTime, 1000);
 </script>
-
+✅ 
 
             
             
