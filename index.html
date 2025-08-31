@@ -2340,7 +2340,7 @@ position: fixed;
             
 
 
-     
+    
 <!-- 📆 Nepali BS DateTime Widget -->
 <div id="nepali-datetime-widget">
   <p id="nepali-datetime">लोड हुँदैछ..</p>
@@ -2368,70 +2368,55 @@ position: fixed;
   }
 </style>
 
+
+
 <script>
-// Nepali months and days
+// Nepali months
 const nepaliMonths = [
   "बैशाख", "जेठ", "असार", "श्रावण", "भदौ", "आश्विन",
   "कार्तिक", "मंसिर", "पुष", "माघ", "फाल्गुण", "चैत्र"
 ];
 const nepaliDays = ["आइतबार", "सोमबार", "मंगलबार", "बुधबार", "बिहीबार", "शुक्रबार", "शनिबार"];
 
-// BS month lengths table (simplified for 2000-2089 BS)
-const bsMonthData = {
-  2079: [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 30],
-  2080: [31, 31, 32, 31, 32, 30, 30, 29, 30, 29, 30, 30],
-  // Add more years as needed
-};
+// AD to BS year/month start mapping (simplified)
+const bsStart = { year: 2079, month: 1, day: 1, ad: new Date(2022, 3, 14) }; // बैशाख 1, 2079 = 14 April 2022
 
-// Base reference: BS 2079-01-01 = AD 2022-04-14
-const bsBase = { bsYear: 2079, bsMonth: 1, bsDay: 1, adDate: new Date(2022, 3, 14) };
+function getBSDate(adDate) {
+  const diff = Math.floor((adDate - bsStart.ad) / (24*60*60*1000)); // days difference
+  let bsYear = bsStart.year;
+  let bsMonth = bsStart.month;
+  let bsDay = bsStart.day + diff;
 
-function adToBs(adDate) {
-  let totalDays = Math.floor((adDate - bsBase.adDate) / (24*60*60*1000));
-  let bsYear = bsBase.bsYear;
-  let bsMonth = bsBase.bsMonth;
-  let bsDay = bsBase.bsDay;
+  const monthDays = [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 30]; // approximate BS month lengths
 
-  while (totalDays > 0) {
-    const monthDays = bsMonthData[bsYear][bsMonth - 1];
-    if (totalDays + bsDay <= monthDays) {
-      bsDay += totalDays;
-      totalDays = 0;
-    } else {
-      totalDays -= (monthDays - bsDay + 1);
-      bsDay = 1;
-      bsMonth++;
-      if (bsMonth > 12) {
-        bsMonth = 1;
-        bsYear++;
-      }
+  while (bsDay > monthDays[bsMonth - 1]) {
+    bsDay -= monthDays[bsMonth - 1];
+    bsMonth++;
+    if (bsMonth > 12) {
+      bsMonth = 1;
+      bsYear++;
     }
   }
 
-  return { bsYear, bsMonth, bsDay };
-}
+  const weekday = nepaliDays[adDate.getDay()];
+  const hour = adDate.getHours().toString().padStart(2, '0');
+  const minute = adDate.getMinutes().toString().padStart(2, '0');
+  const second = adDate.getSeconds().toString().padStart(2, '0');
+  const session = adDate.getHours() < 12 ? "बिहान" : "बेलुका";
 
-function getNepaliDateTime() {
-  const now = new Date();
-  const bs = adToBs(now);
-
-  const weekday = nepaliDays[now.getDay()];
-  const hour = now.getHours().toString().padStart(2, '0');
-  const minute = now.getMinutes().toString().padStart(2, '0');
-  const second = now.getSeconds().toString().padStart(2, '0');
-  const session = now.getHours() < 12 ? "बिहान" : "बेलुका";
-
-  return `${weekday}, ${bs.bsDay} ${nepaliMonths[bs.bsMonth - 1]} ${bs.bsYear}, ${session} ${hour}:${minute}:${second}`;
+  return `${weekday}, ${bsDay} ${nepaliMonths[bsMonth - 1]} ${bsYear}, ${session} ${hour}:${minute}:${second}`;
 }
 
 function updateNepaliDateTime() {
-  document.getElementById("nepali-datetime").textContent = getNepaliDateTime();
+  const now = new Date();
+  const bsDateTime = getBSDate(now);
+  document.getElementById("nepali-datetime").textContent = bsDateTime;
 }
 
 updateNepaliDateTime();
 setInterval(updateNepaliDateTime, 1000);
 </script>
-✅ 
+
 
             
             
