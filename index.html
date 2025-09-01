@@ -2633,6 +2633,7 @@ setInterval(updateNepaliDateTime, 1000);
 </style>
 
         <script>
+ document.addEventListener("DOMContentLoaded", () => {
   const video = document.getElementById("widget-video");
   const widget = document.getElementById("video-widget");
 
@@ -2641,6 +2642,10 @@ setInterval(updateNepaliDateTime, 1000);
   video.play().catch(err => {
     console.log("Autoplay blocked:", err);
   });
+     // Fade in after 1 second
+  setTimeout(() => {
+    widget.classList.add("show");
+  }, 1000); // 1000ms = 1 second
 
   // When video finishes
   video.addEventListener("ended", () => {
