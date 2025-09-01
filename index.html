@@ -149,35 +149,9 @@ background-color: #3E4646;
 }
 </style>
 
-        <script>
-<script>
-window.addEventListener('load', function() {
-  const loadingScreen = document.getElementById('loading-screen');
-  const content = document.getElementById('content');
+      
 
-  // Ensure content starts hidden
-  content.classList.add('hidden');
-
-  // Small delay to allow spinner animation to show (optional)
-  setTimeout(() => {
-    // Start fade out
-    loadingScreen.style.opacity = '0';
-    loadingScreen.style.visibility = 'hidden';
-
-    // Fade in content
-    content.style.opacity = '1';
-    content.classList.remove('hidden');
-  }, 500); // Adjust delay if you want spinner to show longer
-
-  // Remove loading screen from DOM after transition
-  loadingScreen.addEventListener('transitionend', () => {
-    loadingScreen.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
-  });
-});
-</script>
-
-        </script>
+ 
 
                 <!--
             - #MAIN
