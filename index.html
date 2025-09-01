@@ -2645,7 +2645,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     widget.classList.add("show"); // fade in
     video.play().catch(err => console.log("Video autoplay blocked:", err));
-  }, 3000); // 3000ms = 3 seconds delay
+  }, 500); // 3000ms = 3 seconds delay
 
   // When video finishes
   video.addEventListener("ended", () => {
