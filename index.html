@@ -2617,9 +2617,7 @@ setInterval(updateNepaliDateTime, 1000);
      opacity: 0;
   transition: opacity 0.6s ease;
 }
-    #video-widget.show {
-  opacity: 1;
-}
+  
 
 #widget-video {
   width: 100%;
@@ -2636,29 +2634,29 @@ setInterval(updateNepaliDateTime, 1000);
 }
 
 </style>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+  <script>
   const video = document.getElementById("widget-video");
   const widget = document.getElementById("video-widget");
 
-  // Delay both fade-in and video start
-  setTimeout(() => {
-    widget.classList.add("show"); // fade in
-    video.play().catch(err => console.log("Video autoplay blocked:", err));
-  }, 500); // 3000ms = 3 seconds delay
+            // Ensure autoplay works
+  video.muted = true;
+  video.play().catch(err => {
+    console.log("Autoplay blocked:", err);
+  });
 
   // When video finishes
   video.addEventListener("ended", () => {
+    // Fade out smoothly
     widget.style.transition = "opacity 0.6s ease";
     widget.style.opacity = 0;
 
+    // After fade, remove completely
     setTimeout(() => {
+        
       widget.style.display = "none";
     }, 600);
   });
-});
-</script>
-            
+</script>         
 
 
 
