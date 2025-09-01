@@ -106,12 +106,7 @@ height="0" width="0" style="display:none;visibility:hidden">
   </div>
 
      <style>
-   body {
-  margin: 0;
-  overflow: hidden; /* Hide scrollbar while loading */
-}
-
-#loading-screen {
+   loading-screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -160,7 +155,6 @@ height="0" width="0" style="display:none;visibility:hidden">
   // Make the content visible
   content.classList.remove('hidden');
 
-  document.body.style.overflow = 'auto';
 
   // Optionally, remove the loading screen from the DOM after the transition ends
   loadingScreen.addEventListener('transitionend', () => {
