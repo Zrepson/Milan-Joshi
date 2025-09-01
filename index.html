@@ -2412,7 +2412,7 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
     color: #F0C413;
     top: 20px;
     right: 20px;
-    font-size: 22px;
+    font-size: 20px;
     padding: 12px;
     border-radius: 50%;
     background: #111;
@@ -2456,6 +2456,34 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
 </script>
 
 
+<!-- 📆 Nepali BS DateTime Widget -->
+<div id="nepali-datetime-widget" style="display:none;">
+  <p id="nepali-datetime">Nepali Time Zone</p>
+</div>
+
+<!-- ✨ Quote Widget -->
+<div id="quote" style="display:none;">
+  <blockquote id="quote-text">Quote of a day</blockquote>
+</div>
+
+<!-- 🔥 Video Widget -->
+<div id="video-widget" style="display:none;">
+  <video id="widget-video" controls autoplay muted playsinline>
+    <source src="./assets/Intoduction.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+  // Delay widgets by 5-7 sec (randomized between 5000–7000ms)
+  const delay = Math.floor(Math.random() * 2000) + 5000; 
+
+  setTimeout(() => {
+    // Show all widgets
+    document.getElementById("nepali-datetime-widget").style.display = "block";
+    document.getElementById("quote").style.display = "block";
+    document.getElementById("video-widget").style.display = "block";
+  }, delay);
+</script>
 
 
     
