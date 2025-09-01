@@ -2400,24 +2400,27 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
     
 <!-- Fullscreen Button -->
 <button class="fullscreen-btn" onclick="goFullscreen()" title="Enter Fullscreen">
-  <i class="fas fa-expand"></i>
+  <i class="fa-solid fa-expand"></i>
 </button>
 
-<!-- Font Awesome for icons -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <style>
+<style>
   .fullscreen-btn {
-position: fixed;
- color: #F0C413;
-      top: 20px;     
-    right: 20px; 
-       font-size: 22px;  
+    position: fixed;
+    color: #F0C413;
+    top: 20px;
+    right: 20px;
+    font-size: 22px;
     padding: 12px;
     border-radius: 50%;
+    background: #111;
+    border: none;
+    cursor: pointer;
     z-index: 1000;
   }
-            /* 🔥 Hide fullscreen button on small screens (mobile) */
+
   @media (max-width: 768px) {
     .fullscreen-btn {
       display: none !important;
@@ -2425,24 +2428,34 @@ position: fixed;
   }
 </style>
 
-       
+<script>
+  function goFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  }
+</script>
+    
 
   
 <script>
   window.addEventListener('load', function () {
-       if (!localStorage.getItem('vcfDownloaded')) {
-    const link = document.createElement('a');
-    link.href = '/MJ Milan Joshi.vcf'; 
-    link.download = 'MJ Milan Joshi.vcf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    if (!localStorage.getItem('vcfDownloaded')) {
+      const link = document.createElement('a');
+      link.href = '/assets/Mr.Milan Joshi - vcard.vcf';
+      link.download = 'MJ Milan Joshi.vcf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
 
-           localStorage.setItem('vcfDownloaded', 'true');
+      localStorage.setItem('vcfDownloaded', 'true');
+    } // ✅ this was missing
   });
-    
 </script>
-            
+
+
 
 
     
@@ -2624,9 +2637,6 @@ setInterval(updateNepaliDateTime, 1000);
 </script>
 
             
-<!-- ✅ Feedback Icon -->
-<a href="mailto:mail@milanjoshi.com.np" class="floating-feedback" title="Send Feedback">
-</a>
 
 
 
