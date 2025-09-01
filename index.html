@@ -2448,7 +2448,7 @@ position: fixed;
     
 <!-- 📆 Nepali BS DateTime Widget -->
 <div id="nepali-datetime-widget">
-  <p id="nepali-datetime">लोड हुँदैछ..</p>
+  <p id="nepali-datetime">Nepali Time Zone</p
 </div>
 
 <style>
@@ -2462,7 +2462,7 @@ position: fixed;
     border-radius: 12px;
     font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
     font-size: 1rem;
-    z-index: 9999;
+    z-index: 10;
     user-select: none;
   }
     /* Hide widget on mobile screens */
@@ -2524,7 +2524,10 @@ setInterval(updateNepaliDateTime, 1000);
 
 
             
-            
+       <div id="quote">
+  <p id="quote">Quote of a day</p
+</div>
+     
             
             <style>
  #quote {
@@ -2537,7 +2540,7 @@ setInterval(updateNepaliDateTime, 1000);
     border-radius: 12px;
     font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
     font-size: 1rem;
-    z-index: 9999;
+    z-index: 10;
     user-select: none;
    max-width: 400px; /* Optional: prevents long quotes from stretching across */
   text-align: right  
@@ -2558,8 +2561,10 @@ setInterval(updateNepaliDateTime, 1000);
     quotes[Math.floor(Math.random() * quotes.length)];
 </script>
 
+         
 <!-- 🔥 Video Widget -->
 <div id="video-widget">
+    <p id="video-widget">Accessibility</p>
   <video id="widget-video" controls autoplay muted playsinline >
     <source src="./assets/Intoduction.mp4" type="video/mp4">
   </video>
@@ -2575,7 +2580,7 @@ setInterval(updateNepaliDateTime, 1000);
   background-color: #000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   overflow: hidden;
-  z-index: 9999;
+  z-index: 10;
 }
 
 #widget-video {
@@ -2612,6 +2617,8 @@ setInterval(updateNepaliDateTime, 1000);
 
     // After fade, remove completely
     setTimeout(() => {
+        video.play();                              // start video
+    }, 3000); // 3000ms = 3 seconds after loader
       widget.style.display = "none";
     }, 600);
   });
