@@ -100,7 +100,46 @@ height="0" width="0" style="display:none;visibility:hidden">
 
     <body style="background-image: url('assets/images/Untitled design (4).png'); background-size: cover; background-position: center center; background-repeat: no-repeat;" background-attachment: fixed  scroll-behavior: smooth;>
 
-                <!--
+      <!-- Loader -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<style>
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;body {
+  background-image: url('./assets/images/fewa.jpg');
+  background-size: cover;       /* makes it fill the screen */
+  background-position: center;  /* keeps it centered */
+  background-repeat: no-repeat; /* stops tiling */
+}
+/* match your theme */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.spinner {
+  width: 50px; height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #f0c413;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+</style>
+
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
+</script>
+
+        <!--
             - #MAIN
             -->
   <!-- Announcement Banner -->
