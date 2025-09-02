@@ -524,13 +524,9 @@ body{
 
 .social-item .social-link {
   color: var(--light-gray-70);
-	background: var(--border-gradient-onyx);
-	 width: 30px;
-  height: 30px;
-	  border-radius: 8x;
+ 	
   font-size: 18px;
-	box-shadow: var(--shadow-1);
-  padding-left: 7px;
+	
 }
 
 
