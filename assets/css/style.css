@@ -592,7 +592,7 @@ body{
 }
 
 .about-text p { 
-	 
+	 color: #f9f9f;
 	margin-bottom: 15px;
 	      list-style-type: disc;
 		margin-left: 20px;}
