@@ -845,6 +845,7 @@ align-items: flex-start;
 }
 
 .clients-item img {
+   border-raduis:20px;	
   width: 100%;
   filter: grayscale(1);
   transition: var(--transition-1);
