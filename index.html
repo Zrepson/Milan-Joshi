@@ -2602,14 +2602,13 @@ video.addEventListener("ended", () => {
 });
 </script>
 
-   <!-- 🔥 Network Status Detector-->  
-     <div id="network-status">
-         🌐 Checking...
-         </div>
-         
-         <style>
-         #network-status{
-         
+<!-- 🔥 Network Status Detector-->  
+<div id="network-status">
+  🌐 Checking...
+</div>
+
+<style>
+#network-status{
   position: fixed;
   bottom: 20px;
   left: 20px;
@@ -2621,37 +2620,53 @@ video.addEventListener("ended", () => {
   background: rgba(17, 17, 17, 0.5); 
   color: #F0C413;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: background 0.3s, color 0.3s;
+  transition: opacity 0.8s ease, background 0.3s, color 0.3s;
+  opacity: 1;
+  z-index: 9999;
 }
-         /* Hide widget on mobile screens */
-  @media only screen and (max-width: 768px) {
-    #network-status{
-      display: none;
-    }
+/* Hidden state */
+#network-status.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+/* Hide widget on mobile screens */
+@media only screen and (max-width: 768px) {
+  #network-status{
+    display: none;
   }
-     </style>
+}
+</style>
 
 <script>
-  const statusDiv = document.getElementById("network-status");
+const statusDiv = document.getElementById("network-status");
 
-  function updateStatus() {
-    if (navigator.onLine) {
-      statusDiv.textContent = "✅ Online";
-      statusDiv.style.background = "rgba(0, 150, 0, 0.8)";
-      statusDiv.style.color = "#F0C413";
-    } else {
-      statusDiv.textContent = "⚠️ Offline";
-      statusDiv.style.background = "rgba(200, 0, 0, 0.8)";
-      statusDiv.style.color = "#F0C413";
-    }
+function showStatus(message, bgColor) {
+  statusDiv.textContent = message;
+  statusDiv.style.background = bgColor;
+  statusDiv.style.color = "#F0C413";
+  statusDiv.classList.remove("hidden"); // make visible
+
+  // Auto-hide after 3 seconds
+  clearTimeout(statusDiv.timer);
+  statusDiv.timer = setTimeout(() => {
+    statusDiv.classList.add("hidden");
+  }, 3000);
+}
+
+function updateStatus() {
+  if (navigator.onLine) {
+    showStatus("✅ Online", "rgba(0, 150, 0, 0.8)");
+  } else {
+    showStatus("⚠️ Offline", "rgba(200, 0, 0, 0.8)");
   }
+}
 
-  // Initial check
-  updateStatus();
+// Initial check
+updateStatus();
 
-  // Listen for changes
-  window.addEventListener("online", updateStatus);
-  window.addEventListener("offline", updateStatus);
+// Listen for changes
+window.addEventListener("online", updateStatus);
+window.addEventListener("offline", updateStatus);
 </script>
 
     
