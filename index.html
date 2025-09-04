@@ -2484,13 +2484,13 @@ setInterval(updateNepaliDateTime, 1000);
 
 
             
-       <div id="quote">
+       <div id="quote-container">
 <blockquote id="quote"> " आजको भनाइ । " </blockquote>
 </div>
      
             
             <style>
- #quote {
+ #quote-container{
     position: fixed;
     bottom: 70px;
     right: 20px;
@@ -2503,11 +2503,11 @@ setInterval(updateNepaliDateTime, 1000);
     z-index: 10;
     user-select: none;
    max-width: 400px; /* Optional: prevents long quotes from stretching across */
-  text-align: right  
+  text-align: right;
   }
 
  @media only screen and (max-width: 768px) {
-    #quote {
+    #quote-container{
       display: none;
 }
   }
