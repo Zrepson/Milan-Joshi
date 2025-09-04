@@ -2602,6 +2602,58 @@ video.addEventListener("ended", () => {
 });
 </script>
 
+   <!-- 🔥 Network Status Detector-->  
+     <div id="network-status">
+         🌐 Checking...
+         </div>
+         
+         <style>
+         #network-status{
+         
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  background: #333;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background 0.3s, color 0.3s;
+}
+         /* Hide widget on mobile screens */
+  @media only screen and (max-width: 768px) {
+    #network-status{
+      display: none;
+    }
+  }
+     </style>
+
+<script>
+  const statusDiv = document.getElementById("network-status");
+
+  function updateStatus() {
+    if (navigator.onLine) {
+      statusDiv.textContent = "✅ Online";
+      statusDiv.style.background = "rgba(0, 150, 0, 0.8)";
+      statusDiv.style.color = "#fff";
+    } else {
+      statusDiv.textContent = "⚠️ Offline";
+      statusDiv.style.background = "rgba(200, 0, 0, 0.8)";
+      statusDiv.style.color = "#fff";
+    }
+  }
+
+  // Initial check
+  updateStatus();
+
+  // Listen for changes
+  window.addEventListener("online", updateStatus);
+  window.addEventListener("offline", updateStatus);
+</script>
+
     
 </body>
 
