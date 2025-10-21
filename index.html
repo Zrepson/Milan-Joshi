@@ -2399,7 +2399,69 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
   
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ae3e61bcd6064b6288cbb7bb5bb51d1b"}'></script><!-- End Cloudflare Web Analytics -->
 
-    
+
+     <div class="sticky-note" id="un-event">
+  Loading upcoming International event..
+</div>
+
+<style>
+.sticky-note {
+  position: fixed;
+  Top: 20px;
+  left: 20px;
+  background: #fffacd;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  border: 1px solid #e2c044;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: #222;
+  transform: rotate(-2deg);
+  z-index: 1000;
+}
+</style>
+
+<script>
+// 📅 URL to your UN Calendar (replace with your hosted .ics or public UN link)
+const icsURL = 'https://milanjoshi.com.np/assets/un-international-days.ics';
+
+// Parse ICS file and display next event
+fetch(icsURL)
+  .then(response => response.text())
+  .then(data => {
+    const events = parseICS(data);
+    const now = new Date();
+
+    // Find next upcoming event
+    const nextEvent = events.find(e => new Date(e.start) > now);
+
+    if (nextEvent) {
+      const date = new Date(nextEvent.start);
+      const options = { weekday: 'long', month: 'long', day: 'numeric' };
+      const formattedDate = date.toLocaleDateString('en-US', options);
+
+      document.getElementById('un-event').innerHTML = 
+        `🌍 Upcoming event – <b>${nextEvent.title}</b> starts ${formattedDate}!`;
+    } else {
+      document.getElementById('un-event').innerHTML = 
+        "🎉 No upcoming UN events this week!";
+    }
+  })
+  .catch(err => {
+    console.error('Error loading calendar:', err);
+    document.getElementById('un-event').innerText = 
+      "⚠️ Could not load UN calendar.";
+  });
+
+// 🧩 Simple ICS parser
+function parseICS(data) {
+  const lines = data.split(/\r?\n/);
+  const events = [];
+  let currentEvent = null;
+
+  for (
+
 <!-- Fullscreen Button -->
 <button class="fullscreen-btn" onclick="goFullscreen()" title="Enter Fullscreen">
   <i class="fa-solid fa-expand"></i>
