@@ -2400,15 +2400,15 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ae3e61bcd6064b6288cbb7bb5bb51d1b"}'></script><!-- End Cloudflare Web Analytics -->
 
 
-     <div class="sticky-note" id="un-event">
-  Loading upcoming International event..
+   <div class="sticky-note" id="un-event">
+  Loading upcoming UN event...
 </div>
 
 <style>
 .sticky-note {
   position: fixed;
-  Top: 20px;
-  left: 20px;
+  bottom: 20px;
+  right: 20px;
   background: #fffacd;
   padding: 15px 20px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
@@ -2419,68 +2419,71 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
   color: #222;
   transform: rotate(-2deg);
   z-index: 1000;
+  transition: all 0.3s ease;
+}
+.sticky-note:hover {
+  transform: rotate(0deg) scale(1.02);
 }
 </style>
 
 <script>
-// 📅 URL to your UN Calendar (replace with your hosted .ics or public UN link)
+// 🔗 Replace with your hosted .ics file (example: https://milanjoshi.com.np/assets/UNCalendar.ics)
 const icsURL = 'https://milanjoshi.com.np/assets/un-international-days.ics';
 
-// Parse ICS file and display next event
 fetch(icsURL)
   .then(response => response.text())
   .then(data => {
     const events = parseICS(data);
     const now = new Date();
 
-    // Find next upcoming event
-    const nextEvent = events.find(e => new Date(e.start) > now);
+    // Filter only future events
+    const upcoming = events.filter(e => new Date(e.start) > now);
+    upcoming.sort((a, b) => new Date(a.start) - new Date(b.start));
 
-    if (nextEvent) {
-      const date = new Date(nextEvent.start);
-      const options = { weekday: 'long', month: 'long', day: 'numeric' };
-      const formattedDate = date.toLocaleDateString('en-US', options);
+    if (upcoming.length > 0) {
+      const next = upcoming[0];
+      const date = new Date(next.start);
+      const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+      const formatted = date.toLocaleDateString('en-US', options);
 
-      document.getElementById('un-event').innerHTML = 
-        `🌍 Upcoming event – <b>${nextEvent.title}</b> starts ${formattedDate}!`;
+      document.getElementById('un-event').innerHTML =
+        `🌍 Upcoming event – <b>${next.title}</b><br>📅 Starts on ${formatted}`;
     } else {
-      document.getElementById('un-event').innerHTML = 
-        "🎉 No upcoming UN events this week!";
+      document.getElementById('un-event').innerHTML =
+        "🎉 No future UN events found in the calendar!";
     }
   })
   .catch(err => {
-    console.error('Error loading calendar:', err);
-    document.getElementById('un-event').innerText = 
-      "⚠️ Could not load UN calendar.";
+    console.error('Error reading calendar:', err);
+    document.getElementById('un-event').innerText =
+      "⚠️ Unable to load UN events.";
   });
 
-// 🧩 Simple ICS parser
+// 🧩 ICS file parser
 function parseICS(data) {
   const lines = data.split(/\r?\n/);
   const events = [];
-  let currentEvent = null;
+  let event = {};
 
   for (let line of lines) {
-    if (line.startsWith('BEGIN:VEVENT')) {
-      currentEvent = {};
-    } else if (line.startsWith('END:VEVENT')) {
-      if (currentEvent) events.push(currentEvent);
-      currentEvent = null;
-    } else if (currentEvent) {
-      if (line.startsWith('SUMMARY:')) {
-        currentEvent.title = line.replace('SUMMARY:', '').trim();
-      } else if (line.startsWith('DTSTART')) {
-        currentEvent.start = parseICSTime(line);
-      }
-    }
+    if (line.startsWith('BEGIN:VEVENT')) event = {};
+    else if (line.startsWith('END:VEVENT')) events.push(event);
+    else if (line.startsWith('SUMMARY:')) event.title = line.replace('SUMMARY:', '').trim();
+    else if (line.startsWith('DTSTART')) event.start = parseICSTime(line);
   }
-  return events.sort((a, b) => new Date(a.start) - new Date(b.start));
+  return events;
 }
 
 function parseICSTime(line) {
   const value = line.split(':')[1].trim();
   return value.includes('T') 
-    ? new Date(value.slice(0,4), value.slice(4,6)-1, value.slice(6,8), value.slice(9,11), value.slice(11,13))
+    ? new Date(
+        value.slice(0,4),
+        value.slice(4,6)-1,
+        value.slice(6,8),
+        value.slice(9,11),
+        value.slice(11,13)
+      )
     : new Date(value.slice(0,4), value.slice(4,6)-1, value.slice(6,8));
 }
 </script>
