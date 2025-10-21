@@ -2460,7 +2460,30 @@ function parseICS(data) {
   const events = [];
   let currentEvent = null;
 
-  for (
+  for (let line of lines) {
+    if (line.startsWith('BEGIN:VEVENT')) {
+      currentEvent = {};
+    } else if (line.startsWith('END:VEVENT')) {
+      if (currentEvent) events.push(currentEvent);
+      currentEvent = null;
+    } else if (currentEvent) {
+      if (line.startsWith('SUMMARY:')) {
+        currentEvent.title = line.replace('SUMMARY:', '').trim();
+      } else if (line.startsWith('DTSTART')) {
+        currentEvent.start = parseICSTime(line);
+      }
+    }
+  }
+  return events.sort((a, b) => new Date(a.start) - new Date(b.start));
+}
+
+function parseICSTime(line) {
+  const value = line.split(':')[1].trim();
+  return value.includes('T') 
+    ? new Date(value.slice(0,4), value.slice(4,6)-1, value.slice(6,8), value.slice(9,11), value.slice(11,13))
+    : new Date(value.slice(0,4), value.slice(4,6)-1, value.slice(6,8));
+}
+</script>
 
 <!-- Fullscreen Button -->
 <button class="fullscreen-btn" onclick="goFullscreen()" title="Enter Fullscreen">
