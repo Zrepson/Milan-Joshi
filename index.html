@@ -767,7 +767,39 @@ border-radius: 00px;
                   </p>
 
       
-            
+            <style>
+.image-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 15px;
+  justify-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.image-layout img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Center the bottom image */
+.image-layout img:nth-child(3) {
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
+</style>
+</head>
+<body>
+
+<div class="image-layout">
+  <img src="556047883_1128460529398644_639839572669795667_n.jpg" alt="Top Left">
+  <img src="556728078_1128460606065303_5830088828954307265_n.jpg" alt="Top Right">
+  <img src="557266016_1128460566065307_4668939742951866819_n.jpg" alt="Bottom Center">
+</div>
+
                  
       <p style="text-align: center;">"The clock is ticking — Let’s act for a <a href="https://dashboards.sdgindex.org/profiles/nepal" target="blank" style="color: orange; text-decoration: mix;"> <strong>Sustainable Development Goals in Nepal 🌱 2030.</strong></a>
  </p>
