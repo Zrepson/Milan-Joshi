@@ -731,49 +731,55 @@ border-radius: 00px;
       
 </br>
               
-        <section class="about-text">
-      
-          <div class="image-text-container">
-        
-                 <img  src="./assets/images/mm.gif" alt="Photo Album" style="width: 60%; height: auto;border-radius: 20px">
+      <section class="about-text">
 
-              
-                 <p>    In a world racing forward, the SDGs are the compass that remind us—progress means nothing if it leaves people or the planet behind.  <p> </div>    
-                       <p id="nepal-time-text">Loading Nepal Time…</p>
+  <div class="image-text-container">
 
-<script>
-  function updateNepalTime() {
-    const options = {
-      timeZone: "Asia/Kathmandu",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    };
+    <img src="./assets/images/mm.gif" 
+         alt="Photo Album" 
+         style="width: 60%; height: auto; border-radius: 20px;">
 
-    const now = new Date().toLocaleString("en-US", options);
-    document.getElementById("nepal-time-text").innerText =
-      "Nepal Time (NPT): " + now;
-  }
+    <p>
+      In a world racing forward, the SDGs are the compass that remind us—
+      progress means nothing if it leaves people or the planet behind.
+    </p>
 
-  updateNepalTime();
-  setInterval(updateNepalTime, 1000);
-</script>
+  </div>
 
-          </p>
-          
-                     
-                  
-          The clock is ticking — Let’s act for a <a href="https://dashboards.sdgindex.org/profiles/nepal" target="blank" style="color: orange; text-decoration: mix;"> <strong>Sustainable Development Goals in Nepal 🌱 2030.</strong></a>
- </p> 
-              <br>
-                    
-         
-    
+  <p id="nepal-time-text">Loading Nepal Time…</p>
 
+  <script>
+    function updateNepalTime() {
+      const options = {
+        timeZone: "Asia/Kathmandu",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      };
+
+      const now = new Date().toLocaleString("en-US", options);
+      document.getElementById("nepal-time-text").innerText =
+        "Nepal Time (NPT): " + now;
+    }
+
+    updateNepalTime();
+    setInterval(updateNepalTime, 1000);
+  </script>
+
+  <p>
+    The clock is ticking — Let’s act for a 
+    <a href="https://dashboards.sdgindex.org/profiles/nepal" 
+       target="_blank" 
+       style="color: orange; text-decoration: none;">
+       <strong>Sustainable Development Goals in Nepal 🌱 2030.</strong>
+    </a>
+  </p>
+
+</section>
 
      
             
