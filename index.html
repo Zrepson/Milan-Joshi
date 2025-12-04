@@ -737,9 +737,34 @@ border-radius: 00px;
         
                  <img  src="./assets/images/mm.gif" alt="Photo Album" style="width: 60%; height: auto;border-radius: 20px">
 
-                 <p>    In a world racing forward, the SDGs are the compass that remind us—progress means nothing if it leaves people or the planet behind.
+                 <p>    In a world racing forward, the SDGs are the compass that remind us—progress means nothing if it leaves people or the planet behind.  </p>
+              <br>
+                     <p id="nepal-time-text">Loading Nepal Time…</p>
+
+<script>
+  function updateNepalTime() {
+    const options = {
+      timeZone: "Asia/Kathmandu",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    };
+
+    const now = new Date().toLocaleString("en-US", options);
+    document.getElementById("nepal-time-text").innerText =
+      "Nepal Time (NPT): " + now;
+  }
+
+  updateNepalTime();
+  setInterval(updateNepalTime, 1000);
+</script>
+
         
-           </p>
+          
           </div>    
     
 
