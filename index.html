@@ -731,61 +731,14 @@ border-radius: 00px;
       
 </br>
               
-     <section class="about-text" style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+   
 
-  <!-- IMAGE -->
-  <img src="./assets/images/mm.gif" 
-       alt="Photo Album"
-       style="width: 150px; height: auto; border-radius: 20px;">
 
-  <!-- RIGHT SIDE: SDG text + live time -->
-  <div style="flex: 1;">
+                 <img  src="./assets/images/mm.gif" alt="Photo Album" style="width: 60%; height: auto;border-radius: 20px">
 
-    <p id="sdg-text" style="margin: 0; line-height: 1.5;">
-      In a world racing forward, the SDGs are the compass that remind us—
-      progress means nothing if it leaves people or the planet behind.</p>
-      <br>
-      <span id="nepal-time-text">Loading Nepal Time…</span>
-    </p>
-
-    <p style="margin-top: 10px;">
-      The clock is ticking — Let’s act for a 
-      <a href="https://dashboards.sdgindex.org/profiles/nepal" 
-         target="_blank" 
-         style="color: orange; text-decoration: none;">
-         <strong>Sustainable Development Goals in Nepal 🌱 2030.</strong>
-      </a>
-    </p>
-
-  </div>
-
-</section>
-
-<script>
-  function updateNepalTime() {
-    const options = {
-      timeZone: "Asia/Kathmandu",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    };
-
-    const now = new Date().toLocaleString("en-US", options);
-    document.getElementById("nepal-time-text").innerText =
-      "Nepal Time (NPT): " + now;
-  }
-
-  updateNepalTime();
-  setInterval(updateNepalTime, 1000);
-</script>
-          
-
-      
-          <br>
+                 <p>    In a world racing ahead at breakneck speed, the Sustainable Development Goals serve as our guiding compass — a constant reminder that true progress is measured not just by growth or innovation, but by how we uplift people, protect our planet, and leave no one behind. They challenge us to balance ambition with responsibility, ensuring that every step forward honors both humanity and the Earth we call home.
+           </p>
+          </div>    
 
               <div class="image-text-container">
   <img src="./assets/images/whoare.png" alt="Milan Joshi">
