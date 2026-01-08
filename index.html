@@ -2702,6 +2702,61 @@ setInterval(updateNepaliDateTime, 1000);
     
 </script>
 
+     <!-- 🖼️ Image Widget -->
+<div id="image-widget" style="display:none; opacity:0;">
+  <img src="./assets/favpng_dafd72b6b29c5b812da5b239cfd561ea.png" alt="Greetings" />
+</div>
+
+                       
+<style>
+ #image-widget {
+  max-width: 200px;   /* Adjust widget size */
+  position: fixed;
+  bottom: 120px;
+  left: 0.5px;
+  border-radius: 20px;
+  background-color: #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  overflow: hidden;
+  z-index: 10;
+  transition: opacity 0.6s ease;
+}
+
+#image-widget img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* 📱 Hide image widget on mobile */
+@media only screen and (max-width: 768px) {
+  #image-widget {
+    display: none !important;
+  }
+}
+
+    </style>
+                       
+      <script>
+const widget = document.getElementById("image-widget");
+
+// Show widget after 10 seconds
+setTimeout(() => {
+  widget.style.display = "block";
+  setTimeout(() => widget.style.opacity = 1, 50);
+}, 10000);
+
+// Optional: auto-hide after 8 seconds
+setTimeout(() => {
+  widget.style.opacity = 0;
+  setTimeout(() => {
+    widget.style.display = "none";
+  }, 600);
+}, 18000);
+</script>
+                
+                  
          
 <!-- 🔥 Video Widget -->
 <div id="video-widget" style="display:none; opacity:0;">
