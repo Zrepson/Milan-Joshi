@@ -162,10 +162,36 @@ height="0" width="0" style="display:none;visibility:hidden">
 
   </head>
 
+    
+
  <body style="background-image: url('assets/images/Background.png'); background-size: cover; background-position: center center; background-repeat: no-repeat;" background-attachment: fixed  scroll-behavior: smooth;>
-    <div id="loader">
+   
+<div id="fancy-cursor"></div>
+
+<style> 
+#fancy-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: gold;
+  border-radius: 50%;
+  pointer-events: none; /* Cursor won't block clicks */
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s;
+}
+</style>
+
+<script>
+const cursor = document.getElementById('fancy-cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+</script>
+     
+     <div id="loader">
              <div class="loader-content">
     <img src="./assets/images/cropped_image (1).png" alt="Logo" class="loader-logo">
+                 <P>"🚀 Launching Page…"</P>
   <div class="spinner"></div>
 </div>
 </div>
@@ -2701,27 +2727,7 @@ setInterval(updateNepaliDateTime, 1000);
     
 </script>
 
-<div id="fancy-cursor"></div>
 
-<style> 
-#fancy-cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background: gold;
-  border-radius: 50%;
-  pointer-events: none; /* Cursor won't block clicks */
-  transform: translate(-50%, -50%);
-  transition: transform 0.05s;
-}
-</style>
-
-<script>
-const cursor = document.getElementById('fancy-cursor');
-document.addEventListener('mousemove', e => {
-  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-});
-</script>
 
          
 <!-- 🔥 Video Widget -->
