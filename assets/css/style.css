@@ -140,12 +140,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-a {
-  display: inline-block !important;
-  white-space: nowrap !important;
-}
-
+a { text-decoration: none; }
 li { list-style: none; }
 
 img, ion-icon, a, button, time, span { display: block; }
