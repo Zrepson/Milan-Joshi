@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en"> 
 
 <head>
@@ -2483,33 +2483,35 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
   
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ae3e61bcd6064b6288cbb7bb5bb51d1b"}'></script><!-- End Cloudflare Web Analytics -->
 
-     <!-- Sticky Notes -->
+<!-- Sticky Note -->
 <div class="sticky-note">
-  <b>🐾  प्रभावशाली काममा अग्रसर  🐾</b>
+  <b>🐾 प्रभावशाली काममा अग्रसर 🐾</b>
 </div>
 
 <style>
 .sticky-note {
   position: fixed;
-  Top: 50px;
-  left: 20px;
+  top: 3rem;                 /* scalable spacing */
+  left: 2rem;
   background: #A09F9E;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
   border: 1px solid #e2c044;
   border-radius: 12px;
-  font-family: ' Noto Sans Devanagari','Inter', sans-serif;
+  font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
   font-weight: 500;
-  color: #22222;
+  color: #222222;            /* valid hex */
   transform: rotate(-2deg);
   z-index: 1000;
+  max-width: 90vw;           /* prevents overflow */
 }
 
-     @media only screen and (max-width: 768px) {
-    .sticky-note{
-      display: none;
-}
+/* Hide on mobile only */
+@media screen and (max-width: 767px) {
+  .sticky-note {
+    display: none;
   }
+}
 </style>
 
                    
