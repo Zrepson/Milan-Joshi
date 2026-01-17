@@ -141,7 +141,10 @@
   box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+a {
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
 
 li { list-style: none; }
 
