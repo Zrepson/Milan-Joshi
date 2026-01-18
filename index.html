@@ -2522,7 +2522,7 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
     
  <div class="service-card-box">
    <a href="https://www.licnepal.com.np" target="_blank" rel="noopener noreferrer">
-  <img src="./assets/images/LIC-Logo_Rajesh.png" alt="LIC Nepal" class="lic-logo" width="140" height="60 padding: 6px;  border-radius: 12px;>
+  <img src="./assets/images/LIC-Logo_Rajesh.png" alt="LIC Nepal" class="lic-logo" width="280" height="120 padding: 6px;  border-radius: 12px;>
 </a><br>
   <strong id="agent-name">Milan J.</strong>
 
@@ -2530,19 +2530,23 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
  </div>
 
 <style>
-    .service-card-box { 
-  position: fixed;
-  top: 70px;
-    right: 20px;
-
-   font-size: 16px;
-     color: #222223;
-    background: rgba(17, 17, 17, 0.5); 
-     border-radius: 12px;
-        z-index: 9999;
+   .service-card-box {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 12px;
+  background: rgba(17, 17, 17, 0.5);
+  text-align: center;
 }
 
-    </style>
+.lic-logo {
+  width: 280px;   /* display size */
+  height: 120px;  /* display size */
+  object-fit: contain;  /* preserves aspect ratio */
+  border-radius: 12px;
+  display: block;       /* avoid inline spacing issues */
+  margin: 0 auto;       /* center inside container */
+}
+   </style>
     
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
