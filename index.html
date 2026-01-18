@@ -2518,57 +2518,50 @@ An earthquake impacts the economy, causing losses and also planning & settle dow
   <i class="fa-solid fa-expand"></i>
 </button>
 
-<!-- Serivice-content-box -->    
-    
- <div class="service-card-box">
+<!-- LIC Widget -->
+<div class="service-card-box">
    <a href="https://www.licnepal.com.np" target="_blank" rel="noopener noreferrer">
-  <img src="./assets/images/LIC-Logo_Rajesh.png" alt="LIC Nepal" class="lic-logo" width="100" height="auto">
-</a>
+      <img src="./assets/images/LIC-Logo_Rajesh.png" alt="LIC Nepal" class="lic-logo" width="100" height="auto">
+   </a>
+</div>
 
-
- </div>
-
-<style>
-    .service-card-box { 
-position: fixed;
-top: 70px;
-right: 20px;
-z-index: 9999;
-}
-
-    @media only screen and (max-width: 768px) {
-    #quote-container{
-        display: none;
-    }
-}
-
-    </style>
-
-
+<!-- Life Insurance Quote -->
 <div id="life-insurance-quote-container">
   <span id="quote-text"> " जीवन सुरक्षित, मन निश्चिन्त । " </span>
 </div>
 
 <style>
-#life-insurance-quote-container{
+/* Widget Styling */
+.service-card-box { 
     position: fixed;
-    Top: 145px;
+    top: 70px;
+    right: 20px;
+    z-index: 9999;
+}
+
+/* Quote Container Styling */
+#life-insurance-quote-container {
+    position: fixed;
+    top: 145px;
     right: 20px;
     background: rgba(17, 17, 17, 0.5); 
     color: #F0C413;
-    padding: 10px ;
+    padding: 10px;
     border-radius: 12px;
     font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
     font-size: 1rem;
-    z-index: 10;
+    z-index: 9998;
     user-select: none;
     max-width: 400px;
     text-align: right;
+    transition: opacity 0.4s ease-in-out;
 }
 
+/* Hide both on mobile */
 @media only screen and (max-width: 768px) {
-    #quote-container{
-        display: none;
+    .service-card-box,
+    #life-insurance-quote-container {
+        display: none !important;
     }
 }
 </style>
@@ -2577,33 +2570,28 @@ z-index: 9999;
 document.addEventListener("DOMContentLoaded", () => {
   const quotes = [
       "जीवन सुरक्षित, मन निश्चिन्त।",
-    "आजको सुरक्षा, भोलीको भरोसा।",
-    "सुरक्षित जीवन, उज्जवल भविष्य।",
-    "बचत र सुरक्षा—सङ्गै अगाडि बढ्नुहोस्।",
-    "आज बीमा, भोली शान्ति।",
-    "जीवन बीमा: परिवारको सुरक्षा, मनको शान्ति।",
-    "अचानकको जोखिम? तयारीले सजिलो बनाउँछ।",
-    "सुरक्षा पहिलो कदम, शान्ति दोस्रो।",
-    "बीमा आज, भरोसा सधैं।",
-    "जोखिमको सामना, योजना संग।",
-    "छोटो आज, ठूलो सुरक्षा भोली।",
-    "जीवन मूल्यवान छ—यसलाई सुरक्षित राख।",
-    "परिवारको हाँसो, तपाईंको सुरक्षा।",
-    "असुरक्षा घटाउने उत्तम उपाय: जीवन बीमा।"
+      "आजको सुरक्षा, भोलीको भरोसा।",
+      "सुरक्षित जीवन, उज्जवल भविष्य।",
+      "बचत र सुरक्षा—सङ्गै अगाडि बढ्नुहोस्।",
+      "आज बीमा, भोली शान्ति।",
+      "जीवन बीमा: परिवारको सुरक्षा, मनको शान्ति।",
+      "अचानकको जोखिम? तयारीले सजिलो बनाउँछ।",
+      "सुरक्षा पहिलो कदम, शान्ति दोस्रो।",
+      "बीमा आज, भरोसा सधैं।",
+      "जोखिमको सामना, योजना संग।",
+      "छोटो आज, ठूलो सुरक्षा भोली।",
+      "जीवन मूल्यवान छ—यसलाई सुरक्षित राख।",
+      "परिवारको हाँसो, तपाईंको सुरक्षा।",
+      "असुरक्षा घटाउने उत्तम उपाय: जीवन बीमा।"
   ];
 
   const quoteText = document.getElementById("quote-text");
-  const container = document.getElementById("quote-container");
+  const container = document.getElementById("life-insurance-quote-container");
 
   let index = 0;
 
   // Initial quote
   quoteText.textContent = quotes[index];
-
-  // Slide in after page load
-  setTimeout(() => {
-    container.classList.add("show");
-  }, 800);
 
   // Rotate quotes every 6 seconds
   setInterval(() => {
@@ -2617,8 +2605,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 6000);
 });
 </script>
-
-    
 
 
     
