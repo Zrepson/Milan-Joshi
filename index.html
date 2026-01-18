@@ -2540,13 +2540,13 @@ z-index: 9999;
 
 
 <div id="life-insurance-quote-container">
-  <blockquote id="quote"> " जीवन सुरक्षित, मन निश्चिन्त । " </blockquote>
+  <span id="quote-text"> " जीवन सुरक्षित, मन निश्चिन्त । " </span>
 </div>
 
 <style>
 #life-insurance-quote-container{
     position: fixed;
-    Top: 130px;
+    Top: 150px;
     right: 20px;
     background: rgba(17, 17, 17, 0.5); 
     color: #F0C413;
@@ -2568,8 +2568,9 @@ z-index: 9999;
 </style>
 
 <script>
-const quotes = [
-    "जीवन सुरक्षित, मन निश्चिन्त।",
+document.addEventListener("DOMContentLoaded", () => {
+  const quotes = [
+      "जीवन सुरक्षित, मन निश्चिन्त।",
     "आजको सुरक्षा, भोलीको भरोसा।",
     "सुरक्षित जीवन, उज्जवल भविष्य।",
     "बचत र सुरक्षा—सङ्गै अगाडि बढ्नुहोस्।",
@@ -2583,11 +2584,36 @@ const quotes = [
     "जीवन मूल्यवान छ—यसलाई सुरक्षित राख।",
     "परिवारको हाँसो, तपाईंको सुरक्षा।",
     "असुरक्षा घटाउने उत्तम उपाय: जीवन बीमा।"
-];
+  ];
 
-document.getElementById("quote").textContent =
-    quotes[Math.floor(Math.random() * quotes.length)];
+  const quoteText = document.getElementById("quote-text");
+  const container = document.getElementById("quote-container");
+
+  let index = 0;
+
+  // Initial quote
+  quoteText.textContent = quotes[index];
+
+  // Slide in after page load
+  setTimeout(() => {
+    container.classList.add("show");
+  }, 800);
+
+  // Rotate quotes every 6 seconds
+  setInterval(() => {
+    index = (index + 1) % quotes.length;
+    quoteText.style.opacity = 0;
+
+    setTimeout(() => {
+      quoteText.textContent = quotes[index];
+      quoteText.style.opacity = 1;
+    }, 400);
+  }, 6000);
+});
 </script>
+
+    
+
 
     
 <!-- Font Awesome -->
