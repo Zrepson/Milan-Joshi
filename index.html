@@ -2539,6 +2539,55 @@ z-index: 9999;
     </style>
 
 
+<div id="quote-container">
+  <blockquote id="quote"> " जीवन सुरक्षित, मन निश्चिन्त । " </blockquote>
+</div>
+
+<style>
+#quote-container{
+    position: fixed;
+    Top: 100px;
+    right: 20px;
+    background: rgba(17, 17, 17, 0.5); 
+    color: #F0C413;
+    padding: 10px ;
+    border-radius: 12px;
+    font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+    font-size: 1rem;
+    z-index: 10;
+    user-select: none;
+    max-width: 400px;
+    text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+    #quote-container{
+        display: none;
+    }
+}
+</style>
+
+<script>
+const quotes = [
+    "जीवन सुरक्षित, मन निश्चिन्त।",
+    "आजको सुरक्षा, भोलीको भरोसा।",
+    "सुरक्षित जीवन, उज्जवल भविष्य।",
+    "बचत र सुरक्षा—सङ्गै अगाडि बढ्नुहोस्।",
+    "आज बीमा, भोली शान्ति।",
+    "जीवन बीमा: परिवारको सुरक्षा, मनको शान्ति।",
+    "अचानकको जोखिम? तयारीले सजिलो बनाउँछ।",
+    "सुरक्षा पहिलो कदम, शान्ति दोस्रो।",
+    "बीमा आज, भरोसा सधैं।",
+    "जोखिमको सामना, योजना संग।",
+    "छोटो आज, ठूलो सुरक्षा भोली।",
+    "जीवन मूल्यवान छ—यसलाई सुरक्षित राख।",
+    "परिवारको हाँसो, तपाईंको सुरक्षा।",
+    "असुरक्षा घटाउने उत्तम उपाय: जीवन बीमा।"
+];
+
+document.getElementById("quote").textContent =
+    quotes[Math.floor(Math.random() * quotes.length)];
+</script>
 
     
 <!-- Font Awesome -->
@@ -2740,6 +2789,7 @@ updateNepaliDateTime();
 setInterval(updateNepaliDateTime, 1000);
 </script>
 
+    
 
             
        <div id="quote-container">
