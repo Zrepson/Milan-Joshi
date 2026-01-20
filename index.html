@@ -580,11 +580,12 @@ let i = 0;
 const speed = 25; // typing speed in ms
 
 function typeWriter() {
-    if (i < text.length) {
-        document.getElementById("live-text").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
+  if (i < text.length) {
+    const char = text.charAt(i);
+    el.innerHTML += char === "\n" ? "<br>" : char;
+    i++;
+    setTimeout(typeWriter, speed);
+  }
 }
 
 typeWriter();
