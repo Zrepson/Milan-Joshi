@@ -1941,39 +1941,7 @@ Participated in national service projects and social awareness events and impact
                  <img src="./assets/images/a (2).jpg" alt="From a Humble Beginning" style="width: 80%; height: auto; ; border-radius: 20px;" style="center">
              
                  
-                  <details>
-                        <summary><span>MY STORIES : How was my childhood in Kathmandu ?</span><br></summary>
-                               <p class="about-text">
-                                   <br>
-    <strong>Family & Cultural Background:</strong><br>
-     •As a Millennials (Generation Y), Middle Class, Newar Family - Joshi to a father, A group family grewing up with 3 sister and a brother from different mother and 2 upcoming junior sister as odd male and losing one elder sister with braintumer at Kathmandu -1.<br>
-    <br> 
-    <strong>Environmental, Culture & Food Memories</strong><br>
-    • Cold wind that dry up your hands,head and feet.<br>
-    • Water levels drops to freezing points sometimes.<br>              
-    • A month winter vacactions and foggy atmosphere.<br>
-    • Cold Water and sanitations hesitation.<br>
-    • More Greenary and less poppulation.<br>
-    • Less multicultural policies and more common culture in Bhaktapur, Kathmandu and Patan .<br>
-    • Nutrition in foods and ghee, red meat, yougurt were common source of consumption.<br>
-                                   
-<br>
-    <strong>Memories wrapped in silence:</strong><br>
-    • Met a seroius accident, chasing to a cycle,and was badly wouned to a right leg at Kathmandu-1. <Br>
-    • Group Family, Family conflicts, Homelessness and forced to move to New Banewshor.<br>
-    • Load-shedding officially became a daily lifestyle.<br>
-    • Faced revolution change & its impacts on mental health and cultural Change from monarchism to federalism.<br>                
-    • Sucidal attempt, self Harm, adopting smoking habbits & other bad habbits and recommended to take medicine for depression for a cause to a  child who takes misbehaving & discrimination seriously and also may be Autism Childhood.<br>
-
-                                   
-  <br>                                 
-   <strong>Memories that still glow:</strong><br>
-    • Flying kites with mates & watching cartoon network.<br>
-    • Got a first computer , Pentium 4 and enjoyed international songs; Greenday, Simple Plan & PC Games ; Delta Force, Age of Empire.<br>
-    • Participating family & festival events.<br>
-    • Playing Urban Ninja-crawling from a building to another at baneshwor and creative artworks as a hobby.<br>
-                               </p>                
-                    <br>
+                c
  <img src="./assets/images/photos.gif" alt="Photo Collection" style="width: 50%; height: auto; ; border-radius: 20px;" style="center">
              
 
@@ -1996,37 +1964,64 @@ Participated in national service projects and social awareness events and impact
             <img src="./assets/images/a (1).jpg" alt="From a Humble Beginning" style="width: 80%; height: auto; border-radius: 20px; class" center" "> 
 
             <br>
-             <details>       
-                      <summary> <span> MY STORIES : How was my teen age in a Regional Provience ? </span></summary><br>
-               <p class="about-text">
-                   <br>
-<strong>Environmental, Culture & Food Memories</strong><br>
-    • Cold & warm Temperature in morning and evening , sunny day with blue sky and clean air.<br>
-    • Sub Tropical monsoon climate with often 2 to 3 times rain drops a day with cloud brusting in seasons.<br>              
-    • More of the mongolism culture and rising multiculturism culture, clashes and issues.<br>
-    • Fish, Chickens, Local Green Vegies and Fruits were part of consumpution.<br>
-    • Faced live, climate change impact on seti river and flood disaster at Bhurjung Khola, Kaski.<br>
-    • Faced live, climate change impact on hills of Gandaki Provience and Landslide disaster at  Lumle, Bhadaure, kaski.<br>
-    • More Greenary and less poppulation.<br>
-    
+            <details>
+  <summary>
+    <span>MY STORIES : How was my childhood in Kathmandu ?</span>
+  </summary>
 
-<br>
-    <strong>Memories wrapped in silence:</strong><br>
-    • Racial Discrimination & caught into a fight.<br> 
-    • Sucidal attempt, for a cause  to a child who takes misbehaving & discrimination seriously at Gandaki Provience.<br>
-    • Racial Discrimination in a work place and in community at Gandaki Provience.<br>
-    • Catching scars while working hard on family business in Jorpatai, Kathmandu.<br>             
+  <p id="story-text" class="about-text"></p>
+</details>
 
-    <br>
-   <strong>Memories that still glow:</strong><br>
-    • Treking, Swimming, Forest Bathing, Festival Dancing, River diving, Festival Singing, Cycling and Travelling with Little Step male and female mates.<br>          
-    • Event Management & Participation of a Program organized by Leo Club of Pokhara.<br>         
-    • Participating festival events such as  Deusi Bhailo Program , events such as traditional farming in Ashar -15  & gatherings with friends.<br>
-    • Helping Earthquake victims at the time of quake with INF , donating infant childrens & human trafficking with Helping Hands from festival incomes and charity.<br>
-    • Donating blood in a blood donation program organized & led by community & leo club of Pokhara and others.<br>
-    • Helping community in Environemental Restoration at Pardi,Birauta,Kaskl,Pokhara <br>                
-    • Geting Involved in Hospitality Management, Banking Management & also Family Bussiness in kathmandu.<br>         
-               </p>
+<script>
+const storyText = `
+Family & Cultural Background:
+
+• A Millennial (Generation Y) from a middle-class Newar (Joshi) family.
+• Grew up in a large joint family with three sisters, one brother, and later two younger sisters.
+• Experienced early loss within the family and the realities of Kathmandu-1 life.
+
+Environmental, Culture & Food Memories:
+
+• Cold winds that cracked hands, head, and feet.
+• Water levels dropping to near-freezing points.
+• Long winter vacations wrapped in fog.
+• Hesitation around cold water and sanitation.
+• More greenery, less population.
+• Shared culture across Bhaktapur, Kathmandu, and Patan.
+• Ghee, red meat, yogurt, and nutrition-rich foods as daily staples.
+
+Memories wrapped in silence:
+
+• A serious childhood accident resulting in long recovery.
+• Family conflicts, displacement, and relocation to New Baneshwor.
+• Load-shedding becoming a daily routine.
+• Living through political transition and cultural shift.
+• Early struggles with mental health and behavioral challenges.
+
+Memories that still glow:
+
+• Flying kites and watching Cartoon Network.
+• First computer (Pentium 4), music, and PC games.
+• Family gatherings and festivals.
+• Urban exploration, creative art, and playful risk-taking.
+`;
+
+let i = 0;
+const speed = 20;
+const el = document.getElementById("story-text");
+
+function typeStory() {
+  if (i < storyText.length) {
+    const char = storyText.charAt(i);
+    el.innerHTML += char === "\n" ? "<br>" : char;
+    i++;
+    setTimeout(typeStory, speed);
+  }
+}
+
+typeStory();
+</script>
+
                    <br>
           <img src="./assets/images/Photo album.gif" alt="Photos Collection" style="width: 50%; height: auto; border-radius: 20px; class"enter"; ">         
             </li>
