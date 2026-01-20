@@ -39,7 +39,13 @@
   <meta name="twitter:image" content="https://milanjoshi.com.np/assets/images/cropped_image (1).png">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://milanjoshi.com.np/">
+
+<script>
+const canonical = document.createElement("link");
+canonical.rel = "canonical";
+canonical.href = "https://milanjoshi.com.np/";
+document.head.appendChild(canonical);
+</script>
 
      <!--
     - favicon
