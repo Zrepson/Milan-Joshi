@@ -568,13 +568,48 @@ window.addEventListener("load", () => {
       
           <div class="image-text-container">
   <img src="./assets/images/kot.png" alt="Milan Joshi" >
-              <p> <strong>Milan Joshi (मिलन जोशी)</strong> also known as Milan J., is a dedicated  Life Insurance Advisor and former Project Coordinator based in Kathmandu, Nepal.
- He brings a rare blend of strategic thinking, operational expertise, and organizational insight, helping businesses and individuals navigate complex challenges with clarity and precision.
-       <br><br>
-     With experience spanning project management, life insurance consulting, administration, and corporate social responsibility, Milan combines analytical rigor with a people-first approach to deliver meaningful results.
-   </p>
-          </div>
+              <p id="live-text"></p>
+      </div>
+<script>
+const text = `Milan Joshi (मिलन जोशी), also known as Milan J., is a dedicated Life Insurance Advisor and former Project Coordinator based in Kathmandu, Nepal.
+He brings a rare blend of strategic thinking, operational expertise, and organizational insight, helping businesses and individuals navigate complex challenges with clarity and precision.
 
+With experience spanning project management, life insurance consulting, administration, and corporate social responsibility, Milan combines analytical rigor with a people-first approach to deliver meaningful results.`;
+
+let i = 0;
+const speed = 25; // typing speed in ms
+
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("live-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+typeWriter();
+</script>
+
+      <style>
+.image-text-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.image-text-container img {
+  width: 120px;
+  border-radius: 8px;
+}
+
+#live-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111;
+  white-space: pre-wrap; /* preserves line breaks */
+}
+</style>
 
     
      <p>
