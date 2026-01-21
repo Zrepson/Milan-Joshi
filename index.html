@@ -181,44 +181,7 @@ height="0" width="0" style="display:none;visibility:hidden">
 
     
 
- <body style="background-image: url('assets/images/SAVE_20200216_115454-01.jpeg'); background-size: center;border-radius:15px; background-position: center; background-repeat: no-repeat;" background-attachment: fixed ;background-repeat: no-repeat;>
-  <style>
-     .parallax {
-  background-image: url("bg.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-}
-</style>
-     <script>
-       window.addEventListener("scroll", () => {
-  const scrolled = window.pageYOffset;
-  document.querySelector(".parallax").style.backgroundPositionY =
-    -(scrolled * 0.3) + "px";
-});
-   </script>
-<div id="fancy-cursor"></div>
-
-<style> 
-#fancy-cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background: gold;
-  border-radius: 50%;
-  pointer-events: none; /* Cursor won't block clicks */
-  transform: translate(-50%, -50%);
-  transition: transform 0.05s;
-  z-index: 100000;
-}
-</style>
-
-<script>
-const cursor = document.getElementById('fancy-cursor');
-document.addEventListener('mousemove', e => {
-  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-});
-</script>
+<body style="background-image: url('assets/images/Background.png'); background-size: cover;border-radius:15px; background-position: center center; background-repeat: no-repeat;" background-attachment: fixed  scroll-behavior: smooth;>
      
      <div id="loader">
              <div class="loader-content">
