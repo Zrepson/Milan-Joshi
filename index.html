@@ -497,42 +497,75 @@ window.addEventListener("load", () => {
       <!--
         - #NAVBAR
       -->
+<nav class="navbar">
+  <ul class="navbar-list">
+    <li class="navbar-item">
+      <button class="navbar-link active" data-route="/about">About</button>
+    </li>
 
-      <nav class="navbar">
-    
- <ul class="navbar-list">
+    <li class="navbar-item">
+      <button class="navbar-link" data-route="/resume">Resume</button>
+    </li>
 
-          <li class="navbar-item">
-              
-           <button class="navbar-link  active" data-nav-link>About</button>
+    <li class="navbar-item">
+      <button class="navbar-link" data-route="/portfolio">Portfolio</button>
+    </li>
 
-          </li>
+    <li class="navbar-item">
+      <button class="navbar-link" data-route="/blog">Blog</button>
+    </li>
 
-          <li class="navbar-item">
-             <button class="navbar-link" data-nav-link>Resume</button>
+    <li class="navbar-item">
+      <button class="navbar-link" data-route="/contact">Contact</button>
+    </li>
+  </ul>
+</nav>
 
-             </li>
-
-          <li class="navbar-item">
-             <button class="navbar-link" data-nav-link>Portfolio</button>
-
-
-          </li>
-
-          <li class="navbar-item">
-           <button class="navbar-link" data-nav-link>Blog</button>
-
-          </li>
-
-          <li class="navbar-item">
-          <button class="navbar-link" data-nav-link>Contact</button>
-
-          </li>
-
-        </ul>
-      </nav>
   
+<section id="about">About content</section>
+<section id="resume" hidden>Resume content</section>
+<section id="portfolio" hidden>Portfolio content</section>
+<section id="blog" hidden>Blog content</section>
+<section id="contact" hidden>Contact content</section>
 
+<script>
+const buttons = document.querySelectorAll(".navbar-link");
+const sections = document.querySelectorAll("section");
+
+function navigate(path) {
+  // Update URL
+  history.pushState({}, "", path);
+
+  // Hide all sections
+  sections.forEach(sec => sec.hidden = true);
+
+  // Show matching section
+  const id = path.replace("/", "") || "about";
+  const target = document.getElementById(id);
+  if (target) target.hidden = false;
+
+  // Active state
+  buttons.forEach(btn => btn.classList.remove("active"));
+  document
+    .querySelector(`[data-route='/${id}']`)
+    ?.classList.add("active");
+}
+
+// Button click handling
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    navigate(button.dataset.route);
+  });
+});
+
+// Handle browser back/forward
+window.addEventListener("popstate", () => {
+  navigate(location.pathname);
+});
+
+// Load correct section on refresh
+navigate(location.pathname);
+</script>
 
 
 
