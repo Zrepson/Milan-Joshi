@@ -614,13 +614,41 @@ typeWriter();
      <p>
            His work focuses on building efficient systems, fostering team growth, and creating long-term value for clients and communities alike.</p>
    
-    <p>
-      <strong style="color: #E4BA14;"><em>Vision Statement</em></strong><br>
-     To empower individuals and organizations in Nepal to achieve financial security, operational excellence, and lasting positive impact through ethical advisory, innovative project management, and community-focused initiatives.</p>
-      
-<p>    <strong style="color: #E4BA14;"><em>Mission Statement</em></strong><br>
-To deliver reliable life insurance solutions while leveraging project coordination and management expertise to enhance systems, support local communities, and create measurable, sustainable outcomes.</p>
+  <p>
+  <strong style="color: #E4BA14;"><em>Vision Statement</em></strong><br>
+  <span id="vision-text"></span>
+</p>
 
+<p>
+  <strong style="color: #E4BA14;"><em>Mission Statement</em></strong><br>
+  <span id="mission-text"></span>
+</p>
+
+<script>
+const visionText = "To empower individuals and organizations in Nepal to achieve financial security, operational excellence, and lasting positive impact through ethical advisory, innovative project management, and community-focused initiatives.";
+const missionText = "To deliver reliable life insurance solutions while leveraging project coordination and management expertise to enhance systems, support local communities, and create measurable, sustainable outcomes.";
+
+function typeWriter(elementId, text, speed = 25, callback = null) {
+  let i = 0;
+  const el = document.getElementById(elementId);
+
+  function type() {
+    if (i < text.length) {
+      el.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    } else if (callback) {
+      callback();
+    }
+  }
+  type();
+}
+
+// Start typing Vision first, then Mission after a small delay
+typeWriter("vision-text", visionText, 25, () => {
+  setTimeout(() => typeWriter("mission-text", missionText, 25), 500);
+});
+</script>
 
 <p>Over the years, he has worked across diverse teams and initiatives, building operational frameworks, improving coordination, and supporting organizations in achieving sustainable outcomes. He values ethical practice, transparent communication, and consistency—because shortcuts look good today and fail tomorrow.
 </p>
