@@ -181,8 +181,22 @@ height="0" width="0" style="display:none;visibility:hidden">
 
     
 
- <body style="background-image: url('assets/images/Background.png'); background-size: cover;border-radius:15px; background-position: center center; background-repeat: no-repeat;" background-attachment: fixed  scroll-behavior: smooth;>
-   
+ <body style="background-image: url('assets/images/SAVE_20200216_115454-01.jpeg'); background-size: cover;border-radius:15px; background-position: center; background-repeat: no-repeat;" background-attachment: fixed ;background-repeat: no-repeat;>
+  <style>
+     .parallax {
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+</style>
+     <script>
+       window.addEventListener("scroll", () => {
+  const scrolled = window.pageYOffset;
+  document.querySelector(".parallax").style.backgroundPositionY =
+    -(scrolled * 0.3) + "px";
+});
+   </script>
 <div id="fancy-cursor"></div>
 
 <style> 
