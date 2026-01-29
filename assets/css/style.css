@@ -320,29 +320,13 @@ main {
   min-width: 259px;
 }
 
-body {
-  margin: 0;
-  height: 100vh;
-  background: #000;
-  overflow: hidden;
-}
+body{
 
-body::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: starsMove 60s linear infinite;
-  opacity: 0.15;
-}
 
-@keyframes starsMove {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50%); }
-}
 
+
+  position: relative;
+}
 
 
 
