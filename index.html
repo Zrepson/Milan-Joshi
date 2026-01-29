@@ -182,8 +182,37 @@ height="0" width="0" style="display:none;visibility:hidden">
 
     
 
-<body style="background-image: url('assets/images/Background.png'); background-size: cover;border-radius:15px; background-position: center center; background-repeat: no-repeat;" background-attachment: fixed  scroll-behavior: smooth;>
-     
+<body>
+ 
+  <div class="page-wrapper">
+    <style>
+        body {
+  margin: 0;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: starsMove 60s linear infinite;
+  opacity: 0.15;
+}
+
+@keyframes starsMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+        </style>
+  </div>
+
+
      <div id="loader">
              <div class="loader-content">
     <img src="./assets/images/cropped_image (1).png" alt="Logo" class="loader-logo">
