@@ -185,27 +185,21 @@ height="0" width="0" style="display:none;visibility:hidden">
 <body>
  
     <style>
-        body {
+.body {
   margin: 0;
-  height: 100vh;
-  background: #000;
-  overflow: hidden;
-}
+  min-height: 100vh;
 
-body::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: starsMove 60s linear infinite;
-  opacity: 0.15;
-}
+  background: 
+    radial-gradient(circle at 20% 30%, #1a1a2e, transparent 40%),
+    radial-gradient(circle at 80% 70%, #16213e, transparent 40%),
+    linear-gradient(135deg, #0f0f1a, #1b1b2f);
 
-@keyframes starsMove {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50%); }
+  background-attachment: fixed;   /* keeps background still while scrolling */
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+  scroll-behavior: smooth;
 }
 
         </style>
