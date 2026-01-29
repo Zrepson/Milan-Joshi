@@ -321,9 +321,37 @@ main {
 }
 
 
-body{
+body {
+  margin: 0;
+  height: 100vh;
+  background: #0f0f1a;
+  overflow: hidden;
   position: relative;
 }
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.7;
+}
+
+body::before {
+  background: #ff4ecd;
+  top: -100px;
+  left: -100px;
+}
+
+body::after {
+  background: #4ecbff;
+  bottom: -100px;
+  right: -100px;
+}
+
 
 
 .slide{
