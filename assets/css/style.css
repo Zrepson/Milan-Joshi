@@ -1534,6 +1534,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .service-content-box { text-align: left; }
 
+	/* growth path */
+
+  .growth-path-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .growth-path-cta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+
+
   /* testimonials */
 
   .testimonials-title { margin-bottom: 25px; }
@@ -1805,6 +1818,13 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 950px;
     box-shadow: var(--shadow-5);
   }
+	  /**
+   * ABOUT
+   */
+
+  .growth-path-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+
 
 
 
