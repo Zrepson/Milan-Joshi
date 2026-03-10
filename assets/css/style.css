@@ -198,10 +198,21 @@ body {
 article {
   background: var(--eerie-black-2);
   border: 1px solid var(--jet);
-  border-radius: 20px;
+  border-radius: 20px;z
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
+	background:
+    linear-gradient(white,white) padding-box,
+    linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet) border-box;
+  background-size:400% 400%;
+  animation:rainbowMove 6s linear infinite;
+}
+
+@keyframes rainbowMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
 }
 
 .separator {
@@ -217,6 +228,17 @@ article {
   width: 30px;
   height: 30px;
   border-radius: 8px;
+	 background:
+    linear-gradient(white,white) padding-box,
+    linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet) border-box;
+  background-size:400% 400%;
+  animation:rainbowMove 6s linear infinite;
+	@keyframes rainbowMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+}
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,6 +304,7 @@ article.active {
   height: 3px;
   background: var(--text-gradient-yellow);
   border-radius: 3px;
+	
 }
 
 .has-scrollbar::-webkit-scrollbar {
