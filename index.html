@@ -1639,31 +1639,43 @@ In a fast-moving world, the Sustainable Development Goals are our compass, remin
 
 <!-- Sticky Notes -->
 <div class="sticky-note">
-  <div class="rainbow-text">🐾 “ Open for Purposeful Projects. ” 🐾</div>
+  <div class="rainbow-animate">🐾 “ Open for Purposeful Projects. ” 🐾</div>
 </div>
 
 <style>
 .sticky-note {
   position: fixed;
-    top: 20px;
-    left: 20px;
-   
-
-   
+    top: 0px;
+    left: 00px;
     font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
-    font-size: 1rem;
+    font-size: 0.8rem;
     z-index: 1000;
-    
   text-align: left;
 
 }
  
-.rainbow-text {
+.rainbow-animate {
   font-weight: bold;
-  background: linear-gradient(90deg, red, orange, yellow, green, gold, silver, violet);
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 300%;
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* This makes the gradient show inside text */
+  color: transparent;
+  animation: rainbowMove 4s linear infinite;
+}
 
+@keyframes rainbowMove {
+  0% {background-position: 0%}
+  100% {background-position: 300%}
 }
 
  
@@ -1675,7 +1687,9 @@ In a fast-moving world, the Sustainable Development Goals are our compass, remin
   }
 
 </style>
-  
+
+
+ 
 <!-- Fullscreen Button -->
 <button class="fullscreen-btn" onclick="goFullscreen()" title="Enter Fullscreen">
   <i class="fa-solid fa-expand"></i>
