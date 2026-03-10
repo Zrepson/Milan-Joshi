@@ -1645,30 +1645,35 @@ In a fast-moving world, the Sustainable Development Goals are our compass, remin
 <style>
 .sticky-note {
   position: fixed;
-  Top: 50px;
-  left: 20px;
-  padding: 10px;
-  font-family: ' Noto Sans Devanagari','Inter', sans-serif;
-  font-weight: 500;
-  color: #22222;
-  transform: rotate(-2deg);
-  z-index: 1000;
+    bottom: 70px;
+    left: 20px;
+    background: rgba(17, 17, 17, 0.5); 
+    color: #F0C413;
+    padding: 10px ;
+    border-radius: 12px;
+    font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+    font-size: 1rem;
+    z-index: 10;
+    user-select: none;
+   max-width: 400px; /* Optional: prevents long quotes from stretching across */
+  text-align: left;
 
->
+}
+ 
 .rainbow-text {
   font-weight: bold;
   background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* This makes the gradient show inside text */
 
- 
+}
 
  
 
      @media only screen and (max-width: 768px) {
     .sticky-note{
       display: none;
-}
+
   }
 
 </style>
