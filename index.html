@@ -1664,8 +1664,16 @@ In a fast-moving world, the Sustainable Development Goals are our compass, remin
   background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* This makes the gradient show inside text */
+
+  /* subtle black outline / highlight */
+  text-shadow:
+    1px 1px 1px #000,
+   -1px 1px 1px #000,
+    1px -1px 1px #000,
+   -1px -1px 1px #000;
 }
 
+ 
 
      @media only screen and (max-width: 768px) {
     .sticky-note{
