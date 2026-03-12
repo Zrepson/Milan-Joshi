@@ -592,6 +592,44 @@ typeWriter("vision-text", visionText, 25, () => {
 });
 </script>
 
+
+<p>
+  <strong style="color: #E4BA14;"><em>Why wrok with me</em></strong><br>
+  <span id="vision-text"></span>
+</p>
+
+<p>
+  <strong style="color: #E4BA14;"><em>My Creative Workflow</em></strong><br>
+  <span id="mission-text"></span>
+</p>
+
+<script>
+const visionText = "I turn ideas into impact. I value clarity, creativity, and results—making sure your vision isn’t just seen, it’s felt. I keep things smooth, strategic, and full of energy so your project shines.";
+const missionText = "Discover → Ideate → Plan → Execute → Refine → Deliver
+I dive deep into your goals, brainstorm bold ideas, structure them for success, craft with precision, tweak for perfection, and deliver results that actually work. simple, smart, effective.";
+
+function typeWriter(elementId, text, speed = 25, callback = null) {
+  let i = 0;
+  const el = document.getElementById(elementId);
+
+  function type() {
+    if (i < text.length) {
+      el.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    } else if (callback) {
+      callback();
+    }
+  }
+  type();
+}
+
+// Start typing Vision first, then Mission after a small delay
+typeWriter("vision-text", visionText, 25, () => {
+  setTimeout(() => typeWriter("mission-text", missionText, 25), 500);
+});
+</script>
+   
 <p>Over the years, he has worked across diverse teams and initiatives, building operational frameworks, improving coordination, and supporting organizations in achieving sustainable outcomes. He values ethical practice, transparent communication, and consistency—because shortcuts look good today and fail tomorrow.
 </p>
  <p>     
