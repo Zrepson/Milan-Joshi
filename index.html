@@ -592,42 +592,6 @@ typeWriter("vision-text", visionText, 25, () => {
 });
 </script>
 
-
-<p>
-  <strong style="color: #E4BA14;"><em>Why Work With Me</em></strong><br>
-  <span id="why-text"></span>
-</p>
-
-<p>
-  <strong style="color: #E4BA14;"><em>My Creative Workflow</em></strong><br>
-  <span id="workflow-text"></span>
-</p>
-
-<script>
-const whyText = "I turn ideas into impact. I combine clarity, creativity, and strategy to bring projects to life. I anticipate challenges, communicate openly, and deliver results that matter.";
-const workflowText = "Discover → Ideate → Plan → Execute → Refine → Deliver : I research deeply, brainstorm boldly, structure precisely, craft carefully, iterate thoughtfully, and deliver effectively.";
-
-function typeWriter(elementId, text, speed = 25, callback = null) {
-  let i = 0;
-  const el = document.getElementById(elementId);
-
-  function type() {
-    if (i < text.length) {
-      el.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    } else if (callback) {
-      callback();
-    }
-  }
-  type();
-}
-
-// Start typing Why Work With Me first, then Workflow after a small delay
-typeWriter("why-text", whyText, 25, () => {
-  setTimeout(() => typeWriter("workflow-text", workflowText, 25), 500);
-});
-</script>
    
 <p>Over the years, he has worked across diverse teams and initiatives, building operational frameworks, improving coordination, and supporting organizations in achieving sustainable outcomes. He values ethical practice, transparent communication, and consistency—because shortcuts look good today and fail tomorrow.
 </p>
@@ -870,7 +834,17 @@ In a fast-moving world, the Sustainable Development Goals are our compass, remin
    Beyond his formal work, he’s passionate about technology and digital innovation. Reading, exercise, and keep him grounded, curious, and constantly growing. He also mentors people, helping them build clarity, confidence, and direction — guided by real-life lessons, not just theory.</p>
                      </div>
 
-      
+
+   <strong style="color: #E4BA14;"><em>Why Work With Me</em></strong><br>
+   <p>
+    I turn ideas into impact. I value clarity, creativity, and results—making sure your vision isn’t just seen, it’s felt. I keep things smooth, strategic, and full of energy so your project shines.
+   </p>
+
+     <strong style="color: #E4BA14;"><em>My Creative Workflow</em></strong><br>
+   <p>
+   Discover → Ideate → Plan → Execute → Refine → Deliver: 
+I dive deep into your goals, brainstorm bold ideas, structure them for success, craft with precision, tweak for perfection, and deliver results that actually work. Simple, smart, effective. 
+   </p>
           </serction>
       
         
