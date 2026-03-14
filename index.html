@@ -1529,132 +1529,14 @@ In a fast-moving world, the Sustainable Development Goals are our compass, remin
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
-         <!DOCTYPE html>
 
 
-        <section class="mapbox" data-mapbox>
-           <style>
-    #map {
-      height: 600px;
-      width: 100%;
-    }
-    #filter-bar {
-      margin: 10px;
-      text-align: center;
-    }
-    #filter-bar input, #filter-bar select {
-      padding: 5px;
-      margin-right: 5px;
-    }
-  </style>
 
-
-<div id="filter-bar">
-  <input type="text" id="search-input" placeholder="Search locations...">
-  <select id="category-filter">
-    <option value="">All</option>
-    <option value="office">Office</option>
-    <option value="store">Store</option>
-    <option value="event">Event</option>
-  </select>
-  <button onclick="filterMarkers()">Filter</button>
-</div>
-
-<div id="map"></div>
-
-<script>
-  let map;
-  let markers = [];
-  const locations = [
-    {name: "Head Office", lat: 27.7172, lng: 85.3240, type: "office", info: "Main office, Kathmandu"},
-    {name: "Branch Store", lat: 27.7000, lng: 85.3333, type: "store", info: "Branch store near Thamel"},
-    {name: "Event Hall", lat: 27.7120, lng: 85.3150, type: "event", info: "Upcoming tech event"}
-  ];
-
-  function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-      center: {lat: 27.7172, lng: 85.3240},
-      zoom: 13
-    });
-
-    const infoWindow = new google.maps.InfoWindow();
-
-    // Add markers
-    locations.forEach((loc) => {
-      const marker = new google.maps.Marker({
-        position: {lat: loc.lat, lng: loc.lng},
-        map: map,
-        title: loc.name,
-        icon: getIcon(loc.type)
-      });
-
-      marker.addListener("click", () => {
-        infoWindow.setContent(`
-          <div>
-            <h3>${loc.name}</h3>
-            <p>${loc.info}</p>
-            <button onclick="getDirections(${loc.lat}, ${loc.lng})">Get Directions</button>
-          </div>
-        `);
-        infoWindow.open(map, marker);
-      });
-
-      markers.push(marker);
-    });
-
-    // Geolocation
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const userPos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
-          map.setCenter(userPos);
-          new google.maps.Marker({
-            position: userPos,
-            map: map,
-            title: "Your Location",
-            icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-          });
-        },
-        () => { console.log("Geolocation denied or unavailable."); }
-      );
-    }
-  }
-
-  function getIcon(type) {
-    const icons = {
-      office: "https://maps.google.com/mapfiles/ms/icons/red-dot.png",
-      store: "https://maps.google.com/mapfiles/ms/icons/green-dot.png",
-      event: "https://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
-    };
-    return icons[type] || icons.office;
-  }
-
-  function getDirections(lat, lng) {
-    const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
-    window.open(url, "_blank");
-  }
-
-  function filterMarkers() {
-    const searchText = document.getElementById("search-input").value.toLowerCase();
-    const category = document.getElementById("category-filter").value;
-
-    markers.forEach((marker, index) => {
-      const loc = locations[index];
-      const matchesText = loc.name.toLowerCase().includes(searchText);
-      const matchesCategory = category === "" || loc.type === category;
-
-      marker.setVisible(matchesText && matchesCategory);
-    });
-  }
-</script>
-
-<script async
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970.5755504126859!2d85.40616359538554!3d27.675680756583912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4c5e2b0f403ab1d9%3A0xff6be642caa93c15!2sMilan%20Joshi%20-%20Agent%20Profile%20-%20Life%20Insurance-%20LIC%20NEPAL!5e1!3m2!1sen!2snp!4v1754480947046!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"">
-</script>
-        </section>
+      <section class="mapbox" data-mapbox>
+          <figure>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970.5755504126859!2d85.40616359538554!3d27.675680756583912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4c5e2b0f403ab1d9%3A0xff6be642caa93c15!2sMilan%20Joshi%20-%20Agent%20Profile%20-%20Life%20Insurance-%20LIC%20NEPAL!5e1!3m2!1sen!2snp!4v1754480947046!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+          </figure>
+      </section>
 
     <div>
         <section class="about-text">
