@@ -812,6 +812,8 @@ In a fast-moving world, the Sustainable Development Goals are our compass, remin
 <div class="why-work-with-me">
 
   <p><strong style="color:#E4BA14;"><em>Why Work With Me</em></strong></p>
+ 
+ <img class="swipeimage" src="https://assets.codepen.io/16327/portrait-image-8.jpg">
 
   <p>I bring clarity and coordination to complex ideas, turning scattered concepts into structured, actionable results. Think of me as the bridge between vision and execution. Every project I take on is handled with creative precision—careful planning, strategic thinking, and close attention to detail guide each step. I operate with a proactive mindset, anticipating challenges before they appear so workflows remain smooth and efficient. Collaboration is at the center of my approach; open communication and teamwork ensure that your vision is not just heard but amplified. Ultimately, my work is driven by results—success is measured by meaningful impact, not simply the effort invested.</p>
 </div>
@@ -819,13 +821,91 @@ In a fast-moving world, the Sustainable Development Goals are our compass, remin
    <div class="creative-workflow">
 
   <p><strong style="color:#E4BA14;"><em>My Creative Workflow</em></strong></p>
+    
+    <img class="swipeimage" src="https://assets.codepen.io/16327/portrait-image-3.jpg">
 
   <p>My process begins with discovery and research, where I focus on understanding the project, its goals, and the audience behind it. Assumptions are avoided; decisions are grounded in insight. From there comes ideation and brainstorming, exploring multiple possibilities and selecting the ideas with the strongest potential. These ideas are then shaped through planning and structuring, breaking them into clear steps, defining timelines, and aligning each detail with the final objective. Execution follows, where the concept takes form—whether through design, development, or content creation. Once built, the work enters testing and refinement, ensuring everything performs well and delivers a seamless experience. Finally, delivery and support complete the cycle, with proper handoff, guidance, and follow-up so the project continues running effectively long after launch.</p>
   </ul>
 
 </div>
 
-      
+<style>
+ body {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  min-height: 100vh;
+  overflow: hidden;
+  font-size: 0.8em;
+}
+
+ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: inline-block;
+  border-bottom: 2px solid var(--color-surface25);
+  width: 100%;
+  padding: 2rem;
+}
+
+.container img.swipeimage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 9;
+  opacity: 0;
+  visibily: hidden;
+  pointer-events: none;
+}
+</style>
+
+   <script>
+    gsap.set(".container img.swipeimage", { yPercent: -50, xPercent: -50 });
+
+let firstEnter;
+
+gsap.utils.toArray(".container").forEach((el) => {
+  const image = el.querySelector("img.swipeimage"),
+    setX = gsap.quickTo(image, "x", { duration: 0.4, ease: "power3" }),
+    setY = gsap.quickTo(image, "y", { duration: 0.4, ease: "power3" }),
+    align = (e) => {
+      if (firstEnter) {
+        setX(e.clientX, e.clientX); //https://gsap.com/docs/v3/GSAP/gsap.quickTo()/#optionally-define-a-start-value
+        setY(e.clientY, e.clientY);
+        firstEnter = false;
+      } else {
+        setX(e.clientX);
+        setY(e.clientY);
+      }
+    },
+    startFollow = () => document.addEventListener("mousemove", align),
+    stopFollow = () => document.removeEventListener("mousemove", align),
+    fade = gsap.to(image, {
+      autoAlpha: 1,
+      ease: "none",
+      paused: true,
+      duration: 0.1,
+      onReverseComplete: stopFollow
+    });
+
+  el.addEventListener("mouseenter", (e) => {
+    firstEnter = true;
+    fade.play();
+    startFollow();
+    align(e);
+  });
+
+  el.addEventListener("mouseleave", () => fade.reverse());
+});
+   </script>
     
    <div style="padding: 1rem; text-align: center;">
  <p><strong style="color: #E4BA14;"><em>Advertisement !</em></strong></p>
