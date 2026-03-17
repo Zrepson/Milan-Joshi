@@ -2112,62 +2112,16 @@ setInterval(updateNepaliDateTime, 1000);
     </video>
   </div>
 </div>
-
 <style>
-
- /* Lock page */
-body.locked {
-  overflow: hidden;
-}
-
-/* Hide main content initially */
-#mainContent {
-  display: none;
-}
 .video-popup {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999999;
-}
-
-.video-container {
-  position: relative;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-  z-index: 10;
-}
+@@ -2154,19 +2164,41 @@ <h2 class="h2 article-title">Contact</h2>
 </style>
 
 <script>
-// 🔒 LOCK everything immediately
-document.body.classList.add("locked");
+// Auto close after 5 seconds
 
-// Auto close after 5s
 window.onload = function() {
   setTimeout(closeVideoPopup, 5000);
 };
@@ -2175,27 +2129,9 @@ window.onload = function() {
 function closeVideoPopup() {
   const popup = document.getElementById("videoPopup");
   const video = document.getElementById("popupVideo");
-
+  
+  if (popup) popup.style.display = "none";
   if (video) video.pause();
-  if (popup) popup.remove(); // fully remove from DOM
-
-  // ✅ RELEASE WEBSITE
-  document.body.classList.remove("locked");
-  document.getElementById("mainContent").style.display = "block";
-
-  // 🚀 START your scripts manually here
-  startWebsite();
-}
-
-// 🔥 CONTROLLED START POINT
-function startWebsite() {
-  console.log("Website started AFTER popup");
-
- 
-
-const script = document.createElement("script");
-script.src = "main.js";
-document.body.appendChild(script);
 }
 </script>
 
