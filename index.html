@@ -2152,11 +2152,14 @@ setInterval(updateNepaliDateTime, 1000);
 </style>
          
         <script>
-// Auto close after 13
-         seconds
-window.onload = function() {
-  setTimeout(closeVideoPopup, 13000);
-};
+function initPageScripts() {
+  // ALL PAGE SCRIPTS GO HERE
+  // Example:
+  console.log("Popup closed! Running all scripts now...");
+
+  // Your other scripts can be called here, e.g.,
+  // start sliders, fetch data, init animations
+}
 
 function closeVideoPopup() {
   const popup = document.getElementById("videoPopup");
@@ -2164,7 +2167,15 @@ function closeVideoPopup() {
   
   if (popup) popup.style.display = "none";
   if (video) video.pause();
+
+  // Call everything after popup is closed
+  initPageScripts();
 }
+
+// Auto close after 5 seconds
+window.onload = function() {
+  setTimeout(closeVideoPopup, 5000);
+};
 </script>
          
 <!-- 🔥 Video Widget -->
