@@ -2096,88 +2096,70 @@ setInterval(updateNepaliDateTime, 1000);
     
 </script>
          
-<!-- VIDEO POPUP -->
-<div id="videoPopup" class="video-popup">
-  <div class="video-container">
-    <span class="close-btn" onclick="closeVideoPopup()">&times;</span>
-    
-    <video id="popupVideo" autoplay muted playsinline>
-      <source src="./assets/images/1762331630286.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
 
     
 
    
-    <style>
-.video-popup {
+   <!-- FULLSCREEN VIDEO GATE -->
+<div id="videoGate">
+  <video id="gateVideo" autoplay muted playsinline>
+    <source src="./assets/images/1762331630286.mp4" type="video/mp4">
+  </video>
+</div>
+
+<style>
+/* Lock the page initially */
+body.locked {
+  overflow: hidden;
+}
+
+/* Fullscreen overlay */
+#videoGate {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10000;
+  z-index: 99999;
 }
 
-.video-container {
-  position: relative;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-}
-
-.video-container video {
+/* Video styling */
+#videoGate video {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  color: black;
-  cursor: pointer;
-  z-index: 10;
+/* Hide main content initially */
+#mainContent {
+  display: none;
 }
 </style>
-         
-        <script>
-function initPageScripts() {
-  // ALL PAGE SCRIPTS GO HERE
-  // Example:
-  console.log("Popup closed! Running all scripts now...");
 
-  // Your other scripts can be called here, e.g.,
-  // start sliders, fetch data, init animations
-}
+<script>
+// Lock scroll immediately
+document.body.classList.add("locked");
 
-function closeVideoPopup() {
-  const popup = document.getElementById("videoPopup");
-  const video = document.getElementById("popupVideo");
-  
-  if (popup) popup.style.display = "none";
+// After 13 seconds → remove gate
+setTimeout(() => {
+  const gate = document.getElementById("videoGate");
+  const video = document.getElementById("gateVideo");
+
   if (video) video.pause();
+  if (gate) gate.style.display = "none";
 
-  // Call everything after popup is closed
-  initPageScripts();
-}
+  // Unlock page
+  document.body.classList.remove("locked");
 
-// Auto close after 5 seconds
-window.onload = function() {
-  setTimeout(closeVideoPopup, 12000);
-};
-</script>
-         
+  // Show main content
+  document.getElementById("mainContent").style.display = "block";
+
+}, 13000);
+</script>      
 <!-- 🔥 Video Widget -->
 <div id="video-widget" style="display:none; opacity:0;">
   <video id="widget-video" controls autoplay muted playsinline>
