@@ -2096,8 +2096,114 @@ setInterval(updateNepaliDateTime, 1000);
     
 </script>
 
+<div id="welcome-popup">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    
+    <img src="assets/images/1762331630286.mp4"  class="popup-image">
 
+    
+    </div>
+</div>
+    <style>
+     #welcome-popup {
+  backdrop-filter: blur(8px);
+}
+#welcome-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
+.popup-content {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  animation: fadeIn 0.6s ease;
+}
+
+.popup-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#enter-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #E4BA14;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#enter-btn:hover {
+  opacity: 0.85;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.popup-image {
+  transition: transform 0.3s;
+}
+.popup-image:hover {
+  transform: scale(1.05);
+}
+
+     </style>
+
+         <script>
+const popup = document.getElementById("welcome-popup");
+const closeBtn = document.querySelector(".close-btn");
+const enterBtn = document.getElementById("enter-btn");
+
+// Show only once per session
+if (!sessionStorage.getItem("visited")) {
+  popup.style.display = "flex";
+} else {
+  popup.style.display = "none";
+}
+
+closeBtn.onclick = () => {
+  popup.style.display = "none";
+  sessionStorage.setItem("visited", "true");
+};
+
+enterBtn.onclick = () => {
+  popup.style.display = "none";
+  sessionStorage.setItem("visited", "true");
+};
+
+setTimeout(() => {
+  popup.style.display = "none";
+}, 5000);
+
+</script>
          
 <!-- 🔥 Video Widget -->
 <div id="video-widget" style="display:none; opacity:0;">
