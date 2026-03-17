@@ -2098,12 +2098,18 @@ setInterval(updateNepaliDateTime, 1000);
 
 <div id="welcome-popup">
   <div class="popup-content">
-    <span class="close-btn">&times;</span>
+    <span class="close-btn"onclick="closeVideoPopup()">&times;</span>
 
-    
+
+ 
+
     <img src="./assets/images/1762331630286.mp4"  class="popup-image">
 
-    
+<video id="popupVideo" autoplay muted playsinline>
+      
+ 
+    </video>
+      
     </div>
 </div>
     <style>
