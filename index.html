@@ -2114,6 +2114,16 @@ setInterval(updateNepaliDateTime, 1000);
 </div>
 
 <style>
+
+ /* Lock page */
+body.locked {
+  overflow: hidden;
+}
+
+/* Hide main content initially */
+#mainContent {
+  display: none;
+}
 .video-popup {
   position: fixed;
   top: 0;
@@ -2154,7 +2164,10 @@ setInterval(updateNepaliDateTime, 1000);
 </style>
 
 <script>
-// Auto close after 5 seconds
+// 🔒 LOCK everything immediately
+document.body.classList.add("locked");
+
+// Auto close after 5s
 window.onload = function() {
   setTimeout(closeVideoPopup, 5000);
 };
@@ -2162,11 +2175,30 @@ window.onload = function() {
 function closeVideoPopup() {
   const popup = document.getElementById("videoPopup");
   const video = document.getElementById("popupVideo");
-  
-  if (popup) popup.style.display = "none";
+
   if (video) video.pause();
+  if (popup) popup.remove(); // fully remove from DOM
+
+  // ✅ RELEASE WEBSITE
+  document.body.classList.remove("locked");
+  document.getElementById("mainContent").style.display = "block";
+
+  // 🚀 START your scripts manually here
+  startWebsite();
+}
+
+// 🔥 CONTROLLED START POINT
+function startWebsite() {
+  console.log("Website started AFTER popup");
+
+ 
+
+const script = document.createElement("script");
+script.src = "main.js";
+document.body.appendChild(script);
 }
 </script>
+
          
 <!-- 🔥 Video Widget -->
 <div id="video-widget" style="display:none; opacity:0;">
