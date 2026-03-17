@@ -2115,20 +2115,22 @@ setInterval(updateNepaliDateTime, 1000);
 </div>
 
 <style>
+
+
 .video-popup {
   position: fixed;
-  top: 70px;
-  right: 20px;
-  transform: translate(-100%, -0%); /* Start off-screen left */
+   top: 70%;
+  left: 20px;
+  transform: translate(-100%, -70%); /* Start off-screen left */
   z-index: 9999;
-
+ 
   /* animation */
   animation: slideInLeft 0.6s ease forwards;
 }
 
 @keyframes slideInLeft {
   to {
-    transform: translate(0,0); /* Final position: middle-left with gap */
+    transform: translate(20px, -70%); /* Final position: middle-left with gap */
   }
 }
 
