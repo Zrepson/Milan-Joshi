@@ -2095,28 +2095,24 @@ setInterval(updateNepaliDateTime, 1000);
 
     
 </script>
-
-<div id="welcome-popup">
-  <div class="popup-content">
-    <span class="close-btn"onclick="closeVideoPopup()">&times;</span>
-
-
- 
-
-    <img src="./assets/images/1762331630286.mp4"  class="popup-image">
-
-<video id="popupVideo" autoplay muted playsinline>
-      
- 
+         
+<!-- VIDEO POPUP -->
+<div id="videoPopup" class="video-popup">
+  <div class="video-container">
+    <span class="close-btn" onclick="closeVideoPopup()">&times;</span>
+    
+    <video id="popupVideo" autoplay muted playsinline>
+      <source src="./assets/images/1762331630286.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
-      
-    </div>
+  </div>
 </div>
+
+    
+
+   
     <style>
-     #welcome-popup {
-  backdrop-filter: blur(8px);
-}
-#welcome-popup {
+.video-popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -2124,92 +2120,50 @@ setInterval(updateNepaliDateTime, 1000);
   height: 100%;
   background: rgba(0,0,0,0.8);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: 9999;
 }
 
-.popup-content {
-  background: #111;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  color: #fff;
-  max-width: 400px;
-  width: 90%;
+.video-container {
   position: relative;
-  animation: fadeIn 0.6s ease;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-.popup-image {
+.video-container video {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  height: auto;
+  display: block;
 }
 
 .close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 22px;
+  font-size: 28px;
+  color: white;
   cursor: pointer;
+  z-index: 10;
 }
-
-#enter-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #E4BA14;
-  border: none;
-  color: #000;
-  cursor: pointer;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-#enter-btn:hover {
-  opacity: 0.85;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
-}
-
-.popup-image {
-  transition: transform 0.3s;
-}
-.popup-image:hover {
-  transform: scale(1.05);
-}
-
-     </style>
-
-         <script>
-const popup = document.getElementById("welcome-popup");
-const closeBtn = document.querySelector(".close-btn");
-const enterBtn = document.getElementById("enter-btn");
-
-// Show only once per session
-if (!sessionStorage.getItem("visited")) {
-  popup.style.display = "flex";
-} else {
-  popup.style.display = "none";
-}
-
-closeBtn.onclick = () => {
-  popup.style.display = "none";
-  sessionStorage.setItem("visited", "true");
+</style>
+         
+        <script>
+// Auto close after 5 seconds
+window.onload = function() {
+  setTimeout(closeVideoPopup, 5000);
 };
 
-enterBtn.onclick = () => {
-  popup.style.display = "none";
-  sessionStorage.setItem("visited", "true");
-};
-
-setTimeout(() => {
-  popup.style.display = "none";
-}, 5000);
-
+function closeVideoPopup() {
+  const popup = document.getElementById("videoPopup");
+  const video = document.getElementById("popupVideo");
+  
+  if (popup) popup.style.display = "none";
+  if (video) video.pause();
+}
 </script>
          
 <!-- 🔥 Video Widget -->
