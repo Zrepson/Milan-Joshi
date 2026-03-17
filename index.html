@@ -2120,8 +2120,8 @@ setInterval(updateNepaliDateTime, 1000);
 .video-popup {
   position: fixed;
    top: 20%;
-  left: 20;
-  transform: translate(-100%, 0px); /* Start off-screen left */
+  left: 0;
+  transform: translate(-100%, -50px); /* Start off-screen left */
   z-index: 9999;
  
   /* animation */
@@ -2130,7 +2130,7 @@ setInterval(updateNepaliDateTime, 1000);
 
 @keyframes slideInLeft {
   to {
-    transform: translate( 0, 0); /* Final position: middle-left with gap */
+    transform: translate(20px, -50%); /* Final position: middle-left with gap */
   }
 }
 
