@@ -324,11 +324,16 @@ h78.747C231.693,100.736,232.77,106.162,232.77,111.694z"
    <style>
     /* From Uiverse.io by vinodjangid07 */ 
 .loader {
-  width: fit-content;
-  height: fit-content;
+ osition: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  z-index: 99999;
 }
 
 .truckWrapper {
