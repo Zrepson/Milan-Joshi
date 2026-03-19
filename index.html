@@ -195,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden">
   <div class="loader-content">
     <img src="./assets/images/kk pr.gif" alt="Logo" class="loader-logo">
     <div class="spinner"></div>
-<p class="loader-quote" id="loaderQuote"></p>
+<p class="loader-text">Loading Experience...</p>
   </div>
 </div>
 
@@ -234,12 +234,13 @@ height="0" width="0" style="display:none;visibility:hidden">
 
 /* Logo (auto responsive) */
 .loader-logo {
-  width: clamp(90px, 8vw, 150px);
+  width: clamp(90px, 12vw, 180px);
   height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-
+ border-radius: 18% / 25%;
+  object-fit: contain;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35); /* subtle depth */
   animation: floatLogo 2.8s ease-in-out infinite;
+   transition: width 0.3s ease, height 0.3s ease;
 }
 
 /* Spinner */
@@ -261,23 +262,7 @@ height="0" width="0" style="display:none;visibility:hidden">
   font-weight: 500;
 }
 
- .loader-quote {
-  max-width: 420px;
-  font-size: clamp(13px, 1.2vw, 16px);
-  color: #ffffffd9;
-  text-align: center;
-  line-height: 1.6;
-  font-weight: 400;
-  font-style: italic;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: all .6s ease;
-}
 
-.loader-quote.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Spinner animation */
 @keyframes spin {
@@ -295,38 +280,7 @@ height="0" width="0" style="display:none;visibility:hidden">
 
 
  <script>
-const quotes = [
-  "Mountains teach us patience and silence.",
-  "Peace begins where the noise of the world ends.",
-  "Slow steps still reach the summit.",
-  "The glacier moves quietly, yet shapes the earth.",
-  "Calm minds build strong journeys.",
-  "Nature never rushes, yet everything is accomplished.",
-  "Breathe. You are exactly where you need to be.",
-  "Every sunrise writes a new story.",
-  "Stillness is a form of strength.",
-  "Great paths start with quiet moments."
-];
-
-const quoteElement = document.getElementById("loaderQuote");
-
-let index = 0;
-
-function changeQuote() {
-  quoteElement.classList.remove("show");
-
-  setTimeout(() => {
-    quoteElement.textContent = quotes[index];
-    quoteElement.classList.add("show");
-    index = (index + 1) % quotes.length;
-  }, 400);
-}
-
-// first quote
-changeQuote();
-
-// rotate quotes
-setInterval(changeQuote, 4000);
+  
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
 
