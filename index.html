@@ -189,71 +189,144 @@ height="0" width="0" style="display:none;visibility:hidden">
 
 <body>
 
- <div id="loader">
-             <div class="loader-content">
+ 
+
+<div id="loader">
+  <div class="loader-content">
     <img src="./assets/images/kk pr.gif" alt="Logo" class="loader-logo">
-                
-  <div class="spinner"></div>
-</div>
+    <div class="spinner"></div>
+<p class="loader-quote" id="loaderQuote"></p>
+  </div>
 </div>
 
 <style>
-/* Full-screen loader */
+
+/* Fullscreen loader */
 #loader {
   position: fixed;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
+  inset: 0;
   background: linear-gradient(
-  rgba(0, 0, 0, 0.8),
-  rgba(255, 165, 0, 0.2) 
-);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    135deg,
+    rgba(0,0,0,0.92),
+    rgba(255,165,0,0.25)
+  );
+  display: grid;
+  place-items: center;
   z-index: 99999;
+  backdrop-filter: blur(6px);
 
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity .5s ease, visibility .5s ease;
 }
 
-/* Hide state */
 #loader.hidden {
   opacity: 0;
   visibility: hidden;
 }
 
-/* Wrapper */
+/* Content wrapper */
 .loader-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: clamp(14px, 2vw, 26px);
+  text-align: center;
 }
 
-/* Logo */
+/* Logo (auto responsive) */
 .loader-logo {
-  width: 100px;
+  width: clamp(90px, 8vw, 150px);
+  height: auto;
   border-radius: 50%;
-  margin-bottom: 20px;
+  object-fit: cover;
+
+  animation: floatLogo 2.8s ease-in-out infinite;
 }
 
 /* Spinner */
 .spinner {
-  width: 50px; 
-  height: 50px;
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #f0c413;
+  width: clamp(38px, 3.5vw, 60px);
+  height: clamp(38px, 3.5vw, 60px);
+  border: clamp(3px, .4vw, 6px) solid rgba(255,255,255,0.25);
+  border-top: clamp(3px, .4vw, 6px) solid #f0c413;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+
+  animation: spin .9s linear infinite;
 }
 
+/* Optional text */
+.loader-text {
+  font-size: clamp(12px, 1.1vw, 15px);
+  color: #ffffffcc;
+  letter-spacing: .5px;
+  font-weight: 500;
+}
+
+ .loader-quote {
+  max-width: 420px;
+  font-size: clamp(13px, 1.2vw, 16px);
+  color: #ffffffd9;
+  text-align: center;
+  line-height: 1.6;
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all .6s ease;
+}
+
+.loader-quote.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Spinner animation */
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* Logo subtle floating effect */
+@keyframes floatLogo {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
 </style>
 
 
-<script>
+
+ <script>
+const quotes = [
+  "Mountains teach us patience and silence.",
+  "Peace begins where the noise of the world ends.",
+  "Slow steps still reach the summit.",
+  "The glacier moves quietly, yet shapes the earth.",
+  "Calm minds build strong journeys.",
+  "Nature never rushes, yet everything is accomplished.",
+  "Breathe. You are exactly where you need to be.",
+  "Every sunrise writes a new story.",
+  "Stillness is a form of strength.",
+  "Great paths start with quiet moments."
+];
+
+const quoteElement = document.getElementById("loaderQuote");
+
+let index = 0;
+
+function changeQuote() {
+  quoteElement.classList.remove("show");
+
+  setTimeout(() => {
+    quoteElement.textContent = quotes[index];
+    quoteElement.classList.add("show");
+    index = (index + 1) % quotes.length;
+  }, 400);
+}
+
+// first quote
+changeQuote();
+
+// rotate quotes
+setInterval(changeQuote, 4000);
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
 
