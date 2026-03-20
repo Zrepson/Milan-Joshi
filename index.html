@@ -190,6 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden">
 <body>
 
  
+ 
 
 <div id="loader">
   <div class="loader-content">
@@ -293,6 +294,45 @@ window.addEventListener("load", () => {
   }, 500);
 });
 </script>
+
+ 
+
+<div id="vanta-bg"></div>
+
+
+<style>
+ #vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.site-content {
+  position: relative;
+  z-index: 1;
+}
+ </style>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+
+<script>
+VANTA.CLOUDS({
+  el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200,
+  minWidth: 200,
+  skyColor: 0x0,
+  speed: 1.10
+});
+</script>
+
+
 
         <!--
             - #MAIN
