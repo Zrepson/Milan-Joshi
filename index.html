@@ -1922,57 +1922,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
     
-<div id="un-calendar-container">
-  <h3>UN Observances Calendar</h3>
-  <ul id="un-calendar-list"></ul>
-</div>
-
-        <style>
-        
-         #un-calendar-container{
-    position: fixed;
-    top: 230px;
-    right: 20px;
-    background: rgba(17, 17, 17, 0.5); 
-    color: #F0C413;
-    padding: 16px;
-    border-radius: 12px;
-    padding: 10px;
-    font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
-    font-size: 1rem;
-    z-index: 9998;
-    user-select: none;
-    
-}
-
-/* Hide both on mobile */
-@media only screen and (max-width: 768px) {
-    
-    #un-calendar-container {
-        display: none !important;
-    }
-}
-</style>
-
-       
-<script>
-fetch('./assets/un-international-day.ics')  // or URL to the .ics file
-  .then(response => response.text())
-  .then(data => {
-    let jcalData = ICAL.parse(data);
-    let comp = new ICAL.Component(jcalData);
-    let events = comp.getAllSubcomponents('vevent');
-    let list = document.getElementById('un-calendar-list');
-
-    events.forEach(event => {
-      let e = new ICAL.Event(event);
-      let li = document.createElement('li');
-      li.textContent = `${e.startDate.toString().slice(0,10)} — ${e.summary}`;
-      list.appendChild(li);
-    });
-  })
-  .catch(err => console.error("Error loading UN calendar:", err));
-</script>
 
             
     
