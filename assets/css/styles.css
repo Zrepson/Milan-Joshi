@@ -4072,12 +4072,14 @@ td:last-child {
 }
 
 .clients-list__item {
-	flex        : none;
-	width       : 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20%;
 	border-color: rgba(0, 0, 0, 0.2);
 	border-width: 1px;
-	text-align  : center;
-	padding     : 0;
+	text-align: center;
+	padding: 0;
 }
 
 .clients-list__item a {
@@ -4092,10 +4094,13 @@ td:last-child {
 }
 
 .clients-list__item img {
-	margin        : 0;
-	transform     : scale(0.95);
-	transition    : all 0.5s ease-in;
-	vertical-align: bottom;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain; /* or cover if you want them perfectly filled */
+	margin: 0 auto;
+	transform: none;
+	vertical-align: middle;
 }
 
 .clients-list__item:nth-child(n) {
