@@ -431,1407 +431,611 @@ VANTA.CLOUDS({
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar >
+   <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
 
-      <div class="sidebar-info">
+            <div class="row s-header__inner width-sixteen-col">
 
-        <figure class="avatar-1">
-          <img src="./assets/images/cropped_image (1).png" alt="Milan Joshi" width="90">
-        </figure>
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/logo.svg" alt="Homepage">
+                        </a>
+                    </div>
 
-        <div class="info-content">
-        
-          <h1 class="name" title="Milan Joshi">Milan J.</h1>
-            
-          <p class="title">Management Professional</p>
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
 
- </div>
-
-         
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:mail@milanjoshi.com.np?subject=Insurance%20Consultation" class="contact-link"> mail@milanjoshi.com.np</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="https://api.whatsapp.com/send?phone=9779823267863" class="contact-link">+977-9823267863 </a>
-            </div>
-
-          </li>
-
-         
-        
-
-        </ul>
-
-       
-      
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/milanjoshi18/" class="social-link" target="_blank">
-              <ion-icon class = "socials-icons" name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item"> 
-            <a href="https://api.whatsapp.com/send?phone=9779823267863" class="social-link"target="_blank">
-              <ion-icon class = "socials-icons" name="logo-Whatsapp"></ion-icon>
-            </a>
-          </li>
-
-        
-
-          <li class="social-item">
-            <a href="https://sites.google.com/view/bestow-mj/home" class="social-link" target="_blank">
-              <ion-icon name="card-outline"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://docs.google.com/document/d/1aht__tP0fZpUY_hrj5r3xXxWXd_UgckTcl08I7qV1IA/edit?usp=sharing" class="social-link" target="_blank">
-              <ion-icon class = "socials-icons" name="document-attach-outline"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://open.substack.com/pub/milanjoshi/p/the-lifesaving-power-of-blood-donation?r=24vxly&utm_campaign=post&utm_medium=web&showWelcomeOnShare=false" class="social-link" target="_blank">
-             <ion-icon class = "socials-icons" name="medkit-outline"></ion-icon>
-            </a>
-          </li>
-        
-          
-        </ul>
-      </div>
-          
-  
-    </aside>
-
-
-   
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content" >
-
-      <!--
-        - #NAVBAR
-      -->
-     <nav class="navbar">
+                <nav class="s-header__nav">
     
- <ul class="navbar-list">
+                    <ul class="s-header__menu-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul> <!-- s-header__menu-links -->
 
-          <li class="navbar-item">
-              
-           <button class="navbar-link  active" data-nav-link>About</button>
-
-          </li>
-
-        
-
-          <li class="navbar-item">
-             <button class="navbar-link" data-nav-link>Portfolio</button>
-
-
-          </li>
-
-          <li class="navbar-item">
-           <button class="navbar-link" data-nav-link>Blog</button>
-
-          </li>
-
-          <li class="navbar-item">
-          <button class="navbar-link" data-nav-link>Contact</button>
-
-          </li>
-
-        </ul>
-      </nav>
-  
-
-
-  
-
-
-      <!--
-        - #ABOUT
-      -->
-<article class="about active" data-page="about" id="about">
-      <header>
-          <h2 class="h2 article-title">About MJ</h2>  
-      </header>
-
-     
-  <section class="about-text">
-
-      <style>
-      .image-text-container {
-    display: flex;
-    font-size: 15px;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    padding: 20px;
-  
+                    <div class="s-header__contact">
+                        <a href="contact.html" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>                        
+                    </div> <!-- s-header__contact -->
     
-  }
-
-  .image-text-container img {
-      width: 200px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.5px;
-  }
-
-  .image-text-container p {
-      max-width: 700px;
-    text-align:  inherit;
- 
-  }
-
-  @media (min-width: 768px) {
-    .image-text-container {
-           font-size: 15px;
-      flex-direction: row;
-      align-items: flex-start;
-        
-    }
-  }
-
-
-
-</style>
-
-
-      
-          <div class="image-text-container">
-  <img src="./assets/images/kot.png" alt="Milan Joshi" >
-              
-              <p> 
-
-                  <strong>Milan Joshi (मिलन जोशी)</strong> also known as Milan J., is a dedicated  Life Insurance Advisor and former Project Coordinator based in Kathmandu, Nepal.
- He brings a rare blend of strategic thinking, operational expertise, and organizational insight, helping businesses and individuals navigate complex challenges with clarity and precision.
-       <br><br>
-     With experience spanning project management, life insurance consulting, administration, and corporate social responsibility, Milan combines analytical rigor with a people-first approach to deliver meaningful results.
-   </p>
-          </div>
-
-    
-
-    
-     <p>
-           His work focuses on building efficient systems, fostering team growth, and creating long-term value for clients and communities alike.</p>
-   
-  <p>
-  <strong style="color: #E4BA14;"><em>Vision Statement</em></strong><br>
-  <span id="vision-text"></span>
-</p>
-
-<p>
-  <strong style="color: #E4BA14;"><em>Mission Statement</em></strong><br>
-  <span id="mission-text"></span>
-</p>
-
-<script>
-const visionText = "To empower individuals and organizations in Nepal to achieve financial security, operational excellence, and lasting positive impact through ethical advisory, innovative project management, and community-focused initiatives.";
-const missionText = "To deliver reliable life insurance solutions while leveraging project coordination and management expertise to enhance systems, support local communities, and create measurable, sustainable outcomes.";
-
-function typeWriter(elementId, text, speed = 25, callback = null) {
-  let i = 0;
-  const el = document.getElementById(elementId);
-
-  function type() {
-    if (i < text.length) {
-      el.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(type, speed);
-    } else if (callback) {
-      callback();
-    }
-  }
-  type();
-}
-
-// Start typing Vision first, then Mission after a small delay
-typeWriter("vision-text", visionText, 25, () => {
-  setTimeout(() => typeWriter("mission-text", missionText, 25), 500);
-});
-</script>
-
-   
-<p>Over the years, he has worked across diverse teams and initiatives, building operational frameworks, improving coordination, and supporting organizations in achieving sustainable outcomes. He values ethical practice, transparent communication, and consistency—because shortcuts look good today and fail tomorrow.
-</p>
-       
- <p>     
-At his core, Milan is driven by long-term value creation. He is committed to helping individuals secure their financial future, assisting organizations in strengthening their internal systems, and contributing to community-level progress in Nepal through responsible, people-centric work.
-</p>
-
-   <div class="why-work-with-me">
-
-  <p><strong style="color:#E4BA14;"><em>Why Work With Me</em></strong></p>
- 
-
-
-  
-<p>I bring clarity and coordination to complex ideas, turning scattered concepts into structured, actionable results. Think of me as the bridge between vision and execution. Every project I take on is handled with creative precision—careful planning, strategic thinking, and close attention to detail guide each step. I operate with a proactive mindset, anticipating challenges before they appear so workflows remain smooth and efficient. Collaboration is at the center of my approach; open communication and teamwork ensure that your vision is not just heard but amplified. Ultimately, my work is driven by results—success is measured by meaningful impact, not simply the effort invested.</p>
-
-
-   
-   <div class="creative-workflow">
-
-  <p><strong style="color:#E4BA14;"><em>My Creative Workflow</em></strong></p>
-    
-
-
-  <p>My process begins with discovery and research, where I focus on understanding the project, its goals, and the audience behind it. Assumptions are avoided; decisions are grounded in insight. From there comes ideation and brainstorming, exploring multiple possibilities and selecting the ideas with the strongest potential. These ideas are then shaped through planning and structuring, breaking them into clear steps, defining timelines, and aligning each detail with the final objective. Execution follows, where the concept takes form—whether through design, development, or content creation. Once built, the work enters testing and refinement, ensuring everything performs well and delivers a seamless experience. Finally, delivery and support complete the cycle, with proper handoff, guidance, and follow-up so the project continues running effectively long after launch.</p>
-  </ul>
-
-</div>
-
-          
-        
-     
-      <p>      
-          <img src="./assets/images/Black Modern Personal LinkedIn Banner (2).gif " alt="Milan Joshi" style="max-width: 100%; height: auto; border-radius: 20px; "> 
-          </p>
-
-      
-<p>
-         Furthermore, Milan J. is also passionate about the Sustainable Development Goals (SDGs) 🌈 —a set of 17 interconnected global goals established by
-               the United Nations (UN) in 2015. 
-
-    
-    
-      <p>These goals aim to address some of the world's most pressing challenges and promote sustainable development across economic, social, and environmental dimensions. 
-</p>
-
-     
-    
-    
-      <br>
-
-        <style>
-            
- .flip-card {
-  background-color: transparent;
-  width: 80px;
-  height: 80px;
-  perspective: 1000px;
-  border-radius: 00px;
-  text-align: center;
-  display: inline-block;
-
- 
-}
-  </style>
-
-        <div class="image-text-container">
-  
-    <div class="flip-container">
-<!--GOAL 1-->
-    
-<div class="flip-card">
- 
-  <a href="https://sdgs.un.org/goals/goal1" target="_blank">
-    <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-01.jpg" alt="UN SDG Goal 1" style="width:80px;height:80px;"></a>
-</div>
-
-<!--GOAL 2-->
-<div class="flip-card">
-    
- 
-      
-    
-      <a href="https://sdgs.un.org/goals/goal2" target="_blank"><img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-02.jpg" alt="UN SDG Goal 2" style="width:80px;height:80px;"></a>
-    
-</div>
-
-<!--GOAL 3-->
-<div class="flip-card">
-  
-      
- 
-      <a href="https://sdgs.un.org/goals/goal3" target="_blank"> <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-03.jpg" alt="UN SDG Goal 3" style="width:80px;height:80px;"></a>
-  
-</div>
-
-<!--GOAL 4-->
-<div class="flip-card">
-  
-     
-      <a href="https://sdgs.un.org/goals/goal4" target="_blank"> <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-04.jpg" alt="UN SDG Goal 4" style="width:80px;height:80px;"></a>
-   
-</div>
-
-<!--GOAL 5-->
-<div class="flip-card">
-  
-      
-    <a href="https://sdgs.un.org/goals/goal5" target="_blank"><img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-05.jpg" alt="UN SDG Goal 5" style="width:80px;height:80px;"></a>
-    
-</div>
-
-<!--GOAL 6-->
-<div class="flip-card">
- 
-      
-     <a href="https://sdgs.un.org/goals/goal6" target="_blank"><img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-06.jpg" alt="UN SDG Goal 6" style="width:80px;height:80px;">
-    </a>
-</div>
-
-<!--GOAL 7-->
-<div class="flip-card">
-  
-
-    
-      <a href="https://sdgs.un.org/goals/goal7" target="_blank"><img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-07.jpg" alt="UN SDG Goal 7" style="width:80px;height:80px;"></a>
- 
-</div>
-
-<!--GOAL 8-->
-<div class="flip-card">
-
-      <a href="https://sdgs.un.org/goals/goal8" target="_blank">      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-08.jpg" alt="UN SDG Goal 8" style="width:80px;height:80px;"></a>
-   
-</div>
-
-<!--GOAL 9-->
-<div class="flip-card">
-  
- 
-      <a href="https://sdgs.un.org/goals/goal9" target="_blank">
-        <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-09.jpg" alt="UN SDG Goal 9" style="width:80px;height:80px;">
-    </a>
-  
-</div>
-
-<!--GOAL 10-->
-<div class="flip-card">
-  
-    
-      <a href="https://sdgs.un.org/goals/goal10" target="_blank">
-      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-10.jpg" alt="UN SDG Goal 10" style="width:80px;height:80px;"></a>
-</div>
-
-<!--GOAL 11-->
-<div class="flip-card">
-  
-     
-    
-   
-      <a href="https://sdgs.un.org/goals/goal11" target="_blank"> <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-11.jpg" alt="UN SDG Goal 11" style="width:80px;height:80px;"></a>
-    
-</div>
-
-<!--GOAL 12-->
-<div class="flip-card">
-
-      
-   <a href="https://sdgs.un.org/goals/goal12" target="_blank"><img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-12.jpg" alt="UN SDG Goal 12" style="width:80px;height:80px;"></a>
-    
-</div>
-
-<!--GOAL 13-->
-<div class="flip-card">
-  
-     
-    
-      <a href="https://sdgs.un.org/goals/goal13" target="_blank"> <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-13.jpg" alt="UN SDG Goal 13" style="width:80px;height:80px;"></a>
-    
-</div>
-
-<!--GOAL 14-->
-<div class="flip-card">
-  <a href="https://sdgs.un.org/goals/goal14" target="_blank"> 
-      <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-14.jpg" alt="UN SDG Goal 14" style="width:80px;height:80px;">
-  </a>
-    
-</div>
-
-<!--GOAL 15-->
-<div class="flip-card">
-  <a href="https://sdgs.un.org/goals/goal15" target="_blank">    
-    <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-15.jpg" alt="UN SDG Goal 15" style="width:80px;height:80px;">
-  </a>
-   
-</div>
-      
-
-<!--GOAL 16-->
-<div class="flip-card">
-      <a href="https://sdgs.un.org/goals/goal16" target="_blank">
-        <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-16.jpg" alt="UN SDG Goal 16" style="width:80px;height:80px;">
-      </a>
-    
-</div>
-
-<!--GOAL 17-->
-<div class="flip-card">
-      <a href="https://sdgs.un.org/goals/goal17" target="_blank"> <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-17.jpg" alt="UN SDG Goal 17" style="width:80px;height:80px;"></a>
-    
-</div>
-  
-
-        </div></div>
-
-
-</br>
-              
-   
-
-
-
-                <p>
-In a fast-moving world, the Sustainable Development Goals are our compass, reminding us that progress means nothing if people or the planet are left behind. </p>
-                   
-     <div style="padding: 1rem; text-align: center;">
- <p><strong style="color: #E4BA14;"><em>Advertisement !</em></strong></p>
-  <p>Promoting a powerful speech by Leonardo DiCaprio on climate change.</p>
-
-
-  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px;">
-    <iframe 
-      src="https://www.youtube.com/embed/2Cc8E3BWOqA?si=fYMWE-mYI7PYfJYF"
-      title="YouTube video player"
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; border: none;"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-
-    <div class="ticker">
-    <span>जलवायु परिवर्तनले विश्वव्यापी प्रणालीहरू र दैनिक सहरी जीवन दुवैलाई पुनःआकार दिइरहेको छ। विश्वभरि बढ्दो तापक्रम, अनियमित वर्षा, शक्तिशाली आँधीबेहरी र पग्लँदै गएको बरफका कारण पारिस्थितिक प्रणाली, कृषि तथा जलस्रोतहरू प्रभावित भइरहेका छन्। शहरहरूमा, जस्तै काठमाडौंमा, यी विश्वव्यापी परिवर्तनहरूले अझ तीव्र गर्मी, बढ्दो वायु प्रदूषण, अनियमित मनसुन, आकस्मिक बाढी तथा पानी आपूर्ति र पूर्वाधारमाथि बढ्दो दबाबका रूपमा देखिन्छन्। त्यसै समयमा, हिमालय क्षेत्रमा हिमनदीहरू तीव्र गतिमा पग्लिनु लाखौँ मानिसहरू निर्भर रहेका दीर्घकालीन नदी प्रणालीका लागि खतरा बनिरहेको छ। यी सबै परिवर्तनहरूले देखाउँछन् कि जलवायु परिवर्तन कुनै टाढाको वातावरणीय समस्या मात्र होइन—यो विश्वव्यापी रूपमा र नेपालको राजधानीमा समेत सहरी लचिलोपन, जनस्वास्थ्य र दिगो विकासका लागि प्रत्यक्ष चुनौती हो।</span>
-  </div>
-   <style>
-    /* ticker bar */
-.ticker{
-  position:absolute;
-  top:0;
-  width:100%;
-  overflow:hidden;
-  background:rgba(0,0,0,0.7);
-  color:white;
-  font-size:14px;
-  white-space:nowrap;
-}
-
-/* moving line */
-.ticker span{
-  display:inline-block;
-  padding-left:100%;
-  animation:ticker-scroll 100s linear infinite;
-}
-
-@keyframes ticker-scroll{
-  from{
-    transform:translateX(0);
-  }
-  to{
-    transform:translateX(-100%);
-  }
-}
-    </style>
-  </div>
-</div>
-     
-    <p>They call us to act with purpose—driving sustainable development in Nepal by empowering communities, protecting the environment, and ensuring growth and equality move together. When ambition turns into action, lasting impact follows.</p> 
-
-
-       <p>Overview Nepal's progress towards the SDGs:  <a href="https://dashboards.sdgindex.org/profiles/nepal" target="blank" style="color: orange; text-decoration: mix;">
-    <strong> Sustainable Development Report 2025</strong></a>
-    <br></p>
-
-
-      
-
- <div style="padding: 1rem; text-align: center;">
-
-  <section class="disaster-game">
-    <h2>Stop Disasters Game</h2>
-    <p>Interactive disaster risk planning simulation developed by UNDRR.</p>
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px;">
-      <iframe 
-        src="https://www.stopdisastersgame.org/game/"
-        loading="lazy"
-        allowfullscreen
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;">
-      </iframe>
-    </div>
-
-    <p style="margin-top: 1rem;">
-      <strong style="color:#E4BA14;"><em>Discover the Game</em></strong>
-    </p>
-
-    <p>
-      <i>
-        The STOP DISASTERS game helps adults and children understand how
-        disaster risk is shaped by human choices.
-      </i>
-    </p>
-  </section>
-
-</div>
-                   
-
-    
-  
-  <br>
-
-    
-              <div class="image-text-container">
-  <img src="./assets/images/whoare.png" alt="Milan Joshi">
-                  
-<p>
-    In his free time, he pursues interests that reflect his curiosity and dedication to lifelong learning. He enjoys attending conferences and professional events, exploring online courses, and staying informed about emerging ideas and industry trends. 
-</p>
-                  <p>
-   Beyond his formal work, he’s passionate about technology and digital innovation. Reading, exercise, and keep him grounded, curious, and constantly growing. He also mentors people, helping them build clarity, confidence, and direction — guided by real-life lessons, not just theory.</p>
-                     </div>
-
-
-  </section>
-
-
-        
-<!--
-          - service
-        -->
-           <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-                   
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Project Management</h4>
-                   <a href="https://sites.google.com/view/bemsproject/home" target="_blank">   
-              
-<img src="./assets/images/association-image-20240812173906.png" alt="MOT" width="180" height="90" >
-                            
-                <p class="service-item-text">
-                As a former project coordinator, I excel in managing teams, fostering collaboration, and ensuring the successful delivery of projects.
-            
-                </p>
-                   </a>
-              </div>
-
-            </li>
-
-            <li class="service-item">
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+
+        </header> <!-- end s-header -->
+
+
+        <!-- # site main content
+        ================================================== -->
+        <section id="content" class="s-content">
+
+            <!-- intro
+            ----------------------------------------------- -->
+            <section id="intro" class="s-intro">
+
+                <div class="row s-intro__content width-sixteen-col">
+
+                    <div class="column lg-12 s-intro__content-inner grid-block">
+                        
+                        <div class="s-intro__content-text">
+                            <div class="s-intro__content-pretitle text-pretitle">Hello, I'm Monica</div>
+                            <h1 class="s-intro__content-title">
+                            I create marketing <br>
+                            strategies for your <br>
+                            business that get <br>
+                            results.
+                            </h1>
+                        </div> <!-- s-intro__content-text -->
+
+                        <div class="s-intro__content-media"> 
+                            <div class="s-intro__content-media-inner">                               
+                                <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg@2x.jpg 2x" alt="">
+                                <div class="lines">                               
+                                    <span></span>                                  
+                                </div>
+                            </div>
+                        </div> <!-- s-intro__content-media -->                      
+
+                        <div class="s-intro__scroll-down">
+                            <a href="#about" class="smoothscroll">
+                                <div class="scroll-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#97b34a" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">&lt;!--!  Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<polyline points="7 13 12 18 17 13"></polyline><line x1="12" y1="18" x2="12" y2="6"></line></svg>
+                                </div>
+                                <span>Scroll for more</span>
+                            </a>
+                        </div> <!-- s-intro__scroll-down -->
+                        
+                    </div> <!-- s-intro__content-inner -->
+
+                </div> <!-- s-intro__content -->
+
+            </section> <!-- end s-intro -->
+
+            <!-- about
+            ----------------------------------------------- -->
+            <section id="about" class="s-about target-section">
+
+                <div class="row s-about__content width-sixteen-col">
+                    <div class="column grid-block grid-section-split">
+
+                        <img src="images/geometric_shape.svg" alt="" class="s-about__content-imgbg">
+
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">About</div>                           
+                            <h2 class="text-display-title">
+                            An inspiring headline about yourself.
+                            </h2>                           
+                        </div> <!-- end section-header -->
+
+                        <div class="s-about__content-main grid-section-split__primary">
+                            <p class="attention-getter">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Repellendus iste ipsam quod repellat. Hic tempora ullam aperiam 
+                            ipsum optio magni vel inventore voluptatibus nisi maiores laboriosam 
+                            fuga iure, velit eligendi ab vero minima? Quae ducimus ab dignissimos 
+                            iure, eos consequatur est deleniti cum id aliquid neque.
+                            </p>
+
+                            <p class="attention-getter">
+                            Autem tenetur commodi maiores. Lorem ipsum dolor sit, amet consectetur adipisicing elit.  
+                            Est eligendi fugit, facilis velit reiciendis iure laudantium. Praesentium repellat 
+                            corrupti dolor sit sint obcaecati. Modi aut quo molestiae a explicabo maiores necessitatibus 
+                            nemo repellendus architecto? Corrupti numquam ullam nostrum, eveniet at doloribus blanditiis 
+                            aliquid a est porro aspernatur pariatur culpa soluta nesciunt odio quasi maxime debitis illum.
+                            </p>
+
+                            <p class="attention-getter">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Repellendus iste ipsam quod repellat. Hic tempora ullam aperiam 
+                            ipsum optio magni vel inventore voluptatibus nisi maiores laboriosam 
+                            fuga iure, velit eligendi ab vero minima? Quae ducimus ab dignissimos 
+                            iure, eos consequatur est deleniti cum id aliquid neque.
+                            </p>
+                        </div> <!-- end s-about__content-main -->
+
+                        <div class="s-about__content-btn grid-section-split__bottom">
+                            <a href="about.html" class="btn btn--stroke u-fullwidth">More About Me</a>
+
+                            <ul class="s-about__social social-list">
+                                <li>
+                                    <a href="#0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path></svg>
+                                        <span class="u-screen-reader-text">Facebook</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z"></path></svg>
+                                        <span class="u-screen-reader-text">Twitter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"></path></svg>
+                                        <span class="u-screen-reader-text">Instagram</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M20.66 6.98a9.932 9.932 0 0 0-3.641-3.64C15.486 2.447 13.813 2 12 2s-3.486.447-5.02 1.34c-1.533.893-2.747 2.107-3.64 3.64S2 10.187 2 12s.446 3.487 1.34 5.02a9.924 9.924 0 0 0 3.641 3.64C8.514 21.553 10.187 22 12 22s3.486-.447 5.02-1.34a9.932 9.932 0 0 0 3.641-3.64C21.554 15.487 22 13.813 22 12s-.446-3.487-1.34-5.02zM12 3.66c2 0 3.772.64 5.32 1.919-.92 1.174-2.286 2.14-4.1 2.9-1.002-1.813-2.088-3.327-3.261-4.54A7.715 7.715 0 0 1 12 3.66zM5.51 6.8a8.116 8.116 0 0 1 2.711-2.22c1.212 1.201 2.325 2.7 3.34 4.5-2 .6-4.114.9-6.341.9-.573 0-1.006-.013-1.3-.04A8.549 8.549 0 0 1 5.51 6.8zM3.66 12c0-.054.003-.12.01-.2.007-.08.01-.146.01-.2.254.014.641.02 1.161.02 2.666 0 5.146-.367 7.439-1.1.187.373.381.793.58 1.26-1.32.293-2.674 1.006-4.061 2.14S6.4 16.247 5.76 17.5c-1.4-1.587-2.1-3.42-2.1-5.5zM12 20.34c-1.894 0-3.594-.587-5.101-1.759.601-1.187 1.524-2.322 2.771-3.401 1.246-1.08 2.483-1.753 3.71-2.02a29.441 29.441 0 0 1 1.56 6.62 8.166 8.166 0 0 1-2.94.56zm7.08-3.96a8.351 8.351 0 0 1-2.58 2.621c-.24-2.08-.7-4.107-1.379-6.081.932-.066 1.765-.1 2.5-.1.799 0 1.686.034 2.659.1a8.098 8.098 0 0 1-1.2 3.46zm-1.24-5c-1.16 0-2.233.047-3.22.14a27.053 27.053 0 0 0-.68-1.62c2.066-.906 3.532-2.006 4.399-3.3 1.2 1.414 1.854 3.027 1.96 4.84-.812-.04-1.632-.06-2.459-.06z"></path></svg>
+                                        <span class="u-screen-reader-text">Dribbble</span>
+                                    </a>
+                                </li>
+                            </ul> <!-- end s-footer__social -->
+                        </div> <!-- end s-about__content-btn -->
+                    
+                    </div> <!-- content-inner -->
+                </div>
                 
+            </section> <!-- end s-about -->
 
-              
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Life Insurance Solutions</h4>
-                  <a href="https://milanjoshi.substack.com/p/start-now-enroll-now" target="_blank">   
-                    <img src="./assets/images/cc-removebg-preview.png" alt="lic" width="180" height="90" >
-         
-                <p class="service-item-text">
-                  With extensive experience in the insurance industry, I guide individuals and businesses in finding tailored insurance solutions that offer financial security and peace of mind.
-                 
-                </p>
-                  </a>
-              </div>
+            <!-- expertise
+            ----------------------------------------------- -->
+            <section id="expertise" class="s-expertise">
 
-            </li>
+                <div class="row s-expertise__content width-sixteen-col">
+                    <div class="column xl-12 grid-block grid-section-split">
 
-            <li class="service-item">
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">Expertise</div>                           
+                            <h2 class="text-display-title">
+                            My key areas of expertise.
+                            </h2>     
+                            
+                            <p class="lead">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit debitis quam dignissimos veritatis atque pariatur magnam obcaecati fugit reprehenderit vel numquam facere esse est deserunt, perferendis commodi voluptatem similique.
+                            </p>
+                        </div> <!-- end section-header -->
 
-             
-             
-               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Life Skills Mentorship</h4>
-                    <a href="https://medium.com/@meelanjoosi18/why-most-people-feel-lost-and-its-not-their-fault-b01cf405ece4" target="_blank">   
-                  <img src="./assets/images/cropped_image (1).png" alt="lic" width="80" height="80" >
+                        <div class="s-expertise__content-main grid-section-split__primary">
 
-                <p class="service-item-text">
-                  
- <b>Confidence, communication, decision-making, discipline </b> helping you focus on what matters to you, not what others expect. as commended for building confidence in decision making and life skills. </p>
+                            <div class="grid-list-items list-items show-ctr">
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">Digital Marketing</h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p>
+                                        Quibusdam quis autem voluptatibus earum vel ex error ea magni. Rerum quam quos. Aut asperiores 
+                                        sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut 
+                                        magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
+                                        </p>
+                                    </div>
+                                </div> <!-- list-item -->
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">Project Management</h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p>
+                                        Rerum quam quos. Quibusdam quis autem voluptatibus earum vel ex error ea magni. Aut asperiores 
+                                        sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut 
+                                        magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
+                                        </p>
+                                    </div>
+                                </div> <!-- list-expertise__item -->
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">Content Marketing</h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p>
+                                        Eaque velit eligend. iQuibusdam quis autem voluptatibus earum vel ex error ea magni. 
+                                        Rerum quam quos. Aut asperiores sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. 
+                                        Eaque velit eligendi ut magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
+                                        </p>
+                                    </div>
+                                </div> <!-- list-expertise__item -->
+                                <div class="grid-list-items__item list-items__item">
+                                    <div class="grid-list-items__title list-items__item-header">
+                                        <h3 class="list-items__item-title">Research & Discovery</h3>
+                                    </div>
+                                    <div class="grid-list-items__text list-items__item-text">
+                                        <p>
+                                        Quibusdam quis autem voluptatibus earum vel ex error ea magni. Rerum quam quos. Aut asperiores 
+                                        sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut 
+                                        magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
+                                        </p>
+                                    </div>
+                                </div> <!-- list-expertise__item -->
+
+                            </div> <!-- grid-list-items -->
+                        </div> <!-- end s-expertise__content-main -->
+
+                        <div class="s-expertise__content-btn grid-section-split__bottom">
+                            <a href="services.html" class="btn btn--stroke u-fullwidth">View All Services</a>
+                        </div> <!-- end s-about__content-btn -->
+
+                    </div> <!-- end grid-block-->
+                </div> <!-- end s-expertise__content -->
+
+            </section> <!-- end s-expertise -->
+
+            <!-- clients
+            ----------------------------------------------- -->
+            <section id="clients" class="s-clients">          
+
+                <div class="row s-clients__content-block width-sixteen-col">
+                    <div class="column xl-12 grid-block grid-section-split">
+                    
+                        <div class="section-header grid-section-split__header">
+                            <div class="text-pretitle">Clients</div>                           
+                            <h2 class="text-display-title">
+                            I have had the privilege of working with these incredible brands.
+                            </h2>       
+                        </div> <!-- end section-header -->
+                    
+                        <div class="grid-section-split__primary">
+                            <p class="lead">
+                            Quibusdam quis autem voluptatibus earum vel ex error ea. Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Laborum suscipit debitis quam dignissimos veritatis atque pariatur magnam 
+                            obcaecati fugit reprehenderit vel numquam facere esse est deserunt, perferendis commodi voluptatem similique.
+                            </p>   
+
+                            <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, numquam molestiae vel quaerat quas 
+                            facilis voluptates rerum aspernatur quam voluptatem ea, vitae illo, omnis minus vero minima maiores 
+                            quia nihil incidunt provident debitis ab qui quasi. Iure unde numquam in nulla praesentium nesciunt 
+                            dolore exercitationem, odit expedita minima quisquam ullam ex. Aut perferendis vel consectetur modi esse.
+                            Temporibus reprehenderit alias magni atque repellat aspernatur voluptates, accusantium pariatur libero ad 
+                            nesciunt illum labore facere. Earum iure consequatur cumque omnis maiores optio.
+                            </p>
+                        </div> <!-- end grid-section-split__primary -->
+                    
+                    </div> <!-- end column -->
+                </div> <!-- end row -->
+
+                <div class="row s-clients__content-block width-sixteen-col">
+                    <div class="column xl-12">
+                    
+                        <div class="clients-list">                            
+                            <div class="clients-list__item">
+                                <a href="#0">
+                                    <img src="images/clients/flash.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="clients-list__item">
+                                <a href="#0">
+                                    <img src="images/clients/rise.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="clients-list__item">
+                                <a href="#0">
+                                    <img src="images/clients/cactus.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="clients-list__item">
+                                <a href="#0">
+                                    <img src="images/clients/pinpoint.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="clients-list__item">
+                                <a href="#0">
+                                    <img src="images/clients/proline.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="clients-list__item">
+                                <a href="#0">
+                                    <img src="images/clients/vision.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="column clients-list__item">
+                                <a href="#0">
+                                    <img src="images/clients/volume.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="column clients-list__item">
+                                <a href="#0">
+                                    <img src="images/clients/hitech.svg" alt="">
+                                </a>
+                            </div><div class="clients-list__item">
+                                <a href="#0">
+                                    <img src="images/clients/terra.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="clients-list__item">
+                                <a href="#0">
+                                    <img src="images/clients/chain.svg" alt="">
+                                </a>
+                            </div>
+                        </div> <!-- end clients-list -->
+
+                    </div> <!-- end column -->
+                </div> <!-- end row -->
+                                
+                <div class="row s-clients__content-block width-sixteen-col">
+                    <div class="column xl-12 testimonials">
+                    
+                        <div class="swiper-container testimonials__slider home-slider">
+
+                            <div class="swiper-wrapper">
+                                <div class="testimonials__slide swiper-slide">
+                                    <p>
+                                    Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
+                                    Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum.
+                                    Laudantium quia consequatur molestias.
+                                    </p>
+                                    <div class="testimonials__author">
+                                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                                        <cite class="testimonials__cite">
+                                            <strong>John Rockefeller</strong>
+                                            <span>Standard Oil Co.</span>
+                                        </cite>
+                                    </div>
+                                </div>
+                                <div class="testimonials__slide swiper-slide">
+                                    <p>
+                                    Nisi dolores quaerat fuga rem nihil nostrum. Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. 
+                                    Voluptas tempore rem. Laudantium quia consequatur molestias.
+                                    Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.
+                                    </p>
+                                    <div class="testimonials__author">
+                                        <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonials__avatar">
+                                        <cite class="testimonials__cite">
+                                            <strong>Andrew Carnegie</strong>
+                                            <span>Carnegie Steel Co.</span>
+                                        </cite>
+                                    </div>
+                                </div>
+                                <div class="testimonials__slide swiper-slide">
+                                    <p>
+                                    Voluptas tempore rem. Molestiae incidunt consequatur quis ipsa autem nam sit enim magni.  
+                                    Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. 
+                                    Nisi dolores quaerat fuga rem nihil nostrum. Laudantium quia consequatur molestias.
+                                    </p>
+                                    <div class="testimonials__author">
+                                        <img src="images/avatars/user-06.jpg" alt="Author image" class="testimonials__avatar">
+                                        <cite class="testimonials__cite">
+                                            <strong>Henry Ford</strong>
+                                            <span>Ford Motor Co.</span>
+                                        </cite>
+                                    </div>
+                                </div>
+                                <div class="testimonials__slide swiper-slide">
+                                    <p>
+                                    Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
+                                    Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum.
+                                    Laudantium quia consequatur molestias.
+                                    </p>
+                                    <div class="testimonials__author">
+                                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
+                                        <cite class="testimonials__cite">
+                                            <strong>John Morgan</strong>
+                                            <span>JP Morgan & Co.</span>
+                                        </cite>
+                                    </div>
+                                </div> 
+                            </div> <!-- end swiper-wrapper --> 
+
+                            <div class="swiper-pagination"></div>
+
+                        </div> <!--end testimonials__slider -->                    
+                    
+                    </div> <!-- end column -->
+                </div> <!-- end row -->
+
+
+            </section> <!-- end s-clients -->            
+
+        </section> <!-- s-content-->
+
+        <!-- # cta
+        ================================================== -->
+        <section id="cta" class="s-cta">
+
+            <div class="row row-x-center text-center">
+                <div class="column xl-8 lg-12">
+
+                    <div class="s-cta__content">
+                        <h2 class="text-display-title">
+                        Get started with a consultation today.
+                        </h2>
+                        <p class="lead">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis rem, esse doloribus sint eaque at debitis enim vitae minus expedita ratione dignissimos sit nostrum optio sequi. Ipsa at beatae quam.
+                        </p>
+                        <a href="contact.html" class="btn btn--primary">Let's Work Together</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </section> <!-- end s-cta -->
+
+        <!-- # journal
+        ================================================== -->
+        <section id="journal" class="s-journal">
+
+            <div class="row s-journal__content width-sixteen-col">
+                <div class="column xl-12 grid-block">
+
+                    <div class="grid-full section-header text-center">
+                        <div class="text-pretitle">Recent Articles</div>                           
+                        <h2 class="text-display-title">
+                        Latest articles from my blog.
+                        </h2>  
+                    </div> <!-- end section-header --> 
+
+                    <div class="grid-full s-journal__content-main grid-list-items">
+
+                        <div class="grid-list-items__item blog-card">
+                            <div class="blog-card__header">
+                                <div class="blog-card__cat-links">
+                                    <a href="https://www.dreamhost.com/r.cgi?287326">Sponsored</a>
+                                </div>
+                                <h3 class="blog-card__title"><a href="https://www.dreamhost.com/r.cgi?287326">Need Web Hosting for Your Websites?</a></h3>
+                            </div>
+                            <div class="blog-card__text">
+                                <p>
+                                Need hosting for your website? We would highly recommend <a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a>.
+                                Enjoy 100% in-house support, guaranteed performance and uptime, 1-click installs, and a super-intuitive control 
+                                panel to make managing your websites and projects easy. <a href="https://www.dreamhost.com/r.cgi?287326">Sign up</a> now to get started.
+                                </p>
+                            </div>
+                        </div> <!-- end blog-card -->
+                        <div class="grid-list-items__item blog-card">
+                            <div class="blog-card__header">
+                                <div class="blog-card__cat-links">
+                                    <a href="blog.html">Productivity</a>
+                                </div>
+                                <h3 class="blog-card__title"><a href="single.html">5 Marketing Productivity Apps for Your Team</a></h3>
+                            </div>
+                            <div class="blog-card__text">
+                                <p>
+                                Rerum quam quos. Quibusdam quis autem voluptatibus earum vel ex error ea magni. Aut asperiores 
+                                sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut 
+                                magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
+                                </p>
+                            </div>
+                        </div> <!-- end blog-card -->
+                        <div class="grid-list-items__item blog-card">
+                            <div class="blog-card__header">
+                                <div class="blog-card__cat-links">
+                                    <a href="blog.html">SEO</a>
+                                </div>
+                                <h3 class="blog-card__title"><a href="single.html">7 SEO Factors to Consider for Better Website Ranking</a></h3>
+                            </div>
+                            <div class="blog-card__text">
+                                <p>
+                                Quibusdam quis autem voluptatibus earum vel ex error ea magni. Rerum quam quos. Aut asperiores 
+                                sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut 
+                                magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
+                                </p>
+                            </div>
+                        </div> <!-- end blog card -->
+                        <div class="grid-list-items__item blog-card">
+                            <div class="blog-card__header">
+                                <div class="blog-card__cat-links">
+                                    <a href="blog.html">Productivity</a>
+                                </div>
+                                <h3 class="blog-card__title"><a href="single.html">5 Effective Web Design Principles</a></h3>
+                            </div>
+                            <div class="blog-card__text">
+                                <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ullam et laborum aperiam. 
+                                Dignissimos quae voluptatibus ullam esse sapiente fugiat, rerum labore cupiditate obcaecati 
+                                dolore necessitatibus id magni rem officia dolor nam sit laudantium. Quo eaque eveniet quibusdam unde. 
+                                </p>
+                            </div>
+                        </div> <!-- end blog-card -->
+
+                    </div> <!-- end grid-list-items -->
+
+                </div> <!-- end grid-block-->
+            </div> <!-- end s-journal__content -->
+
+        </section> <!-- end s-journal -->
+
+
+        <!-- # footer 
+        ================================================== -->
+        <footer class="s-footer">
+            <div class="row s-footer__content">
+                <div class="column xl-6 lg-6 md-12 s-footer__block s-footer__about">                    
+                    <h3>About Monica</h3>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illum quasi facere libero, 
+                    fugiat laboriosam possimus reprehenderit eveniet vero voluptatum fugit ad quis veritatis suscipit beatae 
+                    incidunt perferendis tempore earum hic repellendus quisquam recusandae ipsa id esse. Nobis, aut deleniti.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere ratione dignissimos.
+                    </p>               
+                </div>                
+                <div class="column xl-3 lg-6 md-12 s-footer__block s-footer__site-links">
+                    <h3>Site Links</h3>
+                    <ul class="link-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Journal</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a></li>
+                    </ul>
+                </div>
+                <div class="column xl-3 lg-6 md-12 tab-12 s-footer__block s-footer__newsletter">
+                    <h3>Newsletter</h3>
+
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere ratione dignissimos.
+                    </p>
+
+                    <div class="subscribe-form">
+                        <form id="mc-form" class="mc-form">
+                            <input type="email" name="EMAIL" id="mce-EMAIL" class="u-fullwidth text-center" placeholder="Your Email Address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+                            <input type="submit" name="subscribe" value="Subscribe" class="btn btn--primary btn--small u-fullwidth">
+                            <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cdb7b577e41181934ed6a6a44_9a91cfe7b3" tabindex="-1" value=""></div> -->
+                            <div class="mc-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>    
+            
+            <div class="row s-footer__bottom">
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                        <li>
+                            <a href="#0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path></svg>
+                                <span class="u-screen-reader-text">Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z"></path></svg>
+                                <span class="u-screen-reader-text">Twitter</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"></path></svg>
+                                <span class="u-screen-reader-text">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M20.66 6.98a9.932 9.932 0 0 0-3.641-3.64C15.486 2.447 13.813 2 12 2s-3.486.447-5.02 1.34c-1.533.893-2.747 2.107-3.64 3.64S2 10.187 2 12s.446 3.487 1.34 5.02a9.924 9.924 0 0 0 3.641 3.64C8.514 21.553 10.187 22 12 22s3.486-.447 5.02-1.34a9.932 9.932 0 0 0 3.641-3.64C21.554 15.487 22 13.813 22 12s-.446-3.487-1.34-5.02zM12 3.66c2 0 3.772.64 5.32 1.919-.92 1.174-2.286 2.14-4.1 2.9-1.002-1.813-2.088-3.327-3.261-4.54A7.715 7.715 0 0 1 12 3.66zM5.51 6.8a8.116 8.116 0 0 1 2.711-2.22c1.212 1.201 2.325 2.7 3.34 4.5-2 .6-4.114.9-6.341.9-.573 0-1.006-.013-1.3-.04A8.549 8.549 0 0 1 5.51 6.8zM3.66 12c0-.054.003-.12.01-.2.007-.08.01-.146.01-.2.254.014.641.02 1.161.02 2.666 0 5.146-.367 7.439-1.1.187.373.381.793.58 1.26-1.32.293-2.674 1.006-4.061 2.14S6.4 16.247 5.76 17.5c-1.4-1.587-2.1-3.42-2.1-5.5zM12 20.34c-1.894 0-3.594-.587-5.101-1.759.601-1.187 1.524-2.322 2.771-3.401 1.246-1.08 2.483-1.753 3.71-2.02a29.441 29.441 0 0 1 1.56 6.62 8.166 8.166 0 0 1-2.94.56zm7.08-3.96a8.351 8.351 0 0 1-2.58 2.621c-.24-2.08-.7-4.107-1.379-6.081.932-.066 1.765-.1 2.5-.1.799 0 1.686.034 2.659.1a8.098 8.098 0 0 1-1.2 3.46zm-1.24-5c-1.16 0-2.233.047-3.22.14a27.053 27.053 0 0 0-.68-1.62c2.066-.906 3.532-2.006 4.399-3.3 1.2 1.414 1.854 3.027 1.96 4.84-.812-.04-1.632-.06-2.459-.06z"></path></svg>
+                                <span class="u-screen-reader-text">Dribbble</span>
+                            </a>
+                        </li>
+                    </ul> <!-- end s-footer__social -->
+                </div>
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>© Copyright Monica 2022</span> 
+                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a> Distribution By <a href="https://themewagon.com">ThemeWagon</a></span>
+                    </p>
+                </div>
+
+                <div class="ss-go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">&lt;!--!  Atomicons Free 1.00 by @atisalab License - https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2021 Atomicons --&gt;<polyline points="17 11 12 6 7 11"></polyline><line x1="12" y1="18" x2="12" y2="6"></line></svg>
                     </a>
-              </div>
-
-            </li>
-
-
-          </ul>
-
-        </section>
-
-      
- 
-            
-      <div>
-         <audio autoplay hidden>
-          <source src="./assets/audiomass-output.mp3" type="audio/mp3">
-         </audio>
-         </div>
-           <br>
-           
-
-
-      
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" >
+                </div> <!-- end ss-go-top -->
             </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-             
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-          <h3 class="h3 clients-title">Professional Engagements</h3>
-       
-          <ul class="clients-list has-scrollbar" ; >
-
-              <li class="clients-item">
-              <a href="https://nelisglobal.org "target="_blank">
-                <img src="./assets/images/cats.jpg" alt="client logo">
-              </a>
-            </li> 
-              <li class="clients-item">
-              <a href="https://onemillionleadersasia.org "target="_blank">
-                <img src="./assets/images/mkls.jpg" alt="client logo">
-              </a>
-            </li> 
-              <li class="clients-item">
-              <a href="https://nhafn.org.np "target="_blank">
-                <img src="./assets/images/mij.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.licnepal.com.np"target="_blank">
-                <img src="./assets/images/cc.jpg" alt="client logo">
-              </a>
-            </li>
-
-               <li class="clients-item">
-              <a href="http://nia.gov.np/"target="_blank">
-                <img src="./assets/images/uiuikj.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://mohp.gov.np/np"target="_blank">
-                <img src="./assets/images/vva.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://nhrc.gov.np"target="_blank">
-                <img src="./assets/images/zz.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://asiafoundation.org/where-we-work/nepal/"target="_blank">
-                <img src="./assets/images/bbd.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://missionoxygenteam.org"target="_blank">
-                <img src="./assets/images/guu.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.ran.org.np"target="_blank">
-                <img src="./assets/images/bb.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://bsn.org.np"target="_blank">
-                <img src="./assets/images/daa.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.d4dnepal.org"target="_blank">
-                <img src="./assets/images/ca.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.undp.org/nepal"target="_blank">
-                <img src="./assets/images/vava.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.daraz.com.np"target="_blank">
-                <img src="./assets/images/qq.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="http://www.aecpl.com.np"target="_blank">
-                <img src="./assets/images/tt.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.jyotigroup.org.np/industry/himal-iron-steel/"target="_blank">
-                <img src="./assets/images/we.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://grandehospital.com"target="_blank">
-                <img src="./assets/images/maia.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.nibl.com.np"target="_blank">
-                <img src="./assets/images/bbds.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.himalayanbank.com/en/"target="_blank">
-                <img src="./assets/images/cdsc.jpg" alt="client logo">
-              </a>
-            </li>
             
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/hh.jpg" alt="client logo" >
-              </a>
-            </li>
+        </footer> <!-- end s-footer -->
 
-            <li class="clients-item">
-              <a href="https://www.inf.org.np" target="_blank">
-                <img src="./assets/images/gh.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://smf.org.np" target="_blank">
-                <img src="./assets/images/dasf.jpg" alt="client logo">
-              </a>
-            </li>
-             <li class="clients-item">
-              <a href="https://nepalcyclesociety.org.np/"target="_blank">
-                <img src="./assets/images/mama.jpg" alt="client logo">
-              </a>
-            </li>
-            <li class="clients-item">
-              <a href="https://nepalscouts.org"target="_blank">
-                <img src="./assets/images/llll.jpg" alt="client logo">
-              </a>
-            </li>
-          
-        </section>
-
-
-        
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Namita Regmi</h4>
-              
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    I never thought much about life insurance until I had my first child. Milan Joshi was incredibly patient and walked me through the entire process. Now, I have peace of mind knowing my family will be taken care of no matter what happens. Highly recommend!
-                  <br></br>
-                    <p> <i>— Namita Regmi, Under Secretary, CIAA</i></p>
-
-                  </p>
-                </div>
-
-              </div>
-            </li>
-          
-
-     
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Abhishek Shrestha</h4>
-              
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                  I am extremely satisfied with my LIC policy. It gives me peace of mind knowing that my future is financially secured. The LIC team has always been approachable and supportive, making the entire experience smooth and reliable. I truly feel that choosing LIC Nepal was the right decision for long-term security and trust."    <br></br>
-                    <p> <i>— Abhishek Shrestha, Upcoming IT Graduate, Institute of Science and Technology (IOST), Tribhuvan University</i></p>
-
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-         
-
-          </ul>
-
-        </section>
-
-        
-<section class="clients">
-
-          <h3 class="h3 clients-title">Conference & Events Participation
-
-          <ul class="clients-list has-scrollbar">
-
-               <li class="clients-item">
-              <a href="https://openinternet.org.np" target="_blank">
-                <img src="./assets/images/GED.jpg" alt="client logo">
-              </a>
-            </li>
-            
-            <li class="clients-item">
-              <a href="https://knowledge.nrna.org" target="_blank">
-                <img src="./assets/images/hhhh.jpg" alt="client logo">
-              </a>
-            </li>
-            
-             <li class="clients-item">
-              <a href="https://www.linkedin.com/in/international-ai-and-robotics-conference-810b39321/" target="_blank">
-                <img src="./assets/images/mana.jpg" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.undp.org/asia-pacific/kanni-wignaraja" target="_blank">
-                <img src="./assets/images/money.jpg" alt="client logo">
-              </a>
-            </li>
-
-               <li class="clients-item">
-              <a href="https://southasiadroneforum.info" target="_blank">
-                <img src="./assets/images/south1.jpg" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-          
-            
-          </section>
-</article>
-
-   
-     
-
-
-            
-
-
-     
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          
- <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Professional Journey</button>
-            </li>
-
-
-          </ul>
-
-         
-           <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Professional Journey</button>
-              </li>
-
-            
-
-            </ul>
-
-          </div>
- 
-  
- 
-       <ul class="project-list">
-            <li class="project-item  active" data-filter-item data-category="Project Management">
-              <a href="https://sites.google.com/view/bemsproject/home"target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/1697638822641.jpg" alt="BEMS" loading="lazy">
-                </figure>
-
-         <h3 class="project-title">BEMS</h3>
-
-               
-
-              </a>
-            </li>
-           
-              <li class="project-item  active" data-filter-item data-category="Professional Highlights">
-              <a href="https://sites.google.com/view/myprofessionalphotogallery?usp=sharing"target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/MJ.jpeg" alt="Gallery of Moments" loading="lazy">
-                </figure>
-
-  <h3 class="project-title">Professional Highlights </h3>
-                  
-              
-
-              </a>
-              </li>
-            </ul>
-
-        </section>
-      
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="https://milanjoshi.substack.com/p/start-now-enroll-now"target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/20a77fce-beb4-4f7b-877d-113afbf53f14_1024x1024.jpg" alt="Start Now ! Enroll Now !!" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Life Insusrance</p>
-
-                    <span class="dot"></span>
-                  </div> 
-
-                  <h3 class="h3 blog-item-title">Why Consider Life Insurance ?</h3>
-
-                  <p class="blog-text">
-                  The Insurance sector's contribution to the SDGs.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-
-
-            
-             
-             <li class="blog-post-item">
-              <a href="https://medium.com/@meelanjoosi18/digital-marketing-a-nepalese-perspective-a4d694b46243"target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/1_rFeQkdVUksSZ3dxoramMZQ.webp" alt=" Digital Marketing: A Nepalese Perspective" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">The Growth of Digital Marketing </p>
-
-                    <span class="dot"></span>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Digital Marketing: A Nepalese Perspective</h3>
-
-                  <p class="blog-text">
-                  Digital Marketing
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@meelanjoosi18/for-a-habitable-kathmandu-7ce83b5494e3"target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/OIG4.jpg" alt=" For a Habitable Kathmandu ="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Sustainable Cities</p>
-
-                    <span class="dot"></span>
-
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Urban Regeneration & Rehabitation</h3>
-
-                  <p class="blog-text">
-                    Sustainable Development Goals
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-          </ul>
-
-            
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-
-
-
-      <section class="mapbox" data-mapbox>
-          <figure>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970.5755504126859!2d85.40616359538554!3d27.675680756583912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4c5e2b0f403ab1d9%3A0xff6be642caa93c15!2sMilan%20Joshi%20-%20Agent%20Profile%20-%20Life%20Insurance-%20LIC%20NEPAL!5e1!3m2!1sen!2snp!4v1754480947046!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
-          </figure>
-      </section>
-
-    <div>
-        <section class="about-text">
-
-            
-          <p>
-        <p>Share Your Thoughts in Just a Few Minutes!</p>
-        <p>Your opinion matters! Take a few minutes to share your thoughts about life insurance in my quick survey. Your feedback will help me improve and provide a better experience for everyone. <b>Click below</b> to get started I truly appreciate your time and input!
-        </p>  
-        
-            <style>
-          .survey-box {
-              display: flex;
-              flex-direction: column;
-              align-items: justify;
-              justify-content: center;
-              width: 200px;
-              height: 50px;
-              background: linear-gradient(135deg, #FFD700, #FFA500);
-              color: #000;
-              font-size: 1em;
-              font-weight: bold;
-              text-align: center;
-              text-decoration: none;
-              border-radius: 12px;
-              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-              transition: transform 0.2s, box-shadow 0.2s;
-          }
-  
-          .survey-box:hover {
-              transform: scale(1.05);
-              box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-          }
-      </style>
-
-            
-<div class=" contact-items">
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdK7atdlac209KOOGZS_Kr7CcurCWlsKcempZHos-k2Kl1kRA/viewform?usp=header"target="_blank" class="survey-box"><b>Take a survey!</b></a>
-</p>
-      
-    
-          
-    
-      </div>    
-
- <div>
-        <section class="about-text">
-
-            
-          <p>
-        <p>Let’s know eachother !</p>
-        <p>This quick survey will help us in the best way possible during our mentorship journey. Your answers will guide our focus, goals, and growth plan together.It only takes a few minutes, and your honest input makes a big difference.
-            </p>  
-        
-            <style>
-          .survey-box {
-              display: flex;
-              flex-direction: column;
-              align-items: justify;
-              justify-content: center;
-              width: 200px;
-              height: 50px;
-              background: linear-gradient(135deg, #FFD700, #FFA500);
-              color: #000;
-              font-size: 1em;
-              font-weight: bold;
-              text-align: center;
-              text-decoration: none;
-              border-radius: 12px;
-              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-              transition: transform 0.2s, box-shadow 0.2s;
-          }
-  
-          .survey-box:hover {
-              transform: scale(1.05);
-              box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-          }
-      </style>
-
-            
-<div class=" contact-items">
-<p><a href="https://forms.zohopublic.com/meelanjoosi18gm1/form/MenteeIntakeGrowthSurvey/formperma/qeFyy32CfOBMpHso0u38KbDYFLzBVCJKSD9qvwznfHM"target="_blank" class="survey-box"><b>Join the Survey ! </b></a>
-</p>
-    
-      </div>    
-
-
-
-            
-        <div>
-        <section class="contact-items">
-          
-          <div>
-               <p>Let’s connect and make great things happen!</p>
-
-      <p> <a href="https://wa.me/9779823267863?text=Hello%20Milan%2C%20I%20want%20to%20talk%20about%20insurance." target="_blank"  class="survey-box">
-  Let's work together !
-</a>
-      </p>
-          </div>
-             <br>
-           
-           
-            
-
-<div style="padding: 1rem; text-align: center;">
- <p><strong style="color: #E4BA14;"><em>Advertisement !</em></strong></p>
-  <p>Promoting Good Health and Well-being – Let’s be active for health for all.</p>
-
-  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px;">
-    <iframe 
-      src="https://www.youtube.com/embed/uZX14W4rVCU?si=XmYoJ4WH9sdWDlrC"
-      title="YouTube video player"
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px; border: none;"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen>
-    </iframe>
-
- <div class="ticker">
-    <span>सर्वस्वास्थ्य र कल्याण प्रवर्द्धन  – “सबैका लागि स्वास्थ्य” महत्वपूर्ण छ किनभने यो हाम्रो मानव जीवन र समाजको आधार हो।
-१. मानव क्षमताको अधिकतम उपयोग – स्वस्थ व्यक्तिहरू काम गर्न, पढ्न, नयाँ कुरा सिर्जना गर्न र समाजमा पूर्ण रूपमा भाग लिन सक्छन्। स्वास्थ्य नभएमा क्षमता र उत्पादकत्व बर्बाद हुन्छ।
-२. असमानता घटाउँछ – सबैले स्वास्थ्य सेवा, पोषणयुक्त खाना र सुरक्षित जीवन पाउने सुनिश्चित गर्दा धनी र गरीब, शहर र गाउँबीचको अन्तर घट्छ। स्वास्थ्य समानता = सामाजिक न्याय।
-३. आर्थिक लाभ – स्वस्थ जनसंख्याले कम बिरामी दिन, कम स्वास्थ्य खर्च र उच्च उत्पादनशीलता ल्याउँछ। रोकथाम स्वास्थ्य र कल्याण कार्यक्रमले दीर्घकालीन रूपमा पैसा बचत गर्छ।
-४. समुदाय बलियो बनाउँछ – स्वास्थ्य भएका व्यक्तिहरू बलियो, लचिलो र संकट सामना गर्न सक्षम समुदाय बनाउँछन्। महामारी, प्राकृतिक विपत्ति वा आर्थिक झट्कासँग सजिलै जुद्न सकिन्छ।
-५. वैश्विक सुरक्षा – रोगले सीमा हेर्दैन। विश्वभर स्वास्थ्य प्रवर्द्धनले महामारी रोकथाम, दिगो विकास र विश्वव्यापी स्थिरता सुनिश्चित गर्छ।
-६. दिगो विकासको आधार – संयुक्त राष्ट्रको SDG 3 भन्छ: “सबै उमेरका मानिसहरूको स्वस्थ जीवन सुनिश्चित गर्नु र कल्याण प्रवर्द्धन गर्नु।” मानिस बिरामी भएमा शिक्षा, काम वा समाजमा योगदान दिन सक्दैनन्।</span>
-  </div>
-   <style>
-    /* ticker bar */
-.ticker{
-  position:absolute;
-  top:0;
-  width:100%;
-  overflow:hidden;
-  background:rgba(0,0,0,0.7);
-  color:white;
-  font-size:14px;
-  white-space:nowrap;
-}
-
-/* moving line */
-.ticker span{
-  display:inline-block;
-  padding-left:100%;
-  animation:ticker-scroll 100s linear infinite;
-}
-
-@keyframes ticker-scroll{
-  from{
-    transform:translateX(0);
-  }
-  to{
-    transform:translateX(-100%);
-  }
-}
-    </style>
-  </div>
-   
-</div>
-<br>
-     
- <div id="wcb" class="carbonbadge wcb-d"></div>
-<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-      <br>
-
-
-<a href="https://www.iubenda.com/privacy-policy/15510139" class="iubenda-black iubenda-noiframe iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-
-<a href="https://www.iubenda.com/privacy-policy/15510139/cookie-policy" class="iubenda-black iubenda-noiframe iubenda-embed" title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-
-
-    
-   
-
-  </section>
-          </section>
-
-              
-      </article>
-
-    </div>
-
-
-  </main>
-
+    </div> <!-- end page-wrap -->
 
   <!--
     - custom js link
