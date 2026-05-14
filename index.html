@@ -2207,7 +2207,101 @@ setInterval(updateNepaliDateTime, 1000);
 
 
 
+<!-- Horizontal Icon Badge Slider -->
+<div class="icon-badge-slider">
 
+  <div class="icon-track">
+
+    <a href="https://your-link-1.com" target="_blank" class="icon-badge">
+      <img src="./assets/images/1777974567281.jpg" alt="Badge 1">
+    </a>
+
+    <a href="https://your-link-2.com" target="_blank" class="icon-badge">
+      <img src="./assets/images/1763549264336.jpg" alt="Badge 2">
+    </a>
+
+  <a href="https://your-link-2.com" target="_blank" class="icon-badge">
+      <img src="./assets/images/1778511889177.jpg" alt="Badge 2">
+    </a>
+
+
+  </div>
+
+</div>
+
+<style>
+
+/* Fixed horizontal strip */
+.icon-badge-slider{
+    position: fixed;
+    top: 80px;
+    right: 20px;
+
+    width: 260px;
+    height: 80px;
+
+    overflow: hidden;
+
+    z-index: 9999;
+}
+
+/* Moving row */
+.icon-track{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    width: max-content;
+
+    animation: slideLeft 10s linear infinite;
+}
+
+/* Pause on hover */
+.icon-badge-slider:hover .icon-track{
+    animation-play-state: paused;
+}
+
+/* Icon only */
+.icon-badge{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image styling */
+.icon-badge img{
+    width: 56px;
+    height: 56px;
+
+    object-fit: contain;
+
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Hover effect */
+.icon-badge:hover img{
+    transform: scale(1.15);
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
+}
+
+/* Infinite horizontal scroll */
+@keyframes slideLeft{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+/* Hide on mobile */
+@media (max-width: 768px){
+    .icon-badge-slider{
+        display: none;
+    }
+}
+
+</style>
         
 
          
